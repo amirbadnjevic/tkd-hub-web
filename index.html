@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TKD Hub - All Taekwondo Events in One Place</title>
+  <meta name="description" content="TKD Hub helps Taekwondo athletes, parents, and coaches discover events across multiple platforms in one simple, mobile-friendly app.">
+  <meta name="keywords" content="taekwondo, TKD, taekwondo events, taekwondo competitions, taekwondo app, taekwondo calendar, martial arts events, TKD Hub">
+  <link rel="canonical" href="https://tkdhub.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TKD Hub - All Taekwondo Events in One Place">
+  <meta property="og:description" content="Stop juggling between event websites. TKD Hub brings Taekwondo events from multiple sources into one beautiful, free app.">
+  <meta property="og:image" content="https://tkdhub.app/assets/cover.png">
+  <meta property="og:url" content="https://tkdhub.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TKD Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TKD Hub - All Taekwondo Events in One Place">
+  <meta name="twitter:description" content="Stop juggling between event websites. TKD Hub brings Taekwondo events from multiple sources into one beautiful, free app.">
+  <meta name="twitter:image" content="https://tkdhub.app/assets/cover.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #2D2B42;
+      background: #FAFAFE;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── CSS Variables ── */
+    :root {
+      --primary: #776ECA;
+      --primary-dark: #5A52A3;
+      --primary-light: #9D95E0;
+      --secondary: #CAD4F1;
+      --gold: #FAD582;
+      --gold-dark: #E8C060;
+      --dark-surface: #1E1E2E;
+      --dark-bg: #121218;
+      --dark-appbar: #2D2B42;
+      --text-primary: #2D2B42;
+      --text-secondary: #555555;
+      --text-light: #FFFFFF;
+      --border: #E0E0E0;
+      --bg: #FAFAFE;
+      --section-alt: #F3F1FB;
+    }
+
+    /* ── Highlights ── */
+    mark {
+      background: linear-gradient(120deg, rgba(119, 110, 202, 0.12) 0%, rgba(202, 212, 241, 0.4) 100%);
+      color: inherit;
+      padding: 2px 6px;
+      border-radius: 4px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* ── Typography ── */
+    .font-brand { font-family: 'Reggae One', cursive; }
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); line-height: 1.25; }
+    h3 { font-size: 1.25rem; }
+    p { color: var(--text-secondary); font-size: 1.05rem; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section { padding: 80px 0; }
+    .section-alt { background: var(--section-alt); }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 16px rgba(119, 110, 202, 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(119, 110, 202, 0.45);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark-appbar);
+      box-shadow: 0 4px 16px rgba(250, 213, 130, 0.4);
+    }
+    .btn-gold:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(250, 213, 130, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--secondary);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      background: rgba(119, 110, 202, 0.06);
+    }
+    .btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(119, 110, 202, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    nav.scrolled { box-shadow: 0 4px 24px rgba(90, 82, 163, 0.3); }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-light);
+    }
+    .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
+    .nav-brand span { font-family: 'Reggae One', cursive; font-size: 1.2rem; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: white; }
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--dark-appbar) !important;
+      padding: 9px 20px !important;
+      font-size: 0.9rem !important;
+      border-radius: 10px !important;
+      box-shadow: 0 2px 8px rgba(250, 213, 130, 0.3) !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold-dark) !important;
+    }
+
+    /* Mobile nav */
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span {
+      display: block; width: 22px; height: 2px; background: white;
+      margin: 5px 0; border-radius: 2px; transition: all 0.3s;
+    }
+    @media (max-width: 768px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: rgba(119, 110, 202, 0.98);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.active { display: flex; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 140px 0 80px;
+      overflow: hidden;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text { max-width: 520px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--section-alt);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid var(--secondary);
+    }
+    .hero-text h1 { color: var(--text-primary); margin-bottom: 18px; }
+    .hero-text h1 em {
+      font-style: normal;
+      color: var(--primary);
+    }
+    .hero-text p { font-size: 1.15rem; margin-bottom: 32px; max-width: 460px; }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .phone-mockup {
+      width: 280px;
+      height: 560px;
+      background: #1A1A1A;
+      border-radius: 40px;
+      border: 4px solid #111111;
+      box-shadow: 0 30px 80px rgba(45, 43, 66, 0.25), 0 0 0 1px rgba(119, 110, 202, 0.15);
+      overflow: hidden;
+      position: relative;
+      transition: background 0.4s ease, border-color 0.4s ease;
+    }
+    .phone-mockup.dark-mode {
+      background: var(--dark-surface);
+      border-color: var(--dark-appbar);
+    }
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 28px;
+      background: #1A1A1A;
+      border-radius: 0 0 18px 18px;
+      z-index: 2;
+      transition: background 0.4s ease;
+    }
+    .phone-mockup.dark-mode .phone-notch {
+      background: var(--dark-appbar);
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .phone-header {
+      background: var(--primary);
+      padding: 40px 20px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .phone-header img { width: 28px; height: 28px; border-radius: 6px; }
+    .phone-header span { font-family: 'Reggae One', cursive; color: white; font-size: 1rem; }
+
+    /* Theme icon next to toggle */
+    .phone-theme-icon {
+      margin-left: auto;
+      color: var(--gold);
+      font-size: 20px;
+      line-height: 1;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    /* Theme toggle in phone header */
+    .phone-theme-toggle {
+      margin-left: 0;
+      width: 40px;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+    .phone-theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .phone-theme-toggle .toggle-knob {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+    .phone-theme-toggle.active .toggle-knob {
+      transform: translateX(18px);
+    }
+
+    /* Light mode body (default) */
+    .phone-body {
+      flex: 1;
+      background: #FAFAFE;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 0.4s ease;
+    }
+    .phone-mockup.dark-mode .phone-body {
+      background: var(--dark-bg);
+    }
+
+    /* Light mode cards (default) */
+    .mock-card {
+      background: white;
+      border-radius: 12px;
+      padding: 14px;
+      border-left: 3px solid var(--primary);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.4s ease, border-color 0.4s ease;
+    }
+    .phone-mockup.dark-mode .mock-card {
+      background: var(--dark-surface);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: var(--primary-light);
+    }
+
+    .mock-card-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      transition: color 0.4s ease;
+    }
+    .phone-mockup.dark-mode .mock-card-title {
+      color: var(--text-light);
+    }
+
+    .mock-card-sub {
+      font-size: 0.7rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+      transition: color 0.4s ease;
+    }
+    .phone-mockup.dark-mode .mock-card-sub {
+      color: var(--primary-light);
+    }
+
+    .mock-card-meta {
+      display: flex;
+      gap: 8px;
+      font-size: 0.65rem;
+      color: #888;
+    }
+    .mock-tag {
+      background: var(--section-alt);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--primary);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    .phone-mockup.dark-mode .mock-tag {
+      background: var(--dark-appbar);
+      color: var(--secondary);
+    }
+
+    .mock-card.favorited { border-left-color: var(--gold); }
+    .phone-mockup.dark-mode .mock-card.favorited { border-left-color: var(--gold); }
+    .mock-fav {
+      float: right;
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+
+    /* Floating elements */
+    .float-badge {
+      position: absolute;
+      background: white;
+      border-radius: 14px;
+      padding: 10px 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      animation: float 3s ease-in-out infinite;
+    }
+    .float-badge.top-right {
+      top: 90px; right: -10px;
+      animation-delay: 0s;
+    }
+    .float-badge.bottom-left {
+      bottom: 60px; left: -10px;
+      animation-delay: 1.5s;
+    }
+    .float-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 90px 0 40px; }
+      .hero .container { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+      .hero-text { max-width: 100%; }
+      .hero-text h1 { margin-bottom: 12px; }
+      .hero-text p { max-width: 100%; margin-bottom: 20px; font-size: 1rem; }
+      .hero-badge { margin-bottom: 14px; }
+      .hero-buttons { justify-content: center; }
+      .hero-visual { margin-top: 0; }
+      .float-badge { display: none; }
+      .phone-mockup { width: 220px; height: 440px; }
+    }
+
+    /* ── Features ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 8px 32px rgba(119, 110, 202, 0.08);
+      transform: translateY(-4px);
+    }
+    .feature-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .feature-card h3 {
+      margin-bottom: 8px;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .feature-card p { font-size: 0.95rem; }
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* ── How It Works ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 48px;
+      counter-reset: step;
+    }
+    .step { text-align: center; counter-increment: step; }
+    .step-number {
+      width: 56px; height: 56px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 16px;
+    }
+    .step h3 { margin-bottom: 8px; color: var(--text-primary); }
+    @media (max-width: 768px) {
+      .steps { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* ── Sources ── */
+    .sources-text { text-align: center; max-width: 600px; margin: 0 auto; }
+    .sources-text p { margin-top: 8px; }
+    .sources-note {
+      text-align: center;
+      margin-top: 32px;
+      padding: 16px 24px;
+      background: var(--section-alt);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Story ── */
+    .story-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .story-avatar {
+      width: 100px;
+      height: 100px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .story-avatar img {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+    }
+    .story-content h2 { margin-bottom: 16px; }
+    .story-content p { margin-bottom: 12px; }
+    .story-quote {
+      margin-top: 20px;
+      padding: 20px 24px;
+      background: var(--section-alt);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr; text-align: center; }
+      .story-avatar { margin: 0 auto; }
+    }
+
+    /* ── Support / CTA ── */
+    .support-section {
+      background: linear-gradient(135deg, #EDE9FB 0%, #F3F1FB 50%, #E8E3F8 100%);
+      color: var(--text-primary);
+    }
+    .support-section h2, .support-section h3 { color: var(--text-primary); }
+    .support-section p { color: var(--text-secondary); }
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .support-card {
+      background: white;
+      border: 1px solid var(--secondary);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s;
+    }
+    .support-card:hover {
+      border-color: var(--primary-light);
+      box-shadow: 0 8px 32px rgba(119, 110, 202, 0.1);
+      transform: translateY(-2px);
+    }
+    .support-card h3 { font-size: 1.1rem; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .support-card p { font-size: 0.95rem; margin-bottom: 0; }
+    .support-card .card-icon { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+    .support-buttons {
+      display: flex;
+      gap: 14px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .support-goal {
+      margin-top: 36px;
+      padding: 20px 24px;
+      background: rgba(119, 110, 202, 0.06);
+      border: 1px solid var(--secondary);
+      border-radius: 14px;
+    }
+    .support-goal-label {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .support-goal-bar {
+      width: 100%;
+      height: 8px;
+      background: var(--secondary);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .support-goal-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 4px;
+      width: 1%;
+      transition: width 1.5s ease;
+    }
+    .support-goal p { font-size: 0.9rem; margin-top: 8px; }
+    @media (max-width: 768px) {
+      .support-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(180deg, var(--section-alt) 0%, var(--bg) 100%);
+      padding: 80px 0;
+    }
+    .final-cta h2 { margin-bottom: 16px; }
+    .final-cta p { max-width: 500px; margin: 0 auto 32px; font-size: 1.1rem; }
+    .final-cta .hero-buttons { justify-content: center; }
+
+    /* ── Footer ── */
+    footer {
+      background: #3A3A4A;
+      color: var(--secondary);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-brand img { width: 30px; height: 30px; border-radius: 6px; }
+    .footer-brand span { font-family: 'Reggae One', cursive; color: white; font-size: 1rem; }
+    .footer-copy { font-size: 0.85rem; color: #999; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: white; }
+
+    /* ── Section headers ── */
+    .section-header { text-align: center; max-width: 600px; margin: 0 auto 0; }
+    .section-header p { margin-top: 12px; }
+
+    /* ── Subtle Animations ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Free Badge ── */
+    .free-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      padding: 20px 28px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .free-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .free-check {
+      width: 22px; height: 22px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Mobile Compactness ── */
+    @media (max-width: 768px) {
+      /* Global section padding reduction */
+      section { padding: 48px 0; }
+      .container { padding: 0 16px; }
+
+      /* Free banner */
+      .free-banner {
+        gap: 16px;
+        padding: 14px 16px;
+        margin-top: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      /* Features */
+      .features-grid { margin-top: 28px; gap: 14px; }
+      .feature-card { padding: 20px 18px; }
+      .feature-card p { font-size: 0.9rem; }
+
+      /* Section headers */
+      .section-header p { margin-top: 8px; font-size: 0.95rem; }
+
+      /* How It Works */
+      .steps { gap: 24px; margin-top: 28px; }
+      .step-number { width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 10px; }
+      .sources-note { margin-top: 20px; padding: 12px 16px; font-size: 0.85rem; }
+
+      /* Story */
+      .story-grid { gap: 20px; }
+      .story-avatar { width: 72px; height: 72px; }
+      .story-avatar img { width: 48px; height: 48px; }
+      .story-content h2 { margin-bottom: 10px; }
+      .story-content p { margin-bottom: 8px; font-size: 0.95rem; }
+      .story-quote { margin-top: 14px; padding: 14px 16px; font-size: 0.9rem; }
+
+      /* Support */
+      .support-grid { margin-top: 24px; gap: 14px; }
+      .support-card { padding: 20px; }
+      .support-card .card-icon { font-size: 1.4rem; margin-bottom: 8px; }
+      .support-card h3 { font-size: 1rem; margin-bottom: 6px; }
+      .support-card p { font-size: 0.9rem; }
+      .support-buttons { margin-top: 24px; }
+      .support-goal { margin-top: 24px; padding: 14px 16px; }
+
+      /* Final CTA */
+      .final-cta { padding: 48px 0; }
+      .final-cta h2 { margin-bottom: 10px; }
+      .final-cta p { margin-bottom: 20px; font-size: 0.9rem; }
+
+      /* Footer */
+      footer { padding: 28px 0; }
+      .footer-inner { gap: 12px; }
+      .footer-links { gap: 16px; }
+      .footer-copy { text-align: center; width: 100%; order: 3; }
+
+      /* Buttons - slightly smaller on mobile */
+      .btn { padding: 12px 22px; font-size: 0.95rem; }
+
+      /* Reduce general typography spacing */
+      h2 { margin-bottom: 0; }
+      p { font-size: 0.95rem; }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TKD Hub",
+    "description": "TKD Hub helps Taekwondo athletes, parents, and coaches discover events across multiple platforms in one simple, mobile-friendly app.",
+    "url": "https://tkdhub.app",
+    "image": "https://tkdhub.app/assets/cover.png",
+    "applicationCategory": "SportsApplication",
+    "operatingSystem": "iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Amir"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TKD Hub",
+    "url": "https://tkdhub.app",
+    "description": "All Taekwondo Events in One Place"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is TKD Hub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TKD Hub is a free, ad-free mobile app that brings Taekwondo events from multiple sources into one simple, beautiful app for athletes, parents, and coaches."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is TKD Hub free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, TKD Hub is 100% free with no ads, no hidden fees, and no account required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What platforms is TKD Hub available on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TKD Hub is currently available on iOS and can be downloaded from the App Store."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav id="nav">
+  <div class="container">
+    <a href="#" class="nav-brand">
+      <img src="assets/logo.png" alt="TKD Hub">
+      <span>TKD Hub</span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#" class="btn btn-primary nav-cta" onclick="alert('Coming soon to the App Store!'); return false;">Download App</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span>&#x1F94B;</span> Free &amp; Ad-Free
+      </div>
+      <h1 class="font-brand">All Taekwondo Events in <em>One Hub</em></h1>
+      <p>Stop juggling between event websites. TKD Hub brings events from multiple sources into one simple, beautiful app.</p>
+      <div class="hero-buttons">
+        <a href="#download" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for iOS
+        </a>
+        <a href="#features" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-header">
+            <img src="assets/logo.png" alt="TKD Hub">
+            <span>TKD Hub</span>
+            <span class="phone-theme-icon" id="themeIcon">&#9728;&#65039;</span>
+            <button class="phone-theme-toggle" id="phoneThemeToggle" onclick="togglePhoneTheme()" aria-label="Toggle phone dark mode">
+              <span class="toggle-knob" id="toggleKnob"></span>
+            </button>
+          </div>
+          <div class="phone-body">
+            <div class="mock-card">
+              <div class="mock-card-title">Nordic Open Championships</div>
+              <div class="mock-card-sub">Jun 14 - Jun 15, 2025</div>
+              <div class="mock-card-meta">
+                <span class="mock-tag">Sweden</span>
+                <span class="mock-tag">G1</span>
+              </div>
+            </div>
+            <div class="mock-card favorited">
+              <span class="mock-fav">&#9829;</span>
+              <div class="mock-card-title">Dutch Open Taekwondo</div>
+              <div class="mock-card-sub">Mar 22 - Mar 23, 2025</div>
+              <div class="mock-card-meta">
+                <span class="mock-tag">Netherlands</span>
+                <span class="mock-tag">Open</span>
+              </div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-title">Austrian Open</div>
+              <div class="mock-card-sub">Apr 5 - Apr 6, 2025</div>
+              <div class="mock-card-meta">
+                <span class="mock-tag">Austria</span>
+                <span class="mock-tag">G1</span>
+              </div>
+            </div>
+            <div class="mock-card favorited">
+              <span class="mock-fav">&#9829;</span>
+              <div class="mock-card-title">European Championships</div>
+              <div class="mock-card-sub">May 10 - May 12, 2025</div>
+              <div class="mock-card-meta">
+                <span class="mock-tag">Croatia</span>
+                <span class="mock-tag">Continental</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="float-badge top-right">
+        <span class="float-dot" style="background: var(--gold)"></span>
+        Multiple Sources
+      </div>
+      <div class="float-badge bottom-left">
+        <span class="float-dot" style="background: var(--primary)"></span>
+        Mobile-First
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Promises ── -->
+<div class="container">
+  <div class="free-banner fade-in">
+    <div class="free-item">
+      <span class="free-check">&#10003;</span>
+      100% Free
+    </div>
+    <div class="free-item">
+      <span class="free-check">&#10003;</span>
+      No Ads Ever
+    </div>
+    <div class="free-item">
+      <span class="free-check">&#10003;</span>
+      No Account Required
+    </div>
+    <div class="free-item">
+      <span class="free-check">&#10003;</span>
+      Built for the Community
+    </div>
+  </div>
+</div>
+
+<!-- ── Features ── -->
+<section id="features" class="section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2>Everything You Need,<br>Nothing You Don't</h2>
+      <p>Designed for athletes, parents, and coaches who want to find Taekwondo events without the hassle.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <h3>One Place for All Events <span class="feature-icon">&#127760;</span></h3>
+        <p>Browse Taekwondo events from multiple platforms and sources without switching between websites.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <h3>Mobile-First Design <span class="feature-icon">&#128241;</span></h3>
+        <p>Built for quick scanning on the go. Find events fast with a clean, modern interface optimized for mobile.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <h3>Smart Filters <span class="feature-icon">&#128269;</span></h3>
+        <p>Filter events by date, country, or category to find exactly what you're looking for in seconds.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <h3>Save Favorites <span class="feature-icon" style="color: var(--gold);">&#9829;</span></h3>
+        <p>Bookmark the events you care about and quickly access them anytime. Never lose track of an event again.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <h3>Notifications <span class="feature-icon">&#128276;</span></h3>
+        <p>Get reminders about upcoming events so you never miss a registration deadline or important date.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <h3>Deep Search &amp; Quick Resume <span class="feature-icon">&#128373;</span></h3>
+        <p>Search within events by athlete, category, club, or country. Pin categories for quick access, and jump straight back to the last event you were viewing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Story ── -->
+<section id="story">
+  <div class="container">
+    <div class="story-grid fade-in">
+      <div class="story-avatar">
+        <img src="assets/logo.png" alt="TKD Hub">
+      </div>
+      <div class="story-content">
+        <h2>The Story Behind TKD Hub</h2>
+        <p>Hi, I'm Amir - a <mark>software engineer and Taekwondo parent</mark> based in Sweden. I built TKD Hub to solve a problem I ran into every week.</p>
+        <p>Finding Taekwondo events meant <mark>jumping between too many websites</mark> that were hard to use, especially on mobile. As a parent of a young athlete, keeping track of upcoming events quickly became a weekly headache.</p>
+        <p>So I built a better way - so athletes, parents, and coaches can <mark>spend less time searching and more time focusing on training.</mark></p>
+        <div class="story-quote">
+          "This is a passion project built for the Taekwondo community and inspired by my daughter's journey in the sport."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How It Works ── -->
+<section id="how-it-works" class="section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2>Simple as 1-2-3</h2>
+      <p>No sign-up required. Just download, open, and start browsing events.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-in">
+        <div class="step-number">1</div>
+        <h3>Download the App</h3>
+        <p>Get TKD Hub from the App Store. It's free, with no ads or hidden fees.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-number">2</div>
+        <h3>Browse Events</h3>
+        <p>Explore Taekwondo events from multiple sources, all in one place. Use filters to find what matters to you.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-number">3</div>
+        <h3>Save &amp; Get Notified</h3>
+        <p>Favorite the events you're interested in and get reminders so you never miss an important date.</p>
+      </div>
+    </div>
+    <div class="sources-note fade-in">
+      TKD Hub is a read-only event browser. It displays publicly available event information and always links back to the original source for registration and official details.
+    </div>
+  </div>
+</section>
+
+<!-- ── Support ── -->
+<section id="support" class="support-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2>Support TKD Hub</h2>
+      <p>TKD Hub is free and ad-free. It's built with love for the Taekwondo community. If it's made your life a little easier, here's how you can help.</p>
+    </div>
+    <div class="support-grid fade-in">
+      <div class="support-card">
+        <h3>Support Her TKD Journey <span class="card-icon">&#x1F3C6;</span></h3>
+        <p>Every contribution goes directly toward training camps, event entry fees, and travel for the young athlete who inspired this app.</p>
+      </div>
+      <div class="support-card">
+        <h3>Keep TKD Hub Running <span class="card-icon">&#x1F4BB;</span></h3>
+        <p>Servers, app store fees, and infrastructure cost around 40 EUR/month. Your support keeps the app alive and free for the whole community.</p>
+      </div>
+    </div>
+    <div class="support-buttons fade-in">
+      <a href="https://ko-fi.com/tkdhub" target="_blank" rel="noopener" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Support on Ko-fi
+      </a>
+      <a href="mailto:tkdhub.app@gmail.com" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Closing ── -->
+<section class="final-cta">
+  <div class="container fade-in">
+    <img src="assets/logo.png" alt="TKD Hub" width="64" height="64" style="border-radius: 14px; margin-bottom: 16px; box-shadow: 0 8px 32px rgba(119,110,202,0.2);">
+    <h2 class="font-brand" style="font-size: clamp(1.3rem, 3vw, 1.8rem);">All Taekwondo Events in One Hub</h2>
+    <p style="font-size: 0.95rem; margin-bottom: 0;">Built with love for the Taekwondo community.</p>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="TKD Hub">
+        <span>TKD Hub</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 TKD Hub. Built with love for the Taekwondo community.
+      </div>
+      <ul class="footer-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="https://ko-fi.com/tkdhub" target="_blank" rel="noopener">Ko-fi</a></li>
+        <li><a href="mailto:tkdhub.app@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Close mobile nav on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Phone mockup theme toggle
+  function togglePhoneTheme() {
+    const mockup = document.querySelector('.phone-mockup');
+    const toggle = document.getElementById('phoneThemeToggle');
+    const icon = document.getElementById('themeIcon');
+    const isDark = mockup.classList.toggle('dark-mode');
+    toggle.classList.toggle('active', isDark);
+    icon.innerHTML = isDark ? '&#127769;' : '&#9728;&#65039;';
+  }
+</script>
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('tkdhub', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#794bc4',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+</body>
+</html>

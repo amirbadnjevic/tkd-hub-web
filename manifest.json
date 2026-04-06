@@ -1,0 +1,21 @@
+{
+  "name": "TKD Hub",
+  "short_name": "TKD Hub",
+  "description": "All Taekwondo Events in One Place",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFE",
+  "theme_color": "#776ECA",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
