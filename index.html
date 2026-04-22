@@ -518,6 +518,54 @@
       .steps { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
     }
 
+    .video-wrapper {
+      margin-top: 48px;
+      display: flex;
+      justify-content: center;
+    }
+    .video-container {
+      position: relative;
+      display: inline-block;
+      max-width: 540px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .video-container video {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(90, 50, 180, 0.15);
+      display: block;
+    }
+    .video-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(90, 50, 180, 0.85);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .video-play-btn svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+      margin-left: 4px;
+    }
+    .video-container:hover .video-play-btn {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: rgba(90, 50, 180, 1);
+    }
+    .video-container.playing .video-play-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     /* ── Sources ── */
     .sources-text { text-align: center; max-width: 600px; margin: 0 auto; }
     .sources-text p { margin-top: 8px; }
@@ -1029,6 +1077,18 @@
         <p>So I built a better way - so athletes, parents, and coaches can <mark>spend less time searching and more time focusing on training.</mark></p>
         <div class="story-quote">
           "This is a passion project built for the Taekwondo community and inspired by my daughter's journey in the sport."
+        </div>
+      </div>
+    </div>
+    <div class="video-wrapper fade-in">
+      <div class="video-container">
+        <video controls playsinline
+          onplay="this.parentElement.classList.add('playing')"
+          onpause="this.parentElement.classList.remove('playing')">
+          <source src="assets/TKD_Hub.mp4" type="video/mp4">
+        </video>
+        <div class="video-play-btn" onclick="this.parentElement.querySelector('video').play()">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </div>
       </div>
     </div>
