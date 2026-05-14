@@ -775,6 +775,57 @@
       flex-shrink: 0;
     }
 
+    /* ── New Feature Highlight ── */
+    .feature-card-new {
+      border-color: var(--gold-dark);
+      background: linear-gradient(135deg, #fff 75%, #FFFBF0 100%);
+    }
+    .feature-card-new:hover {
+      border-color: var(--gold-dark);
+      box-shadow: 0 8px 32px rgba(250, 213, 130, 0.22);
+    }
+    .new-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark-appbar);
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    /* ── Seeding badge in phone mockup ── */
+    .mock-card-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+    .mock-seed-badge {
+      background: var(--gold);
+      color: var(--dark-appbar);
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      white-space: nowrap;
+    }
+    .mock-tag-rank {
+      background: rgba(250, 213, 130, 0.25);
+      color: #7A6000;
+      font-weight: 600;
+    }
+    .phone-mockup.dark-mode .mock-tag-rank {
+      background: rgba(250, 213, 130, 0.15);
+      color: var(--gold);
+    }
+
     /* ── Mobile Compactness ── */
     @media (max-width: 768px) {
       /* Global section padding reduction */
@@ -1049,15 +1100,15 @@
       </div>
       <div class="feature-card fade-in">
         <h3>Save Favorites <span class="feature-icon" style="color: var(--gold);">&#9829;</span></h3>
-        <p>Bookmark the events you care about and quickly access them anytime. Never lose track of an event again.</p>
+        <p>Bookmark the events and ranking categories you care about. Quickly access them anytime and never lose track of what matters to you.</p>
       </div>
       <div class="feature-card fade-in">
         <h3>Notifications <span class="feature-icon">&#128276;</span></h3>
         <p>Get reminders about upcoming events so you never miss a registration deadline or important date.</p>
       </div>
-      <div class="feature-card fade-in">
-        <h3>Deep Search &amp; Quick Resume <span class="feature-icon">&#128373;</span></h3>
-        <p>Search within events by athlete, category, club, or country. Pin categories for quick access, and jump straight back to the last event you were viewing.</p>
+      <div class="feature-card feature-card-new fade-in">
+        <h3>Rankings &amp; Seeding <span class="new-badge">New</span> <span class="feature-icon">&#127942;</span></h3>
+        <p>See your seeding number directly inside events, and track personalized rankings across the weight categories and divisions you compete in.</p>
       </div>
     </div>
   </div>
