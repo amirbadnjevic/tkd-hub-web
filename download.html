@@ -136,9 +136,6 @@
       order: -1;
     }
     .store-btn.recommended:hover { background: var(--primary-dark); }
-    .device-hint {
-      margin-top: 16px; font-size: 0.9rem; color: #888; min-height: 1.4em;
-    }
 
     .perks {
       display: flex; justify-content: center; gap: 10px 28px; flex-wrap: wrap;
@@ -304,7 +301,6 @@
         <span><small>GET IT ON</small><strong>Google Play</strong></span>
       </a>
     </div>
-    <p class="device-hint" id="deviceHint"></p>
 
     <ul class="perks">
       <li>100% free</li>
@@ -447,8 +443,6 @@
     if (!platform) return;
     document.querySelectorAll('.hero .store-btn[data-platform="' + platform + '"]')
       .forEach(btn => btn.classList.add('recommended'));
-    document.getElementById('deviceHint').textContent =
-      'Looks like you\'re on ' + (isAndroid ? 'Android' : 'iOS') + ', so we put your store first.';
   })();
 </script>
 
