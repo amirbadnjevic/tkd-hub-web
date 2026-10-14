@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TKD Hub 2.0 - What's New</title>
+  <meta name="description" content="TKD Hub 2.0 is here: a brand-new Home screen, Athletes on the Rise, event search and one-tap directions in Apple Maps or Google Maps.">
+  <link rel="canonical" href="https://tkdhub.app/download-v2">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TKD Hub 2.0 - What's New">
+  <meta property="og:description" content="A brand-new Home screen, Athletes on the Rise, event search and directions in Apple Maps or Google Maps. Free on the App Store and Google Play.">
+  <meta property="og:image" content="https://tkdhub.app/assets/cover.png">
+  <meta property="og:url" content="https://tkdhub.app/download-v2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TKD Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TKD Hub 2.0 - What's New">
+  <meta name="twitter:description" content="A brand-new Home screen, Athletes on the Rise, event search and directions in Apple Maps or Google Maps. Free on the App Store and Google Play.">
+  <meta name="twitter:image" content="https://tkdhub.app/assets/cover.png">
+
+  <meta name="theme-color" content="#776ECA">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #776ECA;
+      --primary-dark: #5A52A3;
+      --primary-deep: #3E3784;
+      --secondary: #CAD4F1;
+      --gold: #FAD582;
+      --dark-appbar: #2D2B42;
+    }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: white;
+      background: var(--primary-deep);
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-brand { font-family: 'Reggae One', cursive; }
+
+    /* Single screen, story-shaped (9:16) */
+    .story {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: max(28px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      gap: 14px;
+      text-align: center;
+      overflow: hidden;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(250, 213, 130, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(157, 149, 224, 0.45) 0%, transparent 45%),
+        linear-gradient(165deg, var(--primary) 0%, var(--primary-dark) 55%, var(--primary-deep) 100%);
+    }
+
+    /* Header */
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); }
+    .brand span { font-family: 'Reggae One', cursive; font-size: 1.3rem; }
+    h1 {
+      font-family: 'Reggae One', cursive; font-weight: 400;
+      font-size: clamp(1.5rem, 7.6vw, 2.3rem); line-height: 1.1; white-space: nowrap;
+      margin-top: 14px;
+    }
+    h1 em { font-style: normal; color: var(--gold); }
+
+    /* Phones */
+    .phones {
+      position: relative;
+      display: flex; justify-content: center; align-items: center;
+      width: 100%;
+      flex: 1 1 auto;
+      min-height: 0;
+    }
+    .phone {
+      height: clamp(170px, 100vh - 560px, 380px);
+      height: clamp(170px, 100dvh - 560px, 380px);
+      aspect-ratio: 609 / 1320;
+      border-radius: 22px;
+      border: 4px solid #111111;
+      background: #111111;
+      overflow: hidden;
+      box-shadow: 0 22px 50px rgba(20, 16, 60, 0.45);
+    }
+    .phone img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .phone.left { transform: rotate(-6deg) translate(12px, 6px); }
+    .phone.right { transform: rotate(6deg) translate(-12px, -6px); z-index: 2; }
+
+    /* Features */
+    .features { list-style: none; width: 100%; display: grid; gap: 6px; text-align: left; }
+    .features li {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      padding: 8px 12px;
+      font-size: 0.85rem; font-weight: 500; line-height: 1.3;
+    }
+    .features .icon { font-size: 1.2rem; flex-shrink: 0; }
+    .features strong { font-weight: 700; }
+
+    /* Store buttons */
+    .stores { display: flex; gap: 10px; width: 100%; }
+    .store-btn {
+      flex: 1 1 0;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 12px;
+      background: white; color: var(--dark-appbar);
+      border-radius: 14px;
+      text-decoration: none; text-align: left;
+      box-shadow: 0 8px 22px rgba(20, 16, 60, 0.3);
+      transition: transform 0.25s ease;
+    }
+    .store-btn:hover { transform: translateY(-2px); }
+    .store-btn svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .store-btn small { display: block; font-size: 0.62rem; opacity: 0.75; letter-spacing: 0.02em; white-space: nowrap; }
+    .store-btn strong { display: block; font-size: 1rem; font-weight: 700; line-height: 1.15; white-space: nowrap; }
+    .url { font-size: 0.8rem; font-weight: 600; color: rgba(255, 255, 255, 0.75); letter-spacing: 0.02em; }
+  </style>
+</head>
+<body>
+
+<main class="story">
+  <header>
+    <div class="brand">
+      <img src="assets/logo.png" alt="TKD Hub logo">
+      <span>TKD Hub</span>
+    </div>
+    <h1>TKD Hub <em>2.0</em> is here!</h1>
+  </header>
+
+  <div class="phones">
+    <figure class="phone left">
+      <img src="assets/screenshots_iphone/open%20maps.png" alt="Open event location in Apple Maps or Google Maps">
+    </figure>
+    <figure class="phone right">
+      <img src="assets/screenshots_iphone/new%20home.png" alt="New Home screen with next up, coming up and athletes on the rise">
+    </figure>
+  </div>
+
+  <ul class="features">
+    <li><span class="icon">&#x1F4C5;</span><span><strong>Quick access</strong> to ongoing, upcoming, and future events</span></li>
+    <li><span class="icon">&#x1F4C8;</span><span>Discover <strong>Athletes on the Rise</strong> in Rankings Highlights</span></li>
+    <li><span class="icon">&#x1F50E;</span><span><strong>Search for events</strong> directly from the Home screen</span></li>
+    <li><span class="icon">&#x1F4CD;</span><span>Open event locations straight in <strong>Apple Maps or Google Maps</strong></span></li>
+  </ul>
+
+  <div class="stores">
+    <a href="https://apps.apple.com/se/app/tkd-hub/id6761325869" target="_blank" rel="noopener" class="store-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <span><small>Download on the</small><strong>App Store</strong></span>
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.tkdhub.tkdHub" target="_blank" rel="noopener" class="store-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+      <span><small>GET IT ON</small><strong>Google Play</strong></span>
+    </a>
+  </div>
+  <p class="url">tkdhub.app &middot; Free &amp; ad-free</p>
+</main>
+
+</body>
+</html>
