@@ -68,13 +68,10 @@
     }
 
     /* Header */
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .brand img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); }
-    .brand span { font-family: 'Reggae One', cursive; font-size: 1.3rem; }
     h1 {
       font-family: 'Reggae One', cursive; font-weight: 400;
       font-size: clamp(1.5rem, 7.6vw, 2.3rem); line-height: 1.1; white-space: nowrap;
-      margin-top: 14px;
+      margin-top: 40px; /* clear Instagram story header overlay */
     }
     h1 em { font-style: normal; color: var(--gold); }
 
@@ -87,8 +84,8 @@
       min-height: 0;
     }
     .phone {
-      height: clamp(170px, 100vh - 560px, 380px);
-      height: clamp(170px, 100dvh - 560px, 380px);
+      height: clamp(170px, 100vh - 540px, 380px);
+      height: clamp(170px, 100dvh - 540px, 380px);
       aspect-ratio: 609 / 1320;
       border-radius: 22px;
       border: 4px solid #111111;
@@ -129,17 +126,21 @@
     .store-btn svg { width: 24px; height: 24px; flex-shrink: 0; }
     .store-btn small { display: block; font-size: 0.62rem; opacity: 0.75; letter-spacing: 0.02em; white-space: nowrap; }
     .store-btn strong { display: block; font-size: 1rem; font-weight: 700; line-height: 1.15; white-space: nowrap; }
-    .url { font-size: 0.8rem; font-weight: 600; color: rgba(255, 255, 255, 0.75); letter-spacing: 0.02em; }
+    .home-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.8rem; font-weight: 600; color: rgba(255, 255, 255, 0.75); letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .home-link span { text-decoration: underline; text-underline-offset: 3px; }
+    .home-link:hover { color: white; }
+    .home-link img { width: 22px; height: 22px; border-radius: 6px; }
   </style>
 </head>
 <body>
 
 <main class="story">
   <header>
-    <div class="brand">
-      <img src="assets/logo.png" alt="TKD Hub logo">
-      <span>TKD Hub</span>
-    </div>
     <h1>TKD Hub <em>2.0</em> is here!</h1>
   </header>
 
@@ -169,7 +170,10 @@
       <span><small>GET IT ON</small><strong>Google Play</strong></span>
     </a>
   </div>
-  <p class="url">tkdhub.app &middot; Free &amp; ad-free</p>
+  <a href="/" class="home-link">
+    <img src="assets/logo.png" alt="">
+    <span>tkdhub.app &middot; Free &amp; ad-free</span>
+  </a>
 </main>
 
 </body>
