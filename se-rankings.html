@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swedish Taekwondo Rankings - TKD Hub</title>
+  <meta name="description" content="Svenska Cupen ranking for Swedish Taekwondo: cadets, juniors, seniors and masters. Search athletes and weight categories.">
+  <meta name="keywords" content="taekwondo, sweden, svenska cupen, ranking, rankinglista, kadetter, juniorer, seniorer, masters, TKD Hub">
+  <link rel="canonical" href="https://tkdhub.app/se-rankings">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Swedish Taekwondo Rankings - TKD Hub">
+  <meta property="og:description" content="Svenska Cupen ranking for cadets, juniors, seniors and masters. Search athletes and weight categories.">
+  <meta property="og:image" content="https://tkdhub.app/assets/cover.png">
+  <meta property="og:url" content="https://tkdhub.app/se-rankings">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TKD Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swedish Taekwondo Rankings - TKD Hub">
+  <meta name="twitter:description" content="Svenska Cupen ranking for cadets, juniors, seniors and masters. Search athletes and weight categories.">
+  <meta name="twitter:image" content="https://tkdhub.app/assets/cover.png">
+
+  <meta name="theme-color" content="#776ECA">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #2D2B42;
+      background: #FAFAFE;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── CSS Variables ── */
+    :root {
+      --primary: #776ECA;
+      --primary-dark: #5A52A3;
+      --primary-light: #9D95E0;
+      --primary-deep: #3E3784;
+      --secondary: #CAD4F1;
+      --gold: #FAD582;
+      --gold-dark: #E8C060;
+      --silver: #DCDDE6;
+      --bronze: #EBC2A0;
+      --dark-appbar: #2D2B42;
+      --text-primary: #2D2B42;
+      --text-secondary: #555555;
+      --text-muted: #8A88A0;
+      --text-light: #FFFFFF;
+      --border: #E0E0E0;
+      --bg: #FAFAFE;
+      --section-alt: #F3F1FB;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(119, 110, 202, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    nav.scrolled { box-shadow: 0 4px 24px rgba(90, 82, 163, 0.3); }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.2;
+    }
+    .nav-flag { width: 28px; height: 18px; border-radius: 3px; flex-shrink: 0; }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      margin-left: 16px;
+      text-decoration: none;
+      color: var(--text-light);
+    }
+    .brand-by {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.75);
+      white-space: nowrap;
+    }
+    .nav-brand img { width: 34px; height: 34px; border-radius: 8px; }
+    .brand-name { font-family: 'Reggae One', cursive; font-size: 1.15rem; white-space: nowrap; }
+    .nav-brand:hover .brand-by { color: white; }
+    .nav-title .short { display: none; }
+    @media (max-width: 600px) {
+      nav .container { height: 58px; }
+      .nav-title { font-size: 0.85rem; gap: 8px; }
+      .nav-title .full { display: none; }
+      .nav-title .short { display: inline; }
+      .nav-flag { width: 24px; height: 15px; }
+      .nav-brand {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "logo by" "logo name";
+        column-gap: 8px;
+        align-items: center;
+      }
+      .nav-brand img { grid-area: logo; width: 30px; height: 30px; }
+      .brand-by { grid-area: by; font-size: 0.62rem; line-height: 1.1; }
+      .brand-name { grid-area: name; font-size: 0.98rem; line-height: 1.1; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      padding: 120px 0 96px;
+      color: white;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(250, 213, 130, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 92% 90%, rgba(157, 149, 224, 0.45) 0%, transparent 45%),
+        linear-gradient(165deg, var(--primary) 0%, var(--primary-dark) 55%, var(--primary-deep) 100%);
+    }
+    .hero h1 {
+      font-family: 'Reggae One', cursive;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p { color: rgba(255, 255, 255, 0.82); font-size: 1.05rem; max-width: 560px; }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 22px;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+    .hero-meta strong { color: white; font-weight: 600; }
+
+    .source-card {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      margin-top: 26px;
+      max-width: 760px;
+      padding: 16px 18px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 18px;
+    }
+    .source-text { flex: 1 1 260px; min-width: 0; }
+    .source-text small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .source-text strong { display: block; font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
+    .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .source-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 16px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .source-btn.primary {
+      background: var(--gold);
+      color: var(--dark-appbar);
+      box-shadow: 0 2px 8px rgba(250, 213, 130, 0.3);
+    }
+    .source-btn.primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    .source-btn.secondary {
+      color: white;
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+    }
+    .source-btn.secondary:hover { background: rgba(255, 255, 255, 0.12); border-color: white; }
+
+    /* ── Search panel ── */
+    .controls {
+      position: relative;
+      margin-top: -56px;
+      z-index: 2;
+    }
+    .search-card {
+      background: white;
+      border: 1px solid var(--secondary);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 20px 50px rgba(62, 55, 132, 0.16);
+    }
+    .search-box { position: relative; }
+    .search-box svg {
+      position: absolute;
+      left: 18px; top: 50%;
+      width: 20px; height: 20px;
+      transform: translateY(-50%);
+      color: var(--primary);
+      pointer-events: none;
+    }
+    .search-box input {
+      width: 100%;
+      font: inherit;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      background: var(--section-alt);
+      border: 2px solid transparent;
+      border-radius: 14px;
+      padding: 15px 48px 15px 50px;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .search-box input::placeholder { color: var(--text-muted); }
+    .search-box input:focus { border-color: var(--primary); background: white; }
+    .search-box input::-webkit-search-cancel-button { display: none; }
+    .search-clear {
+      position: absolute;
+      right: 10px; top: 50%;
+      transform: translateY(-50%);
+      width: 32px; height: 32px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(119, 110, 202, 0.12);
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      display: none;
+    }
+    .search-clear.visible { display: block; }
+    .search-clear:hover { background: rgba(119, 110, 202, 0.22); }
+
+    .filters {
+      min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .chip-group { display: flex; flex-wrap: wrap; gap: 8px; min-width: 0; }
+    .chip {
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: white;
+      border: 1.5px solid var(--secondary);
+      border-radius: 100px;
+      padding: 7px 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .chip:hover { border-color: var(--primary); }
+    .chip[aria-pressed="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(119, 110, 202, 0.3);
+    }
+    .chip .count { opacity: 0.65; font-weight: 500; margin-left: 4px; }
+
+    .result-summary {
+      margin: 22px 4px 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .result-summary strong { color: var(--text-primary); }
+
+    /* ── Rankings ── */
+    main { padding-bottom: 64px; }
+    .division { margin-top: 36px; }
+    .division-header {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      margin-bottom: 14px;
+    }
+    .division-header h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .division-header span { color: var(--text-muted); font-size: 0.9rem; }
+
+    .gender-group + .gender-group { margin-top: 24px; }
+    .gender-label {
+      margin: 0 2px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
+      align-items: start;
+      gap: 16px;
+    }
+    .category {
+      min-width: 0;
+      background: white;
+      border: 1px solid #ECEAF6;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(45, 43, 66, 0.04);
+    }
+    .category-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--section-alt);
+      border-bottom: 1px solid #ECEAF6;
+    }
+    .category-title { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .category-title h3 { font-size: 1.05rem; font-weight: 700; white-space: nowrap; }
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--primary-dark);
+      background: rgba(119, 110, 202, 0.12);
+      padding: 3px 9px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .category-count { font-size: 0.82rem; color: var(--text-muted); white-space: nowrap; }
+
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th {
+      text-align: left;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      padding: 10px 8px 6px;
+      white-space: nowrap;
+    }
+    td {
+      padding: 9px 8px;
+      border-top: 1px solid #F1EFF8;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child { padding-left: 18px; width: 44px; }
+    th:last-child, td:last-child { padding-right: 18px; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    td.num { color: var(--text-secondary); }
+    td.num.empty { color: #C9C7D8; }
+    td.total { font-weight: 700; color: var(--text-primary); }
+    tr.match td { background: rgba(250, 213, 130, 0.18); }
+
+    .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      background: #F4F3F9;
+    }
+    .rank-1 { background: var(--gold); color: var(--dark-appbar); }
+    .rank-2 { background: var(--silver); color: var(--dark-appbar); }
+    .rank-3 { background: var(--bronze); color: var(--dark-appbar); }
+
+    .athlete { font-weight: 600; color: var(--text-primary); white-space: normal; min-width: 140px; }
+    .athlete .last { text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap; }
+    .tie {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px; height: 17px;
+      margin-left: 6px;
+      border-radius: 50%;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: rgba(119, 110, 202, 0.14);
+      cursor: help;
+      vertical-align: 1px;
+    }
+    mark {
+      background: rgba(250, 213, 130, 0.7);
+      color: inherit;
+      border-radius: 3px;
+      padding: 0 1px;
+    }
+
+    .tie-note {
+      display: none;
+      margin-top: 4px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--primary-dark);
+    }
+    .athlete.show-note .tie-note { display: block; }
+    button.tie { border: none; font-family: inherit; padding: 0; cursor: pointer; }
+
+    .legend { margin: 6px 4px 0; font-size: 0.8rem; color: var(--text-muted); }
+
+    .empty-state {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--text-secondary);
+    }
+    .empty-state .icon { font-size: 2.4rem; margin-bottom: 10px; }
+    .empty-state h2 { font-size: 1.25rem; color: var(--text-primary); margin-bottom: 6px; }
+
+
+    /* ── Footer ── */
+    footer {
+      background: #3A3A4A;
+      color: var(--secondary);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .footer-brand img { width: 30px; height: 30px; border-radius: 6px; }
+    .footer-brand span { font-family: 'Reggae One', cursive; color: white; font-size: 1rem; }
+    .footer-copy { font-size: 0.85rem; color: #999; }
+    .footer-copy a { color: var(--secondary); text-underline-offset: 3px; }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .hero { padding: 92px 0 76px; }
+      .hero h1 { font-size: 1.9rem; margin-bottom: 8px; }
+      .hero p { font-size: 0.95rem; line-height: 1.5; }
+      .hero-meta { gap: 2px 14px; margin-top: 14px; font-size: 0.8rem; }
+      .source-card { margin-top: 18px; padding: 14px; gap: 12px; border-radius: 16px; }
+      .source-text strong { font-size: 0.95rem; }
+      .source-links { width: 100%; }
+      .source-btn { flex: 1 1 0; justify-content: center; padding: 9px 10px; font-size: 0.82rem; }
+      .controls { margin-top: -48px; }
+      .search-card { padding: 12px; border-radius: 18px; }
+      .search-box svg { left: 14px; width: 18px; height: 18px; }
+      .search-box input { padding: 12px 42px 12px 42px; border-radius: 12px; font-size: 16px; }
+      .search-clear { right: 8px; width: 30px; height: 30px; }
+      .filters { flex-direction: column; gap: 8px; margin-top: 10px; }
+      .chip-group { gap: 5px; }
+      .chip { font-size: 0.78rem; padding: 4px 9px; border-width: 1px; }
+      .chip .count { display: none; }
+      .chip[aria-pressed="true"] { box-shadow: 0 2px 8px rgba(119, 110, 202, 0.3); }
+      .result-summary { margin-top: 16px; font-size: 0.85rem; }
+      .legend { font-size: 0.75rem; }
+      .division { margin-top: 28px; }
+      .division-header { margin-bottom: 10px; }
+      .division-header h2 { font-size: 1.25rem; }
+      .division-header span { font-size: 0.8rem; }
+      .grid { gap: 12px; }
+      .gender-group + .gender-group { margin-top: 20px; }
+      .category { border-radius: 16px; }
+      .category-head { padding: 11px 14px; }
+      .category-title h3 { font-size: 1rem; }
+      footer { padding: 28px 0; }
+      .footer-inner { flex-direction: column; gap: 12px; }
+      .footer-copy { text-align: center; }
+    }
+
+    /* Phones: keep every column, just tighter */
+    @media (max-width: 600px) {
+      table { font-size: 0.85rem; }
+      th { padding: 8px 4px 4px; font-size: 0.64rem; letter-spacing: 0.03em; }
+      td { padding: 9px 4px; }
+      td.num { font-size: 0.8rem; }
+      .comp { min-width: 30px; }
+      th:first-child, td:first-child { padding-left: 12px; padding-right: 6px; width: 36px; }
+      th:last-child, td:last-child { padding-right: 12px; }
+      .rank { width: 24px; height: 24px; font-size: 0.78rem; }
+      .athlete { min-width: 0; line-height: 1.3; }
+      .athlete .last { white-space: normal; overflow-wrap: anywhere; }
+      td.total { font-size: 0.9rem; padding-left: 8px; }
+      .tie { width: 15px; height: 15px; margin-left: 4px; font-size: 0.6rem; }
+    }
+    @media (max-width: 360px) {
+      th { padding-left: 2px; padding-right: 2px; font-size: 0.6rem; letter-spacing: 0.02em; }
+      td { padding-left: 2px; padding-right: 2px; }
+      td.num { font-size: 0.75rem; }
+      .comp { min-width: 26px; }
+      th:first-child, td:first-child { padding-left: 10px; padding-right: 4px; width: 32px; }
+      th:last-child, td:last-child { padding-right: 10px; }
+      .athlete { font-size: 0.8rem; }
+      td.total { font-size: 0.85rem; padding-left: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-title">
+      <svg class="nav-flag" viewBox="0 0 16 10" aria-hidden="true"><rect width="16" height="10" fill="#006AA7"/><rect x="5" width="2" height="10" fill="#FECC02"/><rect y="4" width="16" height="2" fill="#FECC02"/></svg>
+      <span class="full">Swedish Taekwondo Kyorugi Rankings</span>
+      <span class="short">Swedish Kyorugi Rankings</span>
+    </div>
+    <a href="/" class="nav-brand" title="TKD Hub">
+      <span class="brand-by">presented by</span>
+      <img src="/assets/logo.png" alt="">
+      <span class="brand-name">TKD Hub</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<header class="hero">
+  <div class="container">
+    <h1>Svenska Cupen <em>Ranking</em></h1>
+    <p>The ranking for cadets, juniors, seniors and masters, in an easy-to-search view. Look up an athlete or a weight category.</p>
+    <div class="hero-meta" id="hero-meta"></div>
+    <div class="source-card">
+      <div class="source-text">
+        <small>Official source</small>
+        <strong>Svenska Taekwondounionen &middot; Ranking <span id="source-season">2026</span></strong>
+      </div>
+      <div class="source-links">
+        <a class="source-btn primary" id="source-pdf" href="https://www.svenskataekwondounionen.se/kyorugi/resultat-rankning/" target="_blank" rel="noopener">Official PDF &#x2197;</a>
+        <a class="source-btn secondary" href="https://www.svenskataekwondounionen.se/kyorugi/resultat-rankning/" target="_blank" rel="noopener">STU results &amp; ranking &#x2197;</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- ── Search & filters ── -->
+    <div class="controls">
+      <div class="search-card">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="search" placeholder="Search athlete or category, e.g. M-58" autocomplete="off" aria-label="Search athletes and categories">
+          <button type="button" class="search-clear" id="search-clear" aria-label="Clear search">&times;</button>
+        </div>
+        <div class="filters">
+          <div class="chip-group" id="division-filter" role="group" aria-label="Division"></div>
+          <div class="chip-group" id="gender-filter" role="group" aria-label="Gender"></div>
+        </div>
+      </div>
+      <div class="result-summary" id="summary" aria-live="polite"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div id="results"></div>
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand">
+        <img src="/assets/logo.png" alt="">
+        <span>TKD Hub</span>
+      </a>
+      <div class="footer-copy">
+        &copy; 2026 TKD Hub &middot; Rankings from <a href="https://www.svenskataekwondounionen.se/kyorugi/resultat-rankning/" target="_blank" rel="noopener" title="Svenska Taekwondounionen">STU</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // ── Rankings ──
+  const DIVISION_KEYS = ['cadetRankings', 'juniorRankings', 'seniorRankings', 'mastersRankings'];
+  const DIVISION_LABELS = {
+    cadetRankings: 'Cadets',
+    juniorRankings: 'Juniors',
+    seniorRankings: 'Seniors',
+    mastersRankings: 'Masters',
+  };
+  const COMP_ABBR = { sc1: 'SC1', sc2: 'SC2', sc3: 'SC3', masterkapen: 'SM' };
+
+  const state = { query: '', division: 'all', gender: 'all' };
+  let data = null;
+  let categories = [];
+
+  const els = {
+    search: document.getElementById('search'),
+    clear: document.getElementById('search-clear'),
+    divisionFilter: document.getElementById('division-filter'),
+    genderFilter: document.getElementById('gender-filter'),
+    summary: document.getElementById('summary'),
+    results: document.getElementById('results'),
+    heroMeta: document.getElementById('hero-meta'),
+    legend: document.getElementById('legend'),
+  };
+
+  const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+  ));
+
+  // Lowercase and strip diacritics so "jonsson" matches "JÖNSSON"; spaces and "-" are dropped
+  // so "m 58" and "m58" both match "M-58 kg". "+" is kept so "F-59" never matches "F+59 kg".
+  const fold = (s) => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const compact = (s) => fold(s).replace(/[\s-]/g, '');
+
+  // Senior women use "W", everyone else "F"
+  const genderOf = (name) => (name.startsWith('M') ? 'male' : 'female');
+
+  function highlight(text, terms) {
+    if (!terms.length) return escapeHtml(text);
+    const folded = fold(text);
+    const ranges = [];
+    terms.forEach((t) => {
+      let i = folded.indexOf(t);
+      while (t && i !== -1) {
+        ranges.push([i, i + t.length]);
+        i = folded.indexOf(t, i + t.length);
+      }
+    });
+    if (!ranges.length) return escapeHtml(text);
+    ranges.sort((a, b) => a[0] - b[0]);
+    let out = '';
+    let pos = 0;
+    ranges.forEach(([s, e]) => {
+      if (e <= pos) return;
+      s = Math.max(s, pos);
+      out += escapeHtml(text.slice(pos, s)) + '<mark>' + escapeHtml(text.slice(s, e)) + '</mark>';
+      pos = e;
+    });
+    return out + escapeHtml(text.slice(pos));
+  }
+
+  function buildIndex() {
+    categories = [];
+    DIVISION_KEYS.forEach((key) => {
+      const div = data[key];
+      if (!div) return;
+      div.categories.forEach((cat) => {
+        const divisionText = `${DIVISION_LABELS[key]} ${div.name} ${div.ageGroup}`;
+        categories.push({
+          ...cat,
+          division: key,
+          gender: genderOf(cat.name),
+          categoryKey: compact(`${cat.name} ${divisionText}`),
+          categoryText: fold(`${cat.name} ${divisionText}`),
+          rankings: cat.rankings.map((r) => ({
+            ...r,
+            fullName: `${r.firstName} ${r.lastName}`,
+            nameKey: fold(`${r.firstName} ${r.lastName}`),
+          })),
+        });
+      });
+    });
+  }
+
+  // A category matches when every search term hits the category/division text.
+  // Otherwise, athletes match when every term hits their name (or the category text,
+  // so "senior adam" finds Adam among seniors).
+  function filter() {
+    const terms = fold(state.query).split(/\s+/).filter(Boolean);
+    const out = [];
+    categories.forEach((cat) => {
+      if (state.division !== 'all' && cat.division !== state.division) return;
+      if (state.gender !== 'all' && cat.gender !== state.gender) return;
+      if (!terms.length) { out.push({ cat, rows: cat.rankings, matches: new Set(), nameTerms: [] }); return; }
+
+      const catHit = (t) => cat.categoryText.includes(t) || cat.categoryKey.includes(compact(t));
+      if (terms.every(catHit)) {
+        out.push({ cat, rows: cat.rankings, matches: new Set(), nameTerms: [], catTerms: terms });
+        return;
+      }
+      const matches = new Set();
+      cat.rankings.forEach((r) => {
+        if (terms.every((t) => r.nameKey.includes(t) || catHit(t)) && terms.some((t) => r.nameKey.includes(t))) {
+          matches.add(r);
+        }
+      });
+      if (matches.size) {
+        out.push({ cat, rows: cat.rankings, matches, nameTerms: terms.filter((t) => !catHit(t)) });
+      }
+    });
+    return out;
+  }
+
+  function renderCategory({ cat, rows, matches, nameTerms, catTerms }) {
+    const comps = data.competitions;
+    const head = comps.map((c) => (
+      `<th class="num comp" title="${escapeHtml(c.name)}">${COMP_ABBR[c.id] || escapeHtml(c.id)}</th>`
+    )).join('');
+    const body = rows.map((r) => {
+      const cells = comps.map((c) => {
+        const v = r.results[c.id];
+        return v == null ? '<td class="num comp empty">&ndash;</td>' : `<td class="num comp">${escapeHtml(v)}</td>`;
+      }).join('');
+      const tie = r.tiebreakNote
+        ? `<button type="button" class="tie" title="${escapeHtml(r.tiebreakNote)}" aria-label="Show tiebreak note">i</button>`
+        : '';
+      const tieNote = r.tiebreakNote ? `<span class="tie-note">Tiebreak: ${escapeHtml(r.tiebreakNote)}</span>` : '';
+      const rankClass = r.rank <= 3 ? ` rank-${r.rank}` : '';
+      return `<tr${matches.has(r) ? ' class="match"' : ''}>
+        <td><span class="rank${rankClass}">${r.rank}</span></td>
+        <td class="athlete">${highlight(r.firstName, nameTerms)} <span class="last">${highlight(r.lastName, nameTerms)}${tie}</span>${tieNote}</td>
+        ${cells}
+        <td class="num total">${escapeHtml(r.points)}</td>
+      </tr>`;
+    }).join('');
+
+    const athletes = cat.athleteCount ?? rows.length;
+    return `<article class="category" id="${escapeHtml(cat.categoryId)}">
+      <div class="category-head">
+        <div class="category-title">
+          <h3>${highlight(cat.name, catTerms || [])}</h3>
+          <span class="tag">${DIVISION_LABELS[cat.division]}</span>
+        </div>
+        <span class="category-count">${athletes} athlete${athletes === 1 ? '' : 's'}</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Athlete</th>${head}<th class="num">Total</th></tr></thead>
+          <tbody>${body}</tbody>
+        </table>
+      </div>
+    </article>`;
+  }
+
+  function render() {
+    const results = filter();
+    const athleteMatches = results.reduce((n, r) => n + r.matches.size, 0);
+
+    if (!results.length) {
+      els.summary.innerHTML = '';
+      els.results.innerHTML = `<div class="empty-state">
+        <div class="icon">&#x1F50E;</div>
+        <h2>No results</h2>
+        <p>Nothing matches &ldquo;${escapeHtml(state.query)}&rdquo;. Try another name or a category like &ldquo;F-55&rdquo;.</p>
+      </div>`;
+      return;
+    }
+
+    const catCount = `<strong>${results.length}</strong> categor${results.length === 1 ? 'y' : 'ies'}`;
+    els.summary.innerHTML = athleteMatches
+      ? `<strong>${athleteMatches}</strong> athlete${athleteMatches === 1 ? '' : 's'} found in ${catCount}`
+      : `Showing ${catCount}`;
+
+    // Group by division, keeping the original order
+    const html = DIVISION_KEYS.map((key) => {
+      const group = results.filter((r) => r.cat.division === key);
+      if (!group.length) return '';
+      return `<section class="division">
+        <div class="division-header">
+          <h2>${DIVISION_LABELS[key]}</h2>
+        </div>
+        ${['male', 'female'].map((g) => {
+          const cats = group.filter((r) => r.cat.gender === g);
+          if (!cats.length) return '';
+          return `<div class="gender-group">
+            <h3 class="gender-label">${g === 'male' ? 'Male' : 'Female'}</h3>
+            <div class="grid">${cats.map(renderCategory).join('')}</div>
+          </div>`;
+        }).join('')}
+      </section>`;
+    }).join('');
+    els.results.innerHTML = html;
+  }
+
+  function renderChips(container, options, key) {
+    container.innerHTML = options.map(([value, label, count]) => (
+      `<button type="button" class="chip" data-value="${value}" aria-pressed="${state[key] === value}">${label}${count != null ? `<span class="count">${count}</span>` : ''}</button>`
+    )).join('');
+    container.onclick = (e) => {
+      const btn = e.target.closest('.chip');
+      if (!btn) return;
+      state[key] = btn.dataset.value;
+      container.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', c === btn));
+      syncUrl();
+      render();
+    };
+  }
+
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (state.query) params.set('q', state.query);
+    if (state.division !== 'all') params.set('division', state.division.replace('Rankings', ''));
+    if (state.gender !== 'all') params.set('gender', state.gender);
+    const qs = params.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  }
+
+  function readUrl() {
+    const params = new URLSearchParams(location.search);
+    state.query = params.get('q') || '';
+    const division = `${params.get('division')}Rankings`;
+    if (DIVISION_KEYS.includes(division)) state.division = division;
+    if (['male', 'female'].includes(params.get('gender'))) state.gender = params.get('gender');
+  }
+
+  function formatDate(iso) {
+    const d = new Date(`${iso}T00:00:00`);
+    return isNaN(d) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  async function init() {
+    readUrl();
+    try {
+      const res = await fetch('/assets/sweden-rankings.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error(res.status);
+      data = await res.json();
+    } catch (err) {
+      els.results.innerHTML = `<div class="empty-state">
+        <div class="icon">&#x26A0;&#xFE0F;</div>
+        <h2>Couldn&rsquo;t load rankings</h2>
+        <p>${location.protocol === 'file:'
+          ? 'Browsers block loading data from file:// pages. Run a local server instead, e.g. <code>python3 -m http.server</code>.'
+          : 'Please refresh the page and try again.'}</p>
+      </div>`;
+      return;
+    }
+
+    buildIndex();
+    const athleteTotal = categories.reduce((n, c) => n + c.rankings.length, 0);
+    // Progress is the same for every division, so show it once
+    const progress = data[DIVISION_KEYS.find((k) => data[k])];
+    els.heroMeta.innerHTML = `
+      <span>Season <strong>${data.season}</strong></span>
+      <span><strong>${progress.completedCompetitions} of ${progress.totalCompetitions}</strong> competitions completed</span>
+      <span><strong>${categories.length}</strong> categories &middot; <strong>${athleteTotal}</strong> athletes</span>
+      <span>Updated <strong>${formatDate(data.updatedAt)}</strong></span>`;
+    document.getElementById('source-season').textContent = data.season;
+    if (data.sourceUrl) document.getElementById('source-pdf').href = data.sourceUrl;
+
+    els.legend.textContent = data.competitions
+      .map((c) => `${COMP_ABBR[c.id] || c.id} = ${c.name}`).join(' · ');
+
+    const countFor = (key) => categories.filter((c) => c.division === key).length;
+    renderChips(els.divisionFilter, [
+      ['all', 'All', categories.length],
+      ...DIVISION_KEYS.filter((k) => data[k]).map((k) => [k, DIVISION_LABELS[k], countFor(k)]),
+    ], 'division');
+    renderChips(els.genderFilter, [['all', 'All'], ['male', 'Male'], ['female', 'Female']], 'gender');
+
+    els.results.addEventListener('click', (e) => {
+      const tie = e.target.closest('.tie');
+      if (tie) tie.closest('.athlete').classList.toggle('show-note');
+    });
+    if (window.matchMedia('(max-width: 480px)').matches) {
+      els.search.placeholder = 'Search name or category';
+    }
+
+    els.search.value = state.query;
+    els.clear.classList.toggle('visible', !!state.query);
+    els.search.addEventListener('input', () => {
+      state.query = els.search.value.trim();
+      els.clear.classList.toggle('visible', !!els.search.value);
+      syncUrl();
+      render();
+    });
+    els.clear.addEventListener('click', () => {
+      els.search.value = '';
+      els.search.dispatchEvent(new Event('input'));
+      els.search.focus();
+    });
+
+    render();
+  }
+
+  init();
+</script>
+</body>
+</html>

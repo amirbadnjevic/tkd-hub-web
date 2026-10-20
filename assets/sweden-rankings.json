@@ -1,0 +1,3746 @@
+{
+  "name": "Svenska Cupen Ranking 2026",
+  "season": 2026,
+  "updatedAt": "2026-10-18",
+  "sourceUrl": "https://www.svenskataekwondounionen.se/wp-content/uploads/2026/10/Ranking-Svenska-Cupen-1-2-2026.pdf",
+  "competitions": [
+    {
+      "id": "sc1",
+      "name": "Svenska Cupen 1"
+    },
+    {
+      "id": "sc2",
+      "name": "Svenska Cupen 2"
+    },
+    {
+      "id": "sc3",
+      "name": "Svenska Cupen 3"
+    },
+    {
+      "id": "masterkapen",
+      "name": "Svenska Masterkapen"
+    }
+  ],
+  "cadetRankings": {
+    "name": "Cadet Division",
+    "ageGroup": "Kadetter",
+    "completedCompetitions": 2,
+    "totalCompetitions": 4,
+    "categories": [
+      {
+        "name": "M-37 kg",
+        "categoryId": "se-cadet-m-37",
+        "athleteCount": 8,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Adam",
+            "lastName": "DIRAWI",
+            "points": "13.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Pablo",
+            "lastName": "AHRELL",
+            "points": "13.6",
+            "results": {
+              "sc1": "10",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Marvin",
+            "lastName": "SJØDIN",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Adrian",
+            "lastName": "JOBRAIL",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Emir Alp",
+            "lastName": "UYE",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Elias",
+            "lastName": "RISKA",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: DIRAWI Adam (1:a)."
+          },
+          {
+            "rank": 7,
+            "firstName": "Vincent",
+            "lastName": "LILJA",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Sami",
+            "lastName": "PETAJISTO",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-41 kg",
+        "categoryId": "se-cadet-m-41",
+        "athleteCount": 8,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Jesper",
+            "lastName": "ØVEGARD",
+            "points": "13.6",
+            "results": {
+              "sc1": "10",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Sebastian",
+            "lastName": "AHLBLOM",
+            "points": "10",
+            "results": {
+              "sc1": null,
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Elmer",
+            "lastName": "AHRELL",
+            "points": "8.16",
+            "results": {
+              "sc1": "6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Harry",
+            "lastName": "HOLGERSSON",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Gabriel",
+            "lastName": "TOUMA",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Marko",
+            "lastName": "BRAHJA",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Kirubel",
+            "lastName": "FEKADE GEBREMICHAEL",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Sami",
+            "lastName": "PETAJISTO",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-45 kg",
+        "categoryId": "se-cadet-m-45",
+        "athleteCount": 9,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Adib",
+            "lastName": "MAMLOUEI",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Danilo",
+            "lastName": "BENGTSSON",
+            "points": "13.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Philip",
+            "lastName": "JOHANSSON",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Kaan",
+            "lastName": "HELLSTRÖM",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Oliver",
+            "lastName": "TROLLESTAD",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Bleart",
+            "lastName": "GASHI",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: BENGTSSON Danilo (1:a)."
+          },
+          {
+            "rank": 7,
+            "firstName": "Aiken",
+            "lastName": "HELLGREN",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Dexter",
+            "lastName": "WEIBULL",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 9,
+            "firstName": "Alex",
+            "lastName": "AGREN",
+            "points": "1.51",
+            "results": {
+              "sc1": "1.51",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-49 kg",
+        "categoryId": "se-cadet-m-49",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "David",
+            "lastName": "TASMIM",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Noah",
+            "lastName": "PETTERSSON",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Mio",
+            "lastName": "JONSSON",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Bruce",
+            "lastName": "LY",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Viktor",
+            "lastName": "BRYCKE",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-53 kg",
+        "categoryId": "se-cadet-m-53",
+        "athleteCount": 11,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Jakub",
+            "lastName": "KROL",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Elliot",
+            "lastName": "SIU",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Ludwig",
+            "lastName": "BRANDT",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Jon",
+            "lastName": "GONZAGA JONSSON",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Benjamin",
+            "lastName": "WESTLUND",
+            "points": "5.11",
+            "results": {
+              "sc1": "1.51",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Edvin",
+            "lastName": "THUNMARKER",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Joseph",
+            "lastName": "HADDAD",
+            "points": "3.67",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "1.51",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Yesukhei",
+            "lastName": "BEKHBAT",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 9,
+            "firstName": "Mohammed",
+            "lastName": "TELLO",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: KROL Jakub (1:a)."
+          },
+          {
+            "rank": 10,
+            "firstName": "Dexter",
+            "lastName": "FRITHIOFF",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 11,
+            "firstName": "Olle",
+            "lastName": "ENTERNÄS",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-57 kg",
+        "categoryId": "se-cadet-m-57",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Lukas",
+            "lastName": "AYOUB",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Alexander",
+            "lastName": "MOBERG",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Vincent",
+            "lastName": "PREVOLNIK WÄHGEN",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: AYOUB Lukas (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Elias",
+            "lastName": "ÖSTERLUND",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-61 kg",
+        "categoryId": "se-cadet-m-61",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Arkin Aslan",
+            "lastName": "SABUNCU",
+            "points": "7",
+            "results": {
+              "sc1": "6",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Charles",
+            "lastName": "LADHOLM",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Christian",
+            "lastName": "STRANDBERG",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-29 kg",
+        "categoryId": "se-cadet-f-29",
+        "athleteCount": 1,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Dilnura",
+            "lastName": "ZAYNIEVA",
+            "points": "2",
+            "results": {
+              "sc1": "1",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-37 kg",
+        "categoryId": "se-cadet-f-37",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Omayma",
+            "lastName": "ALAMI",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Hedda",
+            "lastName": "AMLOH",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Maedote",
+            "lastName": "GETACHEW",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: ALAMI Omayma (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Najma",
+            "lastName": "BARREALI",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Elsa",
+            "lastName": "THIDELL",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-41 kg",
+        "categoryId": "se-cadet-f-41",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Greta",
+            "lastName": "ALDERIN",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Noyemi",
+            "lastName": "BERNDTSON",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Mathilde",
+            "lastName": "LIND",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Betty",
+            "lastName": "CARLQVIST NYHLEN",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 5,
+            "firstName": "Lovisa",
+            "lastName": "LUNDGREN",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-44 kg",
+        "categoryId": "se-cadet-f-44",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Assyria",
+            "lastName": "SHAMOON",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Linnea",
+            "lastName": "KABRIAL",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Leona",
+            "lastName": "EDVINSSON",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Sana",
+            "lastName": "RASULI",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Ruth",
+            "lastName": "PAHLSSON",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-47 kg",
+        "categoryId": "se-cadet-f-47",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Hermon",
+            "lastName": "GETACHEW",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Nellie",
+            "lastName": "SHABANI",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Ayla",
+            "lastName": "BERGDAHL",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Hedvig",
+            "lastName": "HANNESTAD",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Laila",
+            "lastName": "ABOU SWEID",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-51 kg",
+        "categoryId": "se-cadet-f-51",
+        "athleteCount": 10,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Clara",
+            "lastName": "SKÖLD",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Emine",
+            "lastName": "RUHL",
+            "points": "13.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Alicia",
+            "lastName": "ZAJC",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Alicia",
+            "lastName": "KARLSSON",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Izabell",
+            "lastName": "ISAKSSON",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: SKÖLD Clara (2:a) → RUHL Emine (1:a)."
+          },
+          {
+            "rank": 6,
+            "firstName": "Edda",
+            "lastName": "KARLSSON",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Elize",
+            "lastName": "AVCI KÜÇÜKGÖL",
+            "points": "3.67",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "1.51",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Izabella",
+            "lastName": "BAAZ",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 9,
+            "firstName": "Mina",
+            "lastName": "KÜÇÜKÖSE",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: RUHL Emine (1:a)."
+          },
+          {
+            "rank": 10,
+            "firstName": "Valentina",
+            "lastName": "POUR MANOUCHEHRI",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-55 kg",
+        "categoryId": "se-cadet-f-55",
+        "athleteCount": 6,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Lily",
+            "lastName": "ASP",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Elvira",
+            "lastName": "PANTE",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Nina",
+            "lastName": "FARUQ",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Melody",
+            "lastName": "HOSSEINI",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Mira",
+            "lastName": "SVENSSON",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Liza",
+            "lastName": "STADNIICHUK",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-59 kg",
+        "categoryId": "se-cadet-f-59",
+        "athleteCount": 6,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Stephanie",
+            "lastName": "FOGELQVIST",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Mikaela",
+            "lastName": "DAOUD SMEDBERG",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Lamija",
+            "lastName": "DZAFIC",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Lola",
+            "lastName": "HELLBERG",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Mira",
+            "lastName": "SVENSSON",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 6,
+            "firstName": "Zina",
+            "lastName": "ANDERSSON",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F+59 kg",
+        "categoryId": "se-cadet-f+59",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Hir",
+            "lastName": "LEONA",
+            "points": "10",
+            "results": {
+              "sc1": null,
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Vasilisa",
+            "lastName": "MITRAKOVA",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 3,
+            "firstName": "Keira",
+            "lastName": "JOHANSSON",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Olivia",
+            "lastName": "CASSEBOIS",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "juniorRankings": {
+    "name": "Junior Division",
+    "ageGroup": "Juniorer",
+    "completedCompetitions": 2,
+    "totalCompetitions": 4,
+    "categories": [
+      {
+        "name": "M-45 kg",
+        "categoryId": "se-junior-m-45",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Axel",
+            "lastName": "WIGERUP",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Isa",
+            "lastName": "MARWAN",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Diako",
+            "lastName": "MOHAMMADIAN",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "William",
+            "lastName": "CRONHIELM",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Rayan",
+            "lastName": "SJÖGREN",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-48 kg",
+        "categoryId": "se-junior-m-48",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Mohammad",
+            "lastName": "ALAMI",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Liam",
+            "lastName": "HILLI",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-51 kg",
+        "categoryId": "se-junior-m-51",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Posti",
+            "lastName": "DEVIN",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Milo",
+            "lastName": "SJØDIN",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Dylan",
+            "lastName": "DANIELSSON",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: DEVIN Posti (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Svante",
+            "lastName": "WIGERUP",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-55 kg",
+        "categoryId": "se-junior-m-55",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Kevin",
+            "lastName": "JOHANSSON",
+            "points": "13.6",
+            "results": {
+              "sc1": "10",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Jacob",
+            "lastName": "TASMIM",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Liam",
+            "lastName": "RASMUSSON",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Mohamad",
+            "lastName": "SALHA",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-59 kg",
+        "categoryId": "se-junior-m-59",
+        "athleteCount": 12,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Zack",
+            "lastName": "CLINT",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Anton",
+            "lastName": "POGARCIC",
+            "points": "12.16",
+            "results": {
+              "sc1": "10",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Daniel",
+            "lastName": "GHADDAR",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: CLINT Zack (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Lukas",
+            "lastName": "KNUDSEN",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Nivar",
+            "lastName": "AHMED",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Kevin",
+            "lastName": "BENGTSSON",
+            "points": "3.67",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "1.51",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Jorden",
+            "lastName": "KHAN",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: CLINT Zack (1:a)."
+          },
+          {
+            "rank": 8,
+            "firstName": "Fady",
+            "lastName": "GHARBI",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: GHADDAR Daniel (3:e) → CLINT Zack (1:a)."
+          },
+          {
+            "rank": 9,
+            "firstName": "Atri",
+            "lastName": "ODISHO",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 10,
+            "firstName": "Altin",
+            "lastName": "LAJQI",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: POGARCIC Anton (1:a)."
+          },
+          {
+            "rank": 11,
+            "firstName": "Mohamed",
+            "lastName": "WAEL ABDELGHANI",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: CLINT Zack (2:a) → POGARCIC Anton (1:a)."
+          },
+          {
+            "rank": 12,
+            "firstName": "Tim",
+            "lastName": "WELIN",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-63 kg",
+        "categoryId": "se-junior-m-63",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Victor",
+            "lastName": "SETTVIK",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Ramush",
+            "lastName": "GASHI",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Theo",
+            "lastName": "ÅBERG",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Elliot",
+            "lastName": "OLOFSSON",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-68 kg",
+        "categoryId": "se-junior-m-68",
+        "athleteCount": 7,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Hugo",
+            "lastName": "ÅMAN",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Ihor",
+            "lastName": "HALCHYNSKYI",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Arjun",
+            "lastName": "JASSAL",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: SHKUPOLLI Altin (3:e) → ÅMAN Hugo (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Mete",
+            "lastName": "MEHMED",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Ali",
+            "lastName": "DIRAWI",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Altin",
+            "lastName": "SHKUPOLLI",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: ÅMAN Hugo (1:a)."
+          },
+          {
+            "rank": 7,
+            "firstName": "Kevin",
+            "lastName": "TRAN",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-73 kg",
+        "categoryId": "se-junior-m-73",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Diego",
+            "lastName": "ÅBERG",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Anataolii",
+            "lastName": "BIGUN",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Leonardo",
+            "lastName": "LY",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Marwan",
+            "lastName": "QABLI",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M+78 kg",
+        "categoryId": "se-junior-m+78",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Sebastian",
+            "lastName": "LIND",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Sebastian",
+            "lastName": "HEDBERG WENEMYR",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Caspian",
+            "lastName": "SIMUNOV",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-42 kg",
+        "categoryId": "se-junior-f-42",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Liwia",
+            "lastName": "WIDENLOU",
+            "points": "10",
+            "results": {
+              "sc1": null,
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Sigrid",
+            "lastName": "JOHNSSON",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 3,
+            "firstName": "Isa",
+            "lastName": "GERON YOUSRI",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Astrid",
+            "lastName": "GUSTAFSSON",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-44 kg",
+        "categoryId": "se-junior-f-44",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Nelly",
+            "lastName": "NGUYEN",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Ajla",
+            "lastName": "HADZIHRUSTIC",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-46 kg",
+        "categoryId": "se-junior-f-46",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Nazaah",
+            "lastName": "WALIULLAH",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Dalia",
+            "lastName": "HODZIC",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Veronika",
+            "lastName": "NIKOLAIEVA",
+            "points": "1",
+            "results": {
+              "sc1": "1",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-49 kg",
+        "categoryId": "se-junior-f-49",
+        "athleteCount": 6,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Ajla",
+            "lastName": "BEHRAM",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Diana",
+            "lastName": "HAJJARI",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Märta",
+            "lastName": "STRIDSMAN",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Salma",
+            "lastName": "HUSSEIN",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 5,
+            "firstName": "Lilly",
+            "lastName": "NILSSON BERNAU",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Stella",
+            "lastName": "BYSTRÖM",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-52 kg",
+        "categoryId": "se-junior-f-52",
+        "athleteCount": 9,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Vendla",
+            "lastName": "WIDZ",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Tova",
+            "lastName": "KRISTOFFERSSON",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Fabiola",
+            "lastName": "DANIELSSON",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Saga",
+            "lastName": "SANDIN",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: WIDZ Vendla (1:a)."
+          },
+          {
+            "rank": 5,
+            "firstName": "Emelie",
+            "lastName": "KRAIT",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Sophia",
+            "lastName": "LENNWALD",
+            "points": "3.67",
+            "results": {
+              "sc1": "1.51",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Filuca",
+            "lastName": "DUE BYSTRÖM HANSEN",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Isabella",
+            "lastName": "DALSTED",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: KRISTOFFERSSON Tova (3:e) → WIDZ Vendla (1:a)."
+          },
+          {
+            "rank": 9,
+            "firstName": "Stella",
+            "lastName": "BYSTRÖM",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-55 kg",
+        "categoryId": "se-junior-f-55",
+        "athleteCount": 9,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Novalie",
+            "lastName": "GUSTAVSSON",
+            "points": "13.6",
+            "results": {
+              "sc1": "10",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Evelina",
+            "lastName": "ZUMERI",
+            "points": "12.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Tove",
+            "lastName": "HELLGREN",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Elona",
+            "lastName": "BEJTULLAHU",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Leona",
+            "lastName": "HELLGREN",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Thelma",
+            "lastName": "JOHANSSON",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Fabiola",
+            "lastName": "DANIELSSON",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: HELLGREN Tove (2:a) → ZUMERI Evelina (1:a)."
+          },
+          {
+            "rank": 8,
+            "firstName": "Isabella",
+            "lastName": "DALSTED",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 9,
+            "firstName": "Ada",
+            "lastName": "OZYAPAR",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-59 kg",
+        "categoryId": "se-junior-f-59",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Isabel",
+            "lastName": "LINDQUIST",
+            "points": "7",
+            "results": {
+              "sc1": "1",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Alma",
+            "lastName": "ABBAS",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-63 kg",
+        "categoryId": "se-junior-f-63",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Phoebe",
+            "lastName": "MADIUS",
+            "points": "13.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Athena",
+            "lastName": "MAURITZSSON",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Sanna",
+            "lastName": "ABOU SWEID",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: MADIUS Phoebe (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Minnah",
+            "lastName": "SHEMESANI",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-68 kg",
+        "categoryId": "se-junior-f-68",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Adele",
+            "lastName": "LOOF",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Hilana",
+            "lastName": "SABAH",
+            "points": "10",
+            "results": {
+              "sc1": null,
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Ester",
+            "lastName": "WALLGREN",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Abigail",
+            "lastName": "MUSANA",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 5,
+            "firstName": "Olivia",
+            "lastName": "HALL",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F+68 kg",
+        "categoryId": "se-junior-f+68",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Abigail",
+            "lastName": "MUSANA",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Annie",
+            "lastName": "HÄGG",
+            "points": "4.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Alma",
+            "lastName": "ÖSTERLUND",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "seniorRankings": {
+    "name": "Senior Division",
+    "ageGroup": "Seniorer",
+    "completedCompetitions": 2,
+    "totalCompetitions": 4,
+    "categories": [
+      {
+        "name": "M-54 kg",
+        "categoryId": "se-senior-m-54",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Arian",
+            "lastName": "MIAKHEL",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 2,
+            "firstName": "Anis",
+            "lastName": "IBDOW",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-58 kg",
+        "categoryId": "se-senior-m-58",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Mussa",
+            "lastName": "MARWAN",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Albara",
+            "lastName": "ALAMI",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Alexander",
+            "lastName": "SEGERDAHL",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: MARWAN Mussa (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Jorden",
+            "lastName": "KHAN",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Sef",
+            "lastName": "JARRAR",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-63 kg",
+        "categoryId": "se-senior-m-63",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Josef",
+            "lastName": "ALAMI",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Sherif",
+            "lastName": "BADJIE ERIKSSON",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Salman",
+            "lastName": "HEYDARI",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-68 kg",
+        "categoryId": "se-senior-m-68",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Markus",
+            "lastName": "RIBBESTAD",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Aria",
+            "lastName": "PADISAR",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Oscar",
+            "lastName": "LARSSON",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-74 kg",
+        "categoryId": "se-senior-m-74",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Ali",
+            "lastName": "ALIAN",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Kevin",
+            "lastName": "SOUAID",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 3,
+            "firstName": "Robin",
+            "lastName": "JOHANSSON",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Anton",
+            "lastName": "NILSSON",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-80 kg",
+        "categoryId": "se-senior-m-80",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Linus",
+            "lastName": "VESTERLUND",
+            "points": "7",
+            "results": {
+              "sc1": "6",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Tim",
+            "lastName": "ÖDLING HEDQVIST",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Nermin",
+            "lastName": "HODZIC",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-87 kg",
+        "categoryId": "se-senior-m-87",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Rasmus",
+            "lastName": "BRADING",
+            "points": "7",
+            "results": {
+              "sc1": "1",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Emilio",
+            "lastName": "VALLEJOS TAPIA",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M+87 kg",
+        "categoryId": "se-senior-m+87",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Samiallah",
+            "lastName": "AFZALI",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Maisam",
+            "lastName": "AQEILI",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-46 kg",
+        "categoryId": "se-senior-w-46",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Nazaah",
+            "lastName": "WALIULLAH",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Olivia",
+            "lastName": "NORDH",
+            "points": "4.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Dalia",
+            "lastName": "HODZIC",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-49 kg",
+        "categoryId": "se-senior-w-49",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Emma",
+            "lastName": "KELC HANSSON",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Eva-Maria",
+            "lastName": "KANALGA",
+            "points": "10",
+            "results": {
+              "sc1": null,
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Nor",
+            "lastName": "AL-IBRAHIM",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Felicia",
+            "lastName": "BILLQVIST",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Eleni",
+            "lastName": "CHATZIMPAMPIKI",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-53 kg",
+        "categoryId": "se-senior-w-53",
+        "athleteCount": 8,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Tea",
+            "lastName": "LANDENBERG HOLST",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Lucy",
+            "lastName": "HELL",
+            "points": "13.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Kamma",
+            "lastName": "VON WOWERN",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Ellis",
+            "lastName": "JANSSON",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Maja",
+            "lastName": "VENDEL",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 6,
+            "firstName": "Malva",
+            "lastName": "TAPPER LILJEGREN",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 7,
+            "firstName": "Eva-Maria",
+            "lastName": "KANALGA",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: HELL Lucy (3:e) → LANDENBERG HOLST Tea (1:a)."
+          },
+          {
+            "rank": 8,
+            "firstName": "Ella",
+            "lastName": "THUFVESSON",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-57 kg",
+        "categoryId": "se-senior-w-57",
+        "athleteCount": 7,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Alice",
+            "lastName": "BULOW",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Emilia",
+            "lastName": "MILLBERG",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Nathalie",
+            "lastName": "LY",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: BULOW Alice (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Tilda",
+            "lastName": "KVAM",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Emilia",
+            "lastName": "PETTERSEN",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 6,
+            "firstName": "Malva",
+            "lastName": "TAPPER LILJEGREN",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd (Svenska Cupen 1), förlustkedja: MILLBERG Emilia (2:a) → BULOW Alice (1:a)."
+          },
+          {
+            "rank": 7,
+            "firstName": "Daniella",
+            "lastName": "HOLM",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-62 kg",
+        "categoryId": "se-senior-w-62",
+        "athleteCount": 8,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Isabella",
+            "lastName": "EK",
+            "points": "16",
+            "results": {
+              "sc1": "10",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Sofie",
+            "lastName": "ÅKESSON STÅNDIG",
+            "points": "13.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Tindra",
+            "lastName": "ANDERSSON",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Izabella",
+            "lastName": "KALLSTRAND",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Meja",
+            "lastName": "SVENSSON",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: ÅKESSON STÅNDIG Sofie (1:a)."
+          },
+          {
+            "rank": 6,
+            "firstName": "Matilda",
+            "lastName": "MAREE",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: ANDERSSON Tindra (3:e) → ÅKESSON STÅNDIG Sofie (1:a)."
+          },
+          {
+            "rank": 7,
+            "firstName": "Maya",
+            "lastName": "LÖFKVIST",
+            "points": "4.32",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 8,
+            "firstName": "Yasna",
+            "lastName": "RAZAGHI",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-67 kg",
+        "categoryId": "se-senior-w-67",
+        "athleteCount": 2,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Marija",
+            "lastName": "AHLBIN",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Nora",
+            "lastName": "HÖGFELDT",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W-73 kg",
+        "categoryId": "se-senior-w-73",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Alva",
+            "lastName": "CASPERSSON",
+            "points": "16",
+            "results": {
+              "sc1": "6",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Sophie",
+            "lastName": "NILSSON",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Robyn",
+            "lastName": "WENGELIN",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Starkare motstånd, förlustkedja: CASPERSSON Alva (1:a)."
+          },
+          {
+            "rank": 4,
+            "firstName": "Saana",
+            "lastName": "NEUMANN",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "W+73 kg",
+        "categoryId": "se-senior-w+73",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Dania",
+            "lastName": "HAWASH",
+            "points": "20",
+            "results": {
+              "sc1": "10",
+              "sc2": "10",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Rebecka",
+            "lastName": "LÖFKVIST",
+            "points": "9.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Yalda",
+            "lastName": "RAZAGHI",
+            "points": "7.2",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Macarena",
+            "lastName": "LADHOLM",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Izabelle",
+            "lastName": "SAGER",
+            "points": "3.6",
+            "results": {
+              "sc1": null,
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "mastersRankings": {
+    "name": "Masters Division",
+    "ageGroup": "Masters",
+    "completedCompetitions": 2,
+    "totalCompetitions": 4,
+    "categories": [
+      {
+        "name": "M-68 kg",
+        "categoryId": "se-masters-m-68",
+        "athleteCount": 4,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Christoffer Chul",
+            "lastName": "HEDENBJÖRK",
+            "points": "12",
+            "results": {
+              "sc1": "6",
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Fredrik",
+            "lastName": "NYBERG",
+            "points": "5.76",
+            "results": {
+              "sc1": "2.16",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Gabi",
+            "lastName": "KABRIAL",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Lindberg",
+            "lastName": "DICK",
+            "points": "2.16",
+            "results": {
+              "sc1": null,
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M-80 kg",
+        "categoryId": "se-masters-m-80",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Tobias",
+            "lastName": "ERIKSSON",
+            "points": "13.6",
+            "results": {
+              "sc1": "10",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Jerry",
+            "lastName": "KARLSSON",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            },
+            "tiebreakNote": "Bästa placering i senaste tävlingen (Svenska Cupen 2)."
+          },
+          {
+            "rank": 3,
+            "firstName": "Vide",
+            "lastName": "PER",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Jimmy",
+            "lastName": "BERGQVIST",
+            "points": "5.76",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "2.16",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Bartek",
+            "lastName": "MÅRTENSSON",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "M+80 kg",
+        "categoryId": "se-masters-m+80",
+        "athleteCount": 5,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Marcus",
+            "lastName": "RIBBING",
+            "points": "10",
+            "results": {
+              "sc1": "10",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Johan",
+            "lastName": "LENANDER",
+            "points": "6",
+            "results": {
+              "sc1": "6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Andreas",
+            "lastName": "WESTLUND",
+            "points": "4.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 4,
+            "firstName": "Valon",
+            "lastName": "ISLAMAJ",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 5,
+            "firstName": "Michael",
+            "lastName": "HUME-GREN",
+            "points": "2.16",
+            "results": {
+              "sc1": "2.16",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-57 kg",
+        "categoryId": "se-masters-f-57",
+        "athleteCount": 1,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Angelica",
+            "lastName": "NOREN",
+            "points": "2",
+            "results": {
+              "sc1": "1",
+              "sc2": "1",
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-67 kg",
+        "categoryId": "se-masters-f-67",
+        "athleteCount": 3,
+        "rankings": [
+          {
+            "rank": 1,
+            "firstName": "Nina",
+            "lastName": "LINDEBERG",
+            "points": "9.6",
+            "results": {
+              "sc1": "6",
+              "sc2": "3.6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 2,
+            "firstName": "Aicha",
+            "lastName": "YOUSRI",
+            "points": "6",
+            "results": {
+              "sc1": null,
+              "sc2": "6",
+              "sc3": null,
+              "masterkapen": null
+            }
+          },
+          {
+            "rank": 3,
+            "firstName": "Sofia",
+            "lastName": "FRANZEN",
+            "points": "3.6",
+            "results": {
+              "sc1": "3.6",
+              "sc2": null,
+              "sc3": null,
+              "masterkapen": null
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

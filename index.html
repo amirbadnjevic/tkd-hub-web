@@ -190,6 +190,12 @@
       display: block; width: 22px; height: 2px; background: white;
       margin: 5px 0; border-radius: 2px; transition: all 0.3s;
     }
+    .flag-se { width: 18px; height: 12px; border-radius: 2px; margin-right: 2px; vertical-align: -1px; }
+    @media (min-width: 769px) and (max-width: 960px) {
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 0.85rem; white-space: nowrap; }
+      .nav-cta { padding: 8px 14px !important; font-size: 0.85rem !important; }
+    }
     @media (max-width: 768px) {
       .nav-toggle { display: block; }
       .nav-links {
@@ -488,6 +494,15 @@
       gap: 10px;
     }
     .feature-card p { font-size: 0.95rem; }
+    .feature-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .feature-link:hover { color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; }
     @media (max-width: 768px) {
       .features-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
     }
@@ -718,7 +733,7 @@
     .footer-brand img { width: 30px; height: 30px; border-radius: 6px; }
     .footer-brand span { font-family: 'Reggae One', cursive; color: white; font-size: 1rem; }
     .footer-copy { font-size: 0.85rem; color: #999; }
-    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 24px; list-style: none; }
     .footer-links a {
       color: var(--secondary);
       text-decoration: none;
@@ -972,6 +987,7 @@
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#story">Story</a></li>
       <li><a href="#support">Support</a></li>
+      <li><a href="/se-rankings"><svg class="flag-se" viewBox="0 0 16 10" aria-hidden="true"><rect width="16" height="10" fill="#006AA7"/><rect x="5" width="2" height="10" fill="#FECC02"/><rect y="4" width="16" height="2" fill="#FECC02"/></svg> Rankings</a></li>
       <li><a href="/download" class="btn btn-primary nav-cta">Download App</a></li>
     </ul>
   </div>
@@ -1113,6 +1129,7 @@
       <div class="feature-card feature-card-new fade-in">
         <h3>Rankings &amp; Seeding <span class="new-badge">New</span> <span class="feature-icon">&#127942;</span></h3>
         <p>See your seeding number directly inside events, and track personalized rankings across the weight categories and divisions you compete in.</p>
+        <a href="/se-rankings" class="feature-link">View Swedish Kyorugi rankings &rarr;</a>
       </div>
     </div>
   </div>
@@ -1233,6 +1250,7 @@
       <ul class="footer-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#story">Story</a></li>
+        <li><a href="/se-rankings">Swedish Rankings</a></li>
         <li><a href="/download">Download</a></li>
         <li><a href="https://ko-fi.com/tkdhub" target="_blank" rel="noopener">Ko-fi</a></li>
         <li><a href="mailto:tkdhub.app@gmail.com">Contact</a></li>
