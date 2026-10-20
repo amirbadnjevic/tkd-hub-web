@@ -48,7 +48,6 @@
       --primary-deep: #3E3784;
       --secondary: #CAD4F1;
       --gold: #FAD582;
-      --gold-dark: #E8C060;
       --silver: #DCDDE6;
       --bronze: #EBC2A0;
       --dark-appbar: #2D2B42;
@@ -59,6 +58,8 @@
       --border: #E0E0E0;
       --bg: #FAFAFE;
       --section-alt: #F3F1FB;
+      --stu-navy: #16196B;
+      --stu-yellow: #FCD116;
     }
 
     .container {
@@ -165,28 +166,32 @@
     }
     .hero-meta strong { color: white; font-weight: 600; }
 
+    /* Official source card in STU colors */
     .source-card {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 14px 20px;
       margin-top: 26px;
-      max-width: 760px;
-      padding: 16px 18px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      max-width: 780px;
+      padding: 16px 20px;
+      background: var(--stu-navy);
+      border: 2px solid var(--stu-yellow);
       border-radius: 18px;
+      box-shadow: 0 12px 32px rgba(14, 16, 70, 0.35);
     }
-    .source-text { flex: 1 1 260px; min-width: 0; }
+    .source-logo { width: 46px; height: auto; flex-shrink: 0; }
+    .source-text { flex: 1 1 240px; min-width: 0; }
     .source-text small {
       display: block;
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--stu-yellow);
     }
     .source-text strong { display: block; font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
+    .source-sub { display: block; font-size: 0.9rem; font-weight: 500; line-height: 1.35; color: rgba(255, 255, 255, 0.8); }
     .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
     .source-btn {
       display: inline-flex;
@@ -201,16 +206,25 @@
       transition: all 0.2s ease;
     }
     .source-btn.primary {
-      background: var(--gold);
-      color: var(--dark-appbar);
-      box-shadow: 0 2px 8px rgba(250, 213, 130, 0.3);
+      background: var(--stu-yellow);
+      color: var(--stu-navy);
     }
-    .source-btn.primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    .source-btn.primary:hover { filter: brightness(0.94); transform: translateY(-1px); }
     .source-btn.secondary {
       color: white;
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      border: 1.5px solid color-mix(in srgb, var(--stu-yellow) 55%, transparent);
     }
-    .source-btn.secondary:hover { background: rgba(255, 255, 255, 0.12); border-color: white; }
+    .source-btn.secondary:hover { background: color-mix(in srgb, var(--stu-yellow) 12%, transparent); border-color: var(--stu-yellow); }
+    .source-note {
+      display: block;
+      flex-basis: 100%;
+      margin: 0;
+      padding-top: 10px;
+      line-height: 1.45;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
 
     /* ── Search panel ── */
     .controls {
@@ -480,6 +494,9 @@
       .hero p { font-size: 0.95rem; line-height: 1.5; }
       .hero-meta { gap: 2px 14px; margin-top: 14px; font-size: 0.8rem; }
       .source-card { margin-top: 18px; padding: 14px; gap: 12px; border-radius: 16px; }
+      .source-logo { width: 38px; }
+      .source-text { flex-basis: 0; flex-grow: 1; }
+      .source-note { font-size: 0.7rem; padding-top: 8px; }
       .source-text strong { font-size: 0.95rem; }
       .source-links { width: 100%; }
       .source-btn { flex: 1 1 0; justify-content: center; padding: 9px 10px; font-size: 0.82rem; }
@@ -561,14 +578,17 @@
     <p>The ranking for cadets, juniors, seniors and masters, in an easy-to-search view. Look up an athlete or a weight category.</p>
     <div class="hero-meta" id="hero-meta"></div>
     <div class="source-card">
+      <img class="source-logo" src="/assets/stu-logo.png" alt="" width="301" height="400">
       <div class="source-text">
         <small>Official source</small>
-        <strong>Svenska Taekwondounionen &middot; Ranking <span id="source-season">2026</span></strong>
+        <strong>Svenska Taekwondounionen</strong>
+        <span class="source-sub">Ranking <span id="source-season">2026</span></span>
       </div>
       <div class="source-links">
         <a class="source-btn primary" id="source-pdf" href="https://www.svenskataekwondounionen.se/kyorugi/resultat-rankning/" target="_blank" rel="noopener">Official PDF &#x2197;</a>
         <a class="source-btn secondary" href="https://www.svenskataekwondounionen.se/kyorugi/resultat-rankning/" target="_blank" rel="noopener">STU results &amp; ranking &#x2197;</a>
       </div>
+      <small class="source-note">TKD Hub is not affiliated with STU. Rankings are shown as published by Svenska Taekwondounionen.</small>
     </div>
   </div>
 </header>
