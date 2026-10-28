@@ -533,52 +533,34 @@
       .steps { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
     }
 
-    .video-wrapper {
-      margin-top: 48px;
-      display: flex;
-      justify-content: center;
+    /* Screenshots */
+    .shots {
+      display: flex; justify-content: center; align-items: flex-end; gap: 24px;
+      margin-top: 64px;
     }
-    .video-container {
-      position: relative;
-      display: inline-block;
-      max-width: 540px;
-      width: 100%;
-      cursor: pointer;
+    .shot {
+      width: 220px;
+      border-radius: 32px;
+      border: 4px solid #111111;
+      background: #111111;
+      box-shadow: 0 24px 60px rgba(45, 43, 66, 0.22);
+      overflow: hidden;
     }
-    .video-container video {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(90, 50, 180, 0.15);
-      display: block;
+    .shot img { display: block; width: 100%; height: auto; }
+    .shot.center { width: 240px; transform: translateY(-24px); }
+    .shot figcaption {
+      background: white; color: var(--text-primary);
+      font-size: 0.85rem; font-weight: 600; padding: 10px; text-align: center;
     }
-    .video-play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
-      background: rgba(90, 50, 180, 0.85);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.3s, transform 0.3s;
-      cursor: pointer;
+    @media (max-width: 768px) {
+      .shots { gap: 10px; margin-top: 48px; }
+      .shot { width: 23%; border-radius: 16px; border-width: 3px; }
+      .shot.center { width: 25%; transform: translateY(-14px); }
+      .shot figcaption { font-size: 0.7rem; padding: 6px 4px; }
     }
-    .video-play-btn svg {
-      width: 36px;
-      height: 36px;
-      fill: white;
-      margin-left: 4px;
-    }
-    .video-container:hover .video-play-btn {
-      transform: translate(-50%, -50%) scale(1.1);
-      background: rgba(90, 50, 180, 1);
-    }
-    .video-container.playing .video-play-btn {
-      opacity: 0;
-      pointer-events: none;
+    @media (max-width: 560px) {
+      .shots { flex-wrap: wrap; align-items: flex-start; gap: 16px 12px; }
+      .shot, .shot.center { width: calc(50% - 6px); transform: none; }
     }
 
     /* ── Sources ── */
@@ -1152,17 +1134,23 @@
         </div>
       </div>
     </div>
-    <div class="video-wrapper fade-in">
-      <div class="video-container">
-        <video controls playsinline
-          onplay="this.parentElement.classList.add('playing')"
-          onpause="this.parentElement.classList.remove('playing')">
-          <source src="assets/TKD_Hub.mp4" type="video/mp4">
-        </video>
-        <div class="video-play-btn" onclick="this.parentElement.querySelector('video').play()">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-      </div>
+    <div class="shots fade-in">
+      <figure class="shot">
+        <img src="assets/screenshots_iphone/favorites%20with%20logos.png" alt="Favorite Taekwondo events with organizer logos" loading="lazy">
+        <figcaption>Favorites</figcaption>
+      </figure>
+      <figure class="shot center">
+        <img src="assets/screenshots_iphone/event%20details.png" alt="Event details with seeded participants by division" loading="lazy">
+        <figcaption>Event Details</figcaption>
+      </figure>
+      <figure class="shot center">
+        <img src="assets/screenshots_iphone/rankings%20light.PNG" alt="Rankings for a weight category" loading="lazy">
+        <figcaption>Rankings</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/screenshots_iphone/athlete%20profile%20dark.PNG" alt="Athlete profile in dark mode" loading="lazy">
+        <figcaption>Athlete Profiles</figcaption>
+      </figure>
     </div>
   </div>
 </section>
