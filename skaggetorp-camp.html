@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0B10">
+  <title>Skäggetorp International Camp 2027 - Pavel Khan</title>
+  <meta name="description" content="Taekwondo camp with Pavel Khan, two-time Olympic gold coach of Uzbekistan. 4–6 January 2027 in Skäggetorp Centrum, Linköping. All ages, all clubs, 150 EUR.">
+  <link rel="canonical" href="https://tkdhub.app/skaggetorp-camp">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Skäggetorp International Camp 2027 - Pavel Khan">
+  <meta property="og:description" content="Three days with a two-time Olympic gold coach. 4–6 January 2027, Linköping, Sweden. All ages, all clubs, 150 EUR.">
+  <meta property="og:image" content="https://tkdhub.app/assets/skaggetorp-camp.jpg">
+  <meta property="og:url" content="https://tkdhub.app/skaggetorp-camp">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skäggetorp International Camp 2027 - Pavel Khan">
+  <meta name="twitter:description" content="Three days with a two-time Olympic gold coach. 4–6 January 2027, Linköping, Sweden.">
+  <meta name="twitter:image" content="https://tkdhub.app/assets/skaggetorp-camp.jpg">
+
+  <link rel="icon" type="image/png" href="assets/skaggetorp-logo.png">
+  <link rel="apple-touch-icon" href="assets/skaggetorp-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0A0B10;
+      --surface: #13151D;
+      --line: #252836;
+      --blue: #3D6BF5;
+      --blue-dark: #2C55D6;
+      --gold: #F5D90A;
+      --text: #FFFFFF;
+      --muted: #A3A7B7;
+      --faint: #6B7083;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .display { font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 800; text-transform: uppercase; line-height: 0.95; }
+    .label {
+      font-family: 'Saira Condensed', 'Arial Narrow', sans-serif;
+      font-weight: 600; text-transform: uppercase; letter-spacing: 0.22em;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .label.blue { color: var(--blue); }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header { padding: 36px 0 28px; }
+    .head {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+    }
+    .head h1 { font-size: clamp(2.6rem, 11vw, 4.4rem); }
+    .head .label { margin-top: 8px; font-size: clamp(0.9rem, 3.6vw, 1.15rem); letter-spacing: 0.28em; color: #D5D7E0; }
+    .accent { width: 64px; height: 4px; background: var(--blue); margin-top: 18px; }
+    .club-logo { width: clamp(72px, 20vw, 110px); height: auto; flex-shrink: 0; }
+
+    /* Poster */
+    .poster {
+      display: block; width: 100%; height: auto;
+      border-radius: 14px; border: 1px solid var(--line);
+    }
+
+    /* Coach */
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    .coach-name { font-size: clamp(3.4rem, 16vw, 5.6rem); margin: 10px 0 18px; }
+    .gold-row { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .gold-row .big { font-size: 4rem; color: var(--blue); }
+    .gold-row .label { color: var(--text); letter-spacing: 0.18em; }
+    .gold-row small { display: block; color: var(--faint); letter-spacing: 0.16em; font-size: 0.78rem; }
+    .quote {
+      border-left: 3px solid var(--blue);
+      padding-left: 18px;
+    }
+    .quote p { color: #D5D7E0; font-size: 1.05rem; }
+    .quote p + p { margin-top: 14px; }
+
+    /* Facts */
+    .date { font-size: clamp(2.6rem, 12vw, 4.6rem); color: var(--blue); margin: 10px 0 6px; }
+    .facts {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      margin-top: 24px;
+    }
+    .fact { padding: 18px 14px; }
+    .fact:first-child { padding-left: 0; }
+    .fact + .fact { border-left: 1px solid var(--line); }
+    .fact strong { display: block; font-size: clamp(1.6rem, 7vw, 2.4rem); }
+    .fact strong.blue { color: var(--blue); }
+    .fact .label { font-size: 0.72rem; letter-spacing: 0.14em; margin-top: 6px; display: block; }
+
+    .info { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+    .info .value { font-family: 'Saira Condensed', sans-serif; font-weight: 700; font-size: 1.35rem; line-height: 1.25; margin-top: 4px; }
+    .info p { color: var(--muted); font-size: 0.9rem; }
+    .info a { color: var(--text); text-decoration: none; }
+    .info > div:last-child { text-align: right; }
+
+    /* Register */
+    .register {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 18px; padding: 28px 22px; text-align: center;
+    }
+    .register h2 { font-size: clamp(2rem, 9vw, 2.8rem); margin: 8px 0 20px; }
+    .btns { display: flex; flex-direction: column; gap: 10px; max-width: 260px; margin: 0 auto; }
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 11px 18px; border-radius: 10px;
+      font-family: 'Saira Condensed', sans-serif; font-weight: 700;
+      font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em;
+      text-decoration: none; color: var(--text);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn.primary { background: var(--blue); box-shadow: 0 10px 30px rgba(61, 107, 245, 0.35); }
+    .btn.primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .btn.ghost { border: 1px solid var(--line); }
+    .btn.ghost:hover { background: #1B1E29; }
+
+    /* Footer */
+    footer { padding: 32px 0 calc(32px + env(safe-area-inset-bottom)); text-align: center; }
+    .club { color: var(--muted); font-size: 0.9rem; }
+    .presented {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+      color: var(--faint); font-size: 0.8rem; text-decoration: none;
+    }
+    .presented img { width: 20px; height: 20px; border-radius: 5px; }
+    .presented strong { color: var(--muted); font-weight: 600; }
+
+    @media (max-width: 520px) {
+      .fact { padding: 14px 8px; }
+      .fact .label { letter-spacing: 0.08em; font-size: 0.66rem; }
+      .info { grid-template-columns: auto 1fr; gap: 16px; }
+      .info .value { font-size: 1.02rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Skäggetorp International Camp",
+    "description": "Taekwondo camp with Pavel Khan, head coach of the Uzbekistan national team.",
+    "startDate": "2027-01-04",
+    "endDate": "2027-01-06",
+    "image": "https://tkdhub.app/assets/skaggetorp-camp.jpg",
+    "url": "https://tkdhub.app/skaggetorp-camp",
+    "location": {
+      "@type": "Place",
+      "name": "Skäggetorp Centrum",
+      "address": { "@type": "PostalAddress", "addressLocality": "Linköping", "addressCountry": "SE" }
+    },
+    "organizer": { "@type": "SportsOrganization", "name": "Aktivitetshuset Taekwondo Linköping" },
+    "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="head">
+      <div>
+        <h1 class="display">Skäggetorp</h1>
+        <div class="label">International Camp</div>
+        <div class="accent"></div>
+      </div>
+      <img class="club-logo" src="assets/skaggetorp-logo.png" alt="Aktivitetshuset Taekwondo Linköping">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <img class="poster" src="assets/skaggetorp-camp-hero.jpg" alt="Pavel Khan celebrating Olympic gold with Ulugbek Rashitov at Tokyo 2020 and Paris 2024" width="1638" height="880">
+  </div>
+
+  <section style="margin-top: 40px;">
+    <div class="container">
+      <div class="label blue">Olympic gold coach</div>
+      <h2 class="display coach-name">Pavel Khan</h2>
+      <div class="gold-row">
+        <span class="display big">2&times;</span>
+        <div>
+          <div class="label">Olympic gold</div>
+          <small class="label">Tokyo 2020 &middot; Paris 2024</small>
+        </div>
+      </div>
+      <div class="quote">
+        <p>Pavel Khan, head coach of the Uzbekistan national team, took Ulugbek Rashitov to Olympic gold in Tokyo 2020 and did it again in Paris 2024. Same athlete, two consecutive Games &ndash; something very few coaches in the world have achieved. Under his leadership Uzbekistan has gone from unknown to one of the strongest national teams in taekwondo.</p>
+        <p>This is not a demonstration. It is three days with a coach who knows exactly what separates a good athlete from an Olympic champion &ndash; and who teaches it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="label">Skäggetorp Centrum &middot; Linköping, Sweden</div>
+      <div class="display date">4&ndash;6 January 2027</div>
+      <div class="facts">
+        <div class="fact">
+          <strong class="display">3 Days</strong>
+          <span class="label">2 sessions / day</span>
+        </div>
+        <div class="fact">
+          <strong class="display">All ages</strong>
+          <span class="label">Every club welcome</span>
+        </div>
+        <div class="fact">
+          <strong class="display blue">150 EUR</strong>
+          <span class="label">Full camp</span>
+        </div>
+      </div>
+      <div class="info">
+        <div>
+          <div class="label blue">Location</div>
+          <div class="value">Skäggetorp Centrum</div>
+          <p>Linköping, Sweden</p>
+        </div>
+        <div>
+          <div class="label blue">Registration</div>
+          <div class="value">
+            <a href="mailto:skaggetorpcamp@yahoo.com">skaggetorpcamp@<wbr>yahoo.com</a><br>
+            <a href="tel:+46739516247">+46 73 951 62 47</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="register">
+    <div class="container">
+      <div class="register">
+        <div class="label blue">Limited places</div>
+        <h2 class="display">Register now</h2>
+        <div class="btns">
+          <a class="btn primary" href="mailto:skaggetorpcamp@yahoo.com?subject=Registration%20-%20Sk%C3%A4ggetorp%20International%20Camp%202027&amp;body=Name%3A%0AClub%3A%0AAge%3A%0ABelt%3A%0APhone%3A%0A">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Register by email
+          </a>
+          <a class="btn ghost" href="tel:+46739516247">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call to register
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="club">Aktivitetshuset Taekwondo Linköping</div>
+    <a class="presented" href="/download">
+      <img src="assets/logo.png" alt="">
+      <span>Presented by <strong>TKD Hub</strong></span>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
