@@ -1,0 +1,453 @@
+{
+  "club": "Staffanstorps Taekwondo Förening",
+  "source": "https://www.stptkd.se/sida/67035/grader-gradering",
+  "copyright": "Copyright © Staffanstorps Taekwondo Förening 2013",
+  "sections": {
+    "poomse": "Poomse",
+    "stallningar": "Ställningar",
+    "slag": "Slag",
+    "stot": "Stöt",
+    "blockeringar": "Blockeringar",
+    "sparkar": "Sparkar",
+    "mittsteknik": "Mittsteknik",
+    "kamp": "Kamp",
+    "enstegskamp": "Enstegskamp",
+    "krossteknik": "Krossteknik",
+    "armhavning": "Armhävning",
+    "betydelse": "Bältets betydelse",
+    "teori": "Teori",
+    "ovrigt": "Övrigt",
+    "tidskrav": "Tidskrav",
+    "balte": "Bälte"
+  },
+  "belts": [
+    {
+      "gup": 9,
+      "color": "Gult",
+      "belt": { "base": "#F5D20A", "stripe": null, "stripes": 0 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/a7d07b5f-8f13-4585-8b3f-f6a59eaf1004",
+      "inherits": false,
+      "facts": {
+        "poomse": "Taegeuk Il Jang",
+        "onestep": 1,
+        "sparring": "1x1 min",
+        "pushups": { "adult": 20, "child": 10 },
+        "attendance": 75
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Il Jang", "sv": "(1)" }],
+        "stallningar": [
+          { "ko": "Joochum Seogi", "sv": "Ridande ställning" },
+          { "ko": "Ap Seogi", "sv": "Kort steg" },
+          { "ko": "Ap Kubi Seogi", "sv": "Långt steg" }
+        ],
+        "slag": [{ "ko": "Momtong Jireugi", "sv": "Mitt slag" }],
+        "blockeringar": [
+          { "ko": "Arae Makki", "sv": "Låg blockering" },
+          { "ko": "Momtong-An Makki", "sv": "Mitt blockering" },
+          { "ko": "Eolgul Makki", "sv": "Hög blockering" }
+        ],
+        "sparkar": [
+          { "ko": "Ap Chagi", "sv": "Framåt spark" },
+          { "ko": "Bit Chagi", "sv": "Låg framåt rund spark" },
+          { "ko": "Dollyo Chagi", "sv": "Hög framåt rund spark" }
+        ],
+        "kamp": [{ "ko": "1x1 min", "sv": "Utan skydd, endast markering och lätt kontakt" }],
+        "enstegskamp": [{ "ko": "1 st.", "sv": "Tekniker från poomse (1)" }],
+        "krossteknik": [{ "ko": "Momtong Jireugi", "sv": "1 bräda (från 15 år)" }],
+        "armhavning": [{ "text": "Vuxen 20 st. Barn 10 st." }],
+        "betydelse": [{ "text": "Det gula bältets betydelse." }],
+        "teori": [
+          {
+            "ko": "Räkna 1-10",
+            "sv": "Ha-na, Dul, Set, Net, Da-sot, Ya-sot, Il-gop, Ya-dol, A-hop, Yol",
+            "count": ["Ha-na", "Dul", "Set", "Net", "Da-sot", "Ya-sot", "Il-gop", "Ya-dol", "A-hop", "Yol"]
+          },
+          { "ko": "Tae Kwon Do", "sv": "Foten & Handens Väg" },
+          { "ko": "WTF", "sv": "World Taekwondo Federation" },
+          { "ko": "STF", "sv": "Svenska Taekwondo Förbundet" },
+          { "ko": "STPTKD", "sv": "Staffanstorps Taekwondo Förening" },
+          { "ko": "Charyot", "sv": "Givakt" },
+          { "ko": "Kyoung Ye", "sv": "Buga" },
+          { "ko": "Joonbi", "sv": "Färdiga" },
+          { "ko": "Sii Jaak", "sv": "Börja" },
+          { "ko": "Kaljeo", "sv": "Bryt" },
+          { "ko": "Ge Seu", "sv": "Fortsätt" },
+          { "ko": "Geuman", "sv": "Slut" },
+          { "ko": "Kii App", "sv": "Kampskrik" }
+        ],
+        "tidskrav": [{ "text": "Minst en termin med 75% närvaro." }]
+      }
+    },
+    {
+      "gup": 8,
+      "color": "Grönt",
+      "belt": { "base": "#1FA83A", "stripe": null, "stripes": 0 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/c41d658d-478e-49be-8036-d177f0b1d55e",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Yi Jang",
+        "onestep": 2,
+        "sparring": "1x1 min",
+        "pushups": { "adult": 30, "child": 15 },
+        "attendance": 75
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Yi Jang", "sv": "(2)" }],
+        "stallningar": [{ "ko": "Moa Seogi", "sv": "Givakt ställning" }],
+        "slag": [
+          { "ko": "Bandae Jireugi", "sv": "Samma (sida hand/ben) slag" },
+          { "ko": "Baro Jireugi", "sv": "Motsatt (sida hand/ben) slag" },
+          { "ko": "Eolgul Jireugi", "sv": "Högt slag" }
+        ],
+        "blockeringar": [
+          { "ko": "Momtong An Makki", "sv": "Mitt utifrån blockering" },
+          { "ko": "Momtong Bakkat Makki", "sv": "Mitt inifrån blockering" }
+        ],
+        "sparkar": [{ "ko": "Yeop Chagi", "sv": "Sidospark" }],
+        "kamp": [{ "ko": "1x1 min", "sv": "Med skydd, lätt kontakt." }],
+        "enstegskamp": [{ "ko": "2 st.", "sv": "Tekniker från poomse (2)" }],
+        "krossteknik": [{ "ko": "Momtong Jireugi", "sv": "1 bräda (från 15 år)" }],
+        "armhavning": [{ "text": "Vuxen 30 st. Barn 15 st." }],
+        "betydelse": [{ "text": "Det gröna bältets betydelse." }],
+        "teori": [
+          { "ko": "Dojang", "sv": "Träningslokal" },
+          { "ko": "Doobok", "sv": "Träningsdräkt" },
+          { "ko": "Tti", "sv": "Bälte" },
+          { "ko": "Oreun", "sv": "Höger" },
+          { "ko": "Oen", "sv": "Vänster" },
+          { "ko": "Tiro-Dora", "sv": "Vändning 180 grader" },
+          { "ko": "Kukkiwon", "sv": "WTF huvudkvarter i Seoul Korea" }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 75% närvaro." }]
+      }
+    },
+    {
+      "gup": 7,
+      "color": "Grönt med blått streck",
+      "belt": { "base": "#1FA83A", "stripe": "#1E4FD8", "stripes": 1 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/8b7f8e99-1cf4-4c68-b864-afd196ea7f12",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Sam Jang",
+        "onestep": 4,
+        "sparring": "2x2 min",
+        "pushups": { "adult": 30, "child": 15 },
+        "attendance": 75
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Sam Jang", "sv": "(3)" }],
+        "stallningar": [{ "ko": "Dwitkoobi Seogi", "sv": "Bakåt ställning" }],
+        "slag": [
+          { "ko": "Momtong Doobeon Jireugi", "sv": "Mitt dubbel slag" },
+          { "ko": "Sonnal Mok Chigi", "sv": "Knivhands hals slag/stöt" }
+        ],
+        "blockeringar": [
+          { "ko": "Hansonnal Momtong Bakkat Makki", "sv": "Enkel knivhands blockering" }
+        ],
+        "sparkar": [
+          { "ko": "Dwit Chagi", "sv": "Bakåt spark" },
+          { "ko": "Naeryo Chagi", "sv": "Yxspark" },
+          { "ko": "An Naeryo Chagi", "sv": "Utifrån yxspark" },
+          { "ko": "Bakkat Naeryo Chagi", "sv": "Inifrån yxspark" }
+        ],
+        "kamp": [{ "ko": "2x2 min", "sv": "Med skydd." }],
+        "enstegskamp": [{ "ko": "4 st.", "sv": "Tekniker från poomse (3)" }],
+        "krossteknik": [
+          { "ko": "Momtong Jireugi", "sv": "1 bräda (från 15 år)" },
+          { "ko": "Bitchagi", "sv": "1 bräda (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 30 st. Barn 15 st." }],
+        "betydelse": [{ "text": "Det gröna bältets betydelse." }],
+        "teori": [
+          { "ko": "GUP", "sv": "Elevgrad" },
+          { "ko": "Dan", "sv": "Instruktörsgrad" },
+          { "ko": "Chokyo Nim", "sv": "Assisterande instruktör" },
+          { "ko": "Kyosa Nim", "sv": "Instruktör 1-3 Dan" },
+          { "ko": "Sabo Nim", "sv": "Instruktör 4-6 Dan" },
+          { "ko": "Kwanja Nim", "sv": "Instruktör 7-9 Dan" },
+          { "ko": "Kii App", "sv": "Kampskrik" },
+          { "ko": "Twie", "sv": "Hoppande" }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 75% närvaro." }]
+      }
+    },
+    {
+      "gup": 6,
+      "color": "Blått",
+      "belt": { "base": "#1E4FD8", "stripe": null, "stripes": 0 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/8c5b36a4-a9fc-49e7-86b4-f66dfcada587",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Sah Jang",
+        "onestep": 6,
+        "sparring": "2x2 min",
+        "pushups": { "adult": 40, "child": 20 },
+        "attendance": 75
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Sah Jang", "sv": "(4)" }],
+        "slag": [
+          { "ko": "Deung-Joomeok Eolgul Ape Chigi", "sv": "Uppifrån och ned slag" },
+          { "ko": "Jebipum Mokchigi", "sv": "Uppslukande knivhands hals slag" }
+        ],
+        "stot": [{ "ko": "Pyonseonkeut Sewo Chireugi", "sv": "Spjutfingerstöt / stick" }],
+        "blockeringar": [{ "ko": "Sonnal Momtong Makki", "sv": "Dubbel knivhands blockering" }],
+        "sparkar": [
+          { "ko": "Naggeo Chagi", "sv": "Krokspark" },
+          { "ko": "Bandae Dollyo Chagi", "sv": "180° bakåt rundspark" },
+          { "ko": "Mireo Chagi", "sv": "Rak knuffspark" },
+          { "ko": "”Tornado”", "sv": "360° framåt rundspark" }
+        ],
+        "kamp": [{ "ko": "2x2 min", "sv": "Med skydd." }],
+        "enstegskamp": [{ "ko": "6 st.", "sv": "Tekniker från poomse (4)" }],
+        "krossteknik": [
+          { "ko": "Sonnal Chigi", "sv": "1 bräda (från 15 år)" },
+          { "ko": "1 valfri fotteknik (ej bitchagi)", "sv": "1 bräda (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 40 st. Barn 20 st." }],
+        "betydelse": [{ "text": "Det blå bältets betydelse." }],
+        "teori": [
+          { "text": "Kunna förklara skillnaden mellan Jireugi och Chigi." },
+          { "text": "Kunna förklara skillnaden mellan Sonnal och Hansonnal." },
+          { "ko": "Kyurugi", "sv": "Kamp / sparring" },
+          { "ko": "Hanbon-kyurugi", "sv": "Enstegskamp / sparring" },
+          { "ko": "Chong", "sv": "Blå" },
+          { "ko": "Hong", "sv": "Röd" },
+          { "ko": "Kyong Go", "sv": "Varning −0,5 poäng" },
+          { "ko": "Gam Jeom", "sv": "Avdrag −1 poäng" }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 75% närvaro." }]
+      }
+    },
+    {
+      "gup": 5,
+      "color": "Blått med rött streck",
+      "belt": { "base": "#1E4FD8", "stripe": "#E01B24", "stripes": 1 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/8c6397ef-313d-4625-becb-0a671946c98e",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Oh Jang",
+        "onestep": 8,
+        "sparring": "2x2 min",
+        "pushups": { "adult": 40, "child": 20 },
+        "attendance": 75
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Oh Jang", "sv": "(5)" }],
+        "stallningar": [{ "ko": "Koa Seogi", "sv": "Korsställning" }],
+        "slag": [
+          { "ko": "Me Joomeok Naeryo Chigi", "sv": "Hammarslag" },
+          { "ko": "Palkoop Momtong Pyojeok Chigi", "sv": "Armbågs mål slag" },
+          { "ko": "Palkoop Momtong Chigi", "sv": "Armbågsslag" }
+        ],
+        "sparkar": [
+          { "ko": "Twie Ap Chagi", "sv": "Hoppande framåt spark" },
+          { "ko": "Twie Dollyo Chagi", "sv": "Hoppande hög sned framåt spark" },
+          { "ko": "Twie Yeop Chagi", "sv": "Hoppande sidospark" }
+        ],
+        "mittsteknik": [{ "ko": "Twie Yeop Chagi", "sv": "Hoppande sidospark" }],
+        "kamp": [{ "ko": "2x2 min", "sv": "Med skydd" }],
+        "enstegskamp": [{ "ko": "8 st.", "sv": "Tekniker från poomse (5)" }],
+        "krossteknik": [
+          { "ko": "Deung-Joomeok Eolgul Ape Chigi", "sv": "1 bräda (från 15 år)" },
+          { "ko": "Palkoop Chigi (armbågsslag)", "sv": "1 bräda (från 15 år)" },
+          { "ko": "1 valfri fotteknik (ej bitchagi)", "sv": "1 bräda (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 40 st. Barn 20 st." }],
+        "betydelse": [{ "text": "Det blå bältets betydelse." }],
+        "teori": [
+          { "text": "Kunna förklara Koreas flagga." },
+          { "text": "Kunna redogöra vad Taegeuk står för." }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 75% närvaro." }]
+      }
+    },
+    {
+      "gup": 4,
+      "color": "Rött",
+      "belt": { "base": "#E01B24", "stripe": null, "stripes": 0 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/29afea82-aac8-4bef-a1e1-ebeb5e584b72",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Yook Jang",
+        "onestep": 10,
+        "sparring": "3x2 min",
+        "pushups": { "adult": 50, "child": 25 },
+        "attendance": 75
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Yook Jang", "sv": "(6)" }],
+        "blockeringar": [
+          { "ko": "Eolgul Bakkat Makki", "sv": "Hög mitt block" },
+          { "ko": "Arae Hechyo Makki", "sv": "Låg dubbel blockering" },
+          { "ko": "Batangson Momtong Makki", "sv": "Mitt inåt handleds blockering" }
+        ],
+        "sparkar": [
+          { "ko": "Twie Dwitchagi", "sv": "Hoppande bakåtspark" },
+          { "ko": "Twie Bandae Dollyo Chagi", "sv": "Hoppande 180° rundspark" }
+        ],
+        "mittsteknik": [{ "ko": "Twie Dwitchagi", "sv": "Hoppande bakåtspark" }],
+        "kamp": [{ "ko": "3x2 min", "sv": "Med skydd" }],
+        "enstegskamp": [{ "ko": "10 st.", "sv": "Tekniker från poomse (6)" }],
+        "krossteknik": [
+          { "ko": "1 valfri handteknik", "sv": "2 brädor (från 15 år)" },
+          { "ko": "1 valfri snurrande fotteknik", "sv": "1 bräda (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 50 st. Barn 25 st." }],
+        "betydelse": [{ "text": "Det röda bältets betydelse." }],
+        "teori": [
+          { "text": "Kunna sammanfatta vad nödvärnsrätten i Brottsbalkens 24 kap 1 § innebär." },
+          { "text": "Kunna planera och hålla en uppvärmning för nybörjare." }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 75% närvaro." }]
+      }
+    },
+    {
+      "gup": 3,
+      "color": "Rött med 1 svart streck",
+      "belt": { "base": "#E01B24", "stripe": "#111111", "stripes": 1 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/d17def4b-ea7d-4d8c-bd86-1260cc006f1e",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Chil Jang",
+        "onestep": 15,
+        "sparring": "3x2 min",
+        "pushups": { "adult": 60, "child": 30 },
+        "attendance": 80
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Chil Jang", "sv": "(7)" }],
+        "stallningar": [{ "ko": "Beom Seogi", "sv": "Tigerställning" }],
+        "slag": [
+          { "ko": "Doo Joomeok Momtong Jeochyo Jireugi", "sv": "Dubbelt uppåtgående knytnävsslag" },
+          { "ko": "Deung Joomeok Eolgul Bakkat Chigi", "sv": "Utsidan av knytnäven högt inne & ut slag" },
+          { "ko": "Joomeok Yeop Jireugi", "sv": "Knytnävs mitt slag" }
+        ],
+        "blockeringar": [
+          { "ko": "Sonnal Arae Makki", "sv": "Låg dubbel knivhands blockering" },
+          { "ko": "Gawa Makki", "sv": "Saxblockering" },
+          { "ko": "Bakkat Palmok Momtong Hechyo Makki", "sv": "Mitt dubbel blockering" },
+          { "ko": "Eotgeoreo Arae Makki", "sv": "Låg X-blockering" }
+        ],
+        "sparkar": [
+          { "ko": "Pyojeok Chagi", "sv": "Målspark (handflatan)" },
+          { "ko": "Tornado (Eolgul)", "sv": "Framåt 360° snurrspark (i huvudet)" },
+          { "ko": "Moreup Chigi", "sv": "Knästöt" }
+        ],
+        "kamp": [{ "ko": "3x2 min", "sv": "Med skydd" }],
+        "enstegskamp": [{ "ko": "15 st.", "sv": "Tekniker från poomse (7)" }],
+        "krossteknik": [
+          { "ko": "Deung Joomeok Eolgul Bakkat Chigi", "sv": "1 bräda (från 15 år)" },
+          { "ko": "1 valfri snurrande fotteknik", "sv": "1 bräda (från 15 år)" },
+          { "ko": "Twie Yeopchagi (över 4 personer)", "sv": "1 bräda (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 60 st. Barn 30 st." }],
+        "teori": [
+          {
+            "ko": "Kunna räkna första–tionde",
+            "sv": "Il, I, Sam, Sah, Oh, Yook, Chil, Pal, Go, Ship",
+            "count": ["Il", "I", "Sam", "Sah", "Oh", "Yook", "Chil", "Pal", "Go", "Ship"]
+          },
+          { "text": "Kunna jämföra bältena gult, grönt, blått, rött och svart med ett träd." },
+          { "text": "Planerat och genomfört en uppvärmning och träning för en nybörjargrupp." }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 80% närvaro." }]
+      }
+    },
+    {
+      "gup": 2,
+      "color": "Rött med 2 svarta streck",
+      "belt": { "base": "#E01B24", "stripe": "#111111", "stripes": 2 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/33ef79fc-95ff-4bf4-a3d6-0cd52316d841",
+      "inherits": true,
+      "facts": {
+        "poomse": "Taegeuk Pal Jang",
+        "onestep": 20,
+        "sparring": "3x2 min",
+        "pushups": { "adult": 70, "child": 35 },
+        "attendance": 80
+      },
+      "content": {
+        "poomse": [{ "ko": "Taegeuk Pal Jang", "sv": "(8)" }],
+        "slag": [
+          { "ko": "Joomeok Dangyo Teok Jireugi", "sv": "Knytnävs uppåt hakan slag" },
+          { "ko": "Deung Joomeok Eolgul Dollyo Chigi", "sv": "Högt armbågs rundslag" }
+        ],
+        "blockeringar": [
+          { "ko": "Geodeureo Momtong Makki", "sv": "Vaktande mitt blockering" },
+          { "ko": "Geodeureo Arae Makki", "sv": "Vaktande låg blockering" },
+          { "ko": "Oesantul Makki", "sv": "Enkel bergsblockering" }
+        ],
+        "sparkar": [
+          { "ko": "Twie Bandae Dollyo Chagi 360°", "sv": "Hoppande 360° bakåt rundspark i huvudet" },
+          { "ko": "Doobal Dangsang Apchagi", "sv": "Dubbel framåtspark" },
+          { "ko": "Yeopchagi / Dwitchagi", "sv": "Sidospark / bakåtspark (kombination i luften)" }
+        ],
+        "kamp": [{ "ko": "3x2 min", "sv": "Med skydd" }],
+        "enstegskamp": [{ "ko": "20 st.", "sv": "Tekniker från poomse (8)" }],
+        "krossteknik": [
+          { "ko": "Momtong Jireugi / Momtong Yeop Chagi", "sv": "1+1 bräda, två mål samtidigt (från 15 år)" },
+          { "ko": "Yeop Chagi (utan kross) / Twie Dwit Chagi", "sv": "2 brädor (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 70 st. Barn 35 st." }],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 80% närvaro." }]
+      }
+    },
+    {
+      "gup": 1,
+      "color": "Rött med 3 svarta streck",
+      "belt": { "base": "#E01B24", "stripe": "#111111", "stripes": 3 },
+      "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/5274dcb5-d8c0-4509-90fb-b0e5022739fb",
+      "inherits": true,
+      "facts": {
+        "poomse": "Koryo",
+        "onestep": 25,
+        "sparring": "3x2 min + 3x1 min (2 motståndare)",
+        "pushups": { "adult": 80, "child": 40 },
+        "attendance": 80
+      },
+      "content": {
+        "poomse": [{ "ko": "Koryo", "sv": "" }],
+        "slag": [
+          { "ko": "Eopeun Sonnal Bakkat Chigi", "sv": "Utgående knivhandsslag" },
+          { "ko": "Kaljaebi", "sv": "Tigergaps hand" },
+          { "ko": "Mooreup Keokki", "sv": "Knäbrytning" },
+          { "ko": "Joomeok Pyojeok Jireugi", "sv": "Knytnävs mål slag" },
+          { "ko": "Pyonsonkeut Jeochyo Chireugi", "sv": "Låg spjutfingerstöt" },
+          { "ko": "Me Joomeok Pyojeok Arae Chigi", "sv": "Lågt mål slag" }
+        ],
+        "blockeringar": [
+          { "ko": "Hansonnal Arae Makki", "sv": "Låg enkel knivhands blockering" },
+          { "ko": "An Palmok Momtong Hechyo Makki", "sv": "Mitt dubbel blockering" },
+          { "ko": "Hansonnal Momtong Yeop Makki", "sv": "Enkel knivhands mitt sidoblockering" },
+          { "ko": "Batangson Momtong Nullyeo Makki", "sv": "Mitt nedåt handflateblockering" }
+        ],
+        "sparkar": [
+          { "ko": "Arae Yeop Chagi / Momtong Yeop Chagi", "sv": "Låg sidospark / mitt sidospark" },
+          { "ko": "Biteureo Chagi", "sv": "Utåtgående spark" },
+          { "ko": "Ildja Chagi", "sv": "Spagatspark / splittspark i samma nivå" },
+          { "ko": "Modeumbal Chagi", "sv": "Hoppspark med samlade fötter" }
+        ],
+        "kamp": [
+          { "ko": "3x2 min", "sv": "Med skydd" },
+          { "ko": "3x1 min", "sv": "Med skydd, 2 motståndare" }
+        ],
+        "enstegskamp": [{ "ko": "25 st.", "sv": "Tekniker från poomse (Koryo)" }],
+        "krossteknik": [
+          { "ko": "Eopeun Sonnal Bakkat Chigi (med 180° vändning)", "sv": "1 bräda (från 15 år)" },
+          { "ko": "Tornado Naeryo Chagi", "sv": "1 bräda (från 15 år)" },
+          { "ko": "Twie Yeop Chagi över 5 personer", "sv": "1 bräda (från 15 år)" }
+        ],
+        "armhavning": [{ "text": "Vuxen 80 st. Barn 40 st." }],
+        "ovrigt": [
+          { "text": "Kunna räkna 1–20." },
+          { "text": "Instruerat minst 10 träningar." },
+          { "text": "Förståelse av samtliga tekniker och dess namn på svenska och koreanska." },
+          { "text": "Varit med och planerat och deltagit som examinator på en gradering för nybörjare." }
+        ],
+        "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 80% närvaro." }]
+      }
+    }
+  ]
+}
