@@ -75,17 +75,43 @@
     .eyebrow { font-family: 'Saira Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; color: var(--blue); }
 
     /* Belt picker */
-    .belt-row { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 6px; margin-bottom: 18px; }
+    /* Belt picker: boxless, bar + label, navy underline on the selected belt(s) */
+    .belt-row { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 14px 10px; margin-bottom: 18px; }
     @media (max-width: 640px) { .belt-row { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
     .belt-btn {
-      background: var(--surface); border: 1.5px solid var(--line); border-radius: 0;
-      padding: 10px 4px 8px; display: flex; flex-direction: column; align-items: center; gap: 6px;
-      font-weight: 600; font-size: 0.82rem; color: var(--muted); transition: border-color .15s, background .15s;
+      background: none; border: 0; border-bottom: 3px solid transparent; border-radius: 0;
+      padding: 8px 0 7px; min-height: 52px; display: flex; flex-direction: column; align-items: center; gap: 7px;
+      font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.04em;
+      color: var(--muted); transition: border-color .15s, color .15s;
     }
-    .belt-btn:hover { border-color: #b9c6da; }
-    .belt-btn[aria-pressed="true"] { border-color: var(--blue); background: var(--blue-soft); color: var(--navy); }
-    .belt-btn svg { width: 100%; max-width: 60px; height: auto; }
-    .belt-btn.all { justify-content: center; font-size: 0.85rem; }
+    @media (hover: hover) { .belt-btn:hover { color: var(--navy); border-bottom-color: #b9c6da; } }
+    .belt-btn[aria-pressed="true"] { color: var(--navy); border-bottom-color: var(--navy); }
+    .belt-btn svg { width: 100%; max-width: 62px; height: auto; transition: transform .15s; }
+    .belt-btn[aria-pressed="true"] svg { transform: translateY(-2px); filter: drop-shadow(0 3px 3px rgba(2,33,62,.25)); }
+    .belt-btn .chk { display: none; }
+    .belt-row.multi .belt-btn[aria-pressed="true"] .chk { display: inline; color: var(--blue); margin-left: 3px; }
+
+    /* Belt path (belt pages): dots on a line 9 -> 1, earlier belts filled in */
+    .path { --count: 9; --dot: 26px; --pad: 6px; position: relative; display: grid; grid-template-columns: repeat(var(--count), minmax(0, 1fr)); margin: 4px 0 18px; }
+    /* line runs from the first to the last dot centre, through the middle of the dots:
+       top padding + half a dot - half the line */
+    .path::before, .path .fill { content: ''; position: absolute; left: calc(100% / (2 * var(--count))); top: calc(var(--pad) + var(--dot) / 2 - 2px); height: 4px; background: #c9d3e1; }
+    .path::before { right: calc(100% / (2 * var(--count))); }
+    .path .fill { background: var(--navy); }
+    .path button { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: var(--pad) 0 4px; background: none; border: 0; min-height: 56px; }
+    .path .dot {
+      position: relative; width: var(--dot); height: var(--dot); border-radius: 50%; overflow: hidden; flex-shrink: 0;
+      border: 3px solid var(--bg); box-shadow: 0 0 0 1.5px #9aa8bb; transition: box-shadow .15s;
+    }
+    /* Fixed whole-px stripe widths and gaps so every stripe is equally thick. The 1.4x current dot
+       scales them all by the same amount (e.g. 2.8px each), so they stay equal there too. */
+    .path .dot .sg { position: absolute; top: 0; bottom: 0; right: 3px; display: flex; gap: 2px; }
+    .path .dot .sg i { width: 3px; }
+    @media (hover: hover) { .path button:hover .dot { box-shadow: 0 0 0 2px var(--navy); } }
+    .path button[aria-current="true"] .dot { transform: scale(1.4); box-shadow: 0 0 0 2.5px var(--navy); }
+    .path .n { font-family: 'Saira Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: var(--muted); line-height: 1; margin-top: 2px; white-space: nowrap; }
+    .path button[aria-current="true"] .n { color: var(--navy); }
+    .path .n small { font-size: 0.8em; letter-spacing: 0.06em; }
 
     /* Learn detail */
     .belt-head { padding: 20px; display: flex; gap: 18px; align-items: center; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
@@ -182,7 +208,7 @@
     /* Landing */
     .landing { padding: 24px 20px; }
     .landing h2 { font-size: clamp(2rem, 8vw, 2.6rem); color: var(--navy); margin: 6px 0 10px; }
-    .landing .lead { color: var(--muted); font-size: 1.02rem; max-width: 60ch; }
+    .landing .lead { color: var(--muted); font-size: 1.02rem; }
     .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
     .mode {
       text-align: left; display: flex; gap: 14px; align-items: flex-start; padding: 16px;
@@ -291,8 +317,11 @@
     @media (max-width: 560px) {
       .wrap { padding-left: 12px; padding-right: 12px; }
       main.wrap { padding-top: 14px; }
-      .belt-row { gap: 5px; }
-      .belt-btn { padding: 8px 2px 6px; font-size: 0.78rem; }
+      .belt-row { gap: 12px 8px; }
+      .belt-btn { font-size: 0.95rem; }
+      .path { --dot: 22px; }
+      .path .dot .sg { right: 2px; gap: 3px; }
+      .path .dot .sg i { width: 2px; }
       .belt-head { padding: 16px; gap: 14px; }
       .belt-head .big-belt { width: 96px; }
       .belt-head h2 { font-size: 1.9rem; }
@@ -485,6 +514,7 @@
       const res = await fetch('assets/stp/grading.json', { cache: 'no-cache' });
       if (!res.ok) throw new Error(res.status);
       DATA = await res.json();
+      DATA.belts.sort((a, b) => b.gup - a.gup);   // 9 GUP first; picker, path and quiz rely on this order
     } catch (e) {
       $view().innerHTML = `<div class="card loading">Kunde inte ladda graderingsdata. Ladda om sidan.</div>`;
       return;
@@ -510,9 +540,23 @@
   function beltPicker(selected, multi) {
     const btns = DATA.belts.map(b => `
       <button class="belt-btn" data-gup="${b.gup}" aria-pressed="${multi ? selected.has(b.gup) : selected === b.gup}" title="${esc(b.color)}">
-        ${beltSvg(b.belt)}<span>${b.gup} GUP</span>
+        ${beltSvg(b.belt)}<span>${b.gup} GUP<span class="chk" aria-hidden="true">✓</span></span>
       </button>`).join('');
-    return `<div class="belt-row">${btns}</div>`;
+    return `<div class="belt-row${multi ? ' multi' : ''}">${btns}</div>`;
+  }
+
+  /* Belt pages: the road from 9 GUP to 1 GUP; belts before the current one are filled in. */
+  function beltPath(current) {
+    const idx = DATA.belts.findIndex(b => b.gup === current);
+    const dots = DATA.belts.map(b => {
+      // Stripes: equal whole-pixel widths/gaps (set in CSS), anchored a few px from the right edge.
+      const n = b.belt.stripes || 0;
+      const st = n ? `<span class="sg">${`<i style="background:${b.belt.stripe}"></i>`.repeat(n)}</span>` : '';
+      return `<button data-gup="${b.gup}" aria-current="${b.gup === current}" aria-label="${b.gup} GUP, ${esc(b.color.toLowerCase())}" title="${esc(b.color)}">
+        <span class="dot" style="background:${b.belt.base}">${st}</span><span class="n">${b.gup}${b.gup === current ? '<small> GUP</small>' : ''}</span></button>`;
+    }).join('');
+    const count = DATA.belts.length;
+    return `<nav class="path" aria-label="Bälten" style="--count:${count}"><span class="fill" style="width:calc(${idx} * 100% / ${count})"></span>${dots}</nav>`;
   }
 
   function selectLearnBelt(g) {
@@ -723,7 +767,7 @@
 
     $view().innerHTML = learnShell(`
       <button class="back" id="toLanding">← Översikt</button>
-      ${beltPicker(state.learnGup, false)}
+      ${beltPath(state.learnGup)}
       <article class="card">
         <div class="belt-head">
           <div class="big-belt">${beltSvg(belt.belt, 120)}</div>
@@ -745,7 +789,7 @@
       </article>`);
     wireSearch();
 
-    $view().querySelectorAll('.belt-btn').forEach(btn => btn.addEventListener('click', () => {
+    $view().querySelectorAll('.path button').forEach(btn => btn.addEventListener('click', () => {
       selectLearnBelt(+btn.dataset.gup);
     }));
     document.getElementById('toLanding').addEventListener('click', () => selectLearnBelt(null));
