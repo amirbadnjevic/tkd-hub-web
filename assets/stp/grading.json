@@ -19,8 +19,7 @@
     "betydelse": "Bältets betydelse",
     "teori": "Teori",
     "ovrigt": "Övrigt",
-    "tidskrav": "Tidskrav",
-    "balte": "Bälte"
+    "tidskrav": "Tidskrav"
   },
   "belts": [
     {
@@ -29,13 +28,6 @@
       "belt": { "base": "#F5D20A", "stripe": null, "stripes": 0 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/a7d07b5f-8f13-4585-8b3f-f6a59eaf1004",
       "inherits": false,
-      "facts": {
-        "poomse": "Taegeuk Il Jang",
-        "onestep": 1,
-        "sparring": "1x1 min",
-        "pushups": { "adult": 20, "child": 10 },
-        "attendance": 75
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Il Jang", "sv": "(1)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/926de04c-23d3-4591-a145-b17a0cfc1404", "video": "https://www.youtube.com/watch?v=WhkjRruCBTo" }
@@ -89,13 +81,6 @@
       "belt": { "base": "#1FA83A", "stripe": null, "stripes": 0 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/c41d658d-478e-49be-8036-d177f0b1d55e",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Yi Jang",
-        "onestep": 2,
-        "sparring": "1x1 min",
-        "pushups": { "adult": 30, "child": 15 },
-        "attendance": 75
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Yi Jang", "sv": "(2)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/96a377e5-003e-4303-9849-7c7f40fe6712", "video": "https://www.youtube.com/watch?v=tGlrUplKHh8" }
@@ -134,13 +119,6 @@
       "belt": { "base": "#1FA83A", "stripe": "#1E4FD8", "stripes": 1 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/8b7f8e99-1cf4-4c68-b864-afd196ea7f12",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Sam Jang",
-        "onestep": 4,
-        "sparring": "2x2 min",
-        "pushups": { "adult": 30, "child": 15 },
-        "attendance": 75
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Sam Jang", "sv": "(3)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/745b03fd-ca07-4bc1-ba50-7cbcece7df98", "video": "https://www.youtube.com/watch?v=ksSqKt0UkWo" }
@@ -186,13 +164,6 @@
       "belt": { "base": "#1E4FD8", "stripe": null, "stripes": 0 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/8c5b36a4-a9fc-49e7-86b4-f66dfcada587",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Sah Jang",
-        "onestep": 6,
-        "sparring": "2x2 min",
-        "pushups": { "adult": 40, "child": 20 },
-        "attendance": 75
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Sah Jang", "sv": "(4)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/e0cceef8-c55b-4ccd-b188-cdec42f0506c", "video": "https://www.youtube.com/watch?v=Lt917gacJho" }
@@ -236,13 +207,6 @@
       "belt": { "base": "#1E4FD8", "stripe": "#E01B24", "stripes": 1 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/8c6397ef-313d-4625-becb-0a671946c98e",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Oh Jang",
-        "onestep": 8,
-        "sparring": "2x2 min",
-        "pushups": { "adult": 40, "child": 20 },
-        "attendance": 75
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Oh Jang", "sv": "(5)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/f40552af-9c69-48de-b268-3c44b353e3e9", "video": "https://www.youtube.com/watch?v=VdqNEAHWCBM" }
@@ -281,13 +245,6 @@
       "belt": { "base": "#E01B24", "stripe": null, "stripes": 0 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/29afea82-aac8-4bef-a1e1-ebeb5e584b72",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Yook Jang",
-        "onestep": 10,
-        "sparring": "3x2 min",
-        "pushups": { "adult": 50, "child": 25 },
-        "attendance": 75
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Yook Jang", "sv": "(6)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/f0d723c0-f97c-4491-a2bd-7856d6059f7c", "video": "https://www.youtube.com/watch?v=jcBwWo4wN7c" }
@@ -323,13 +280,6 @@
       "belt": { "base": "#E01B24", "stripe": "#111111", "stripes": 1 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/d17def4b-ea7d-4d8c-bd86-1260cc006f1e",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Chil Jang",
-        "onestep": 15,
-        "sparring": "3x2 min",
-        "pushups": { "adult": 60, "child": 30 },
-        "attendance": 80
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Chil Jang", "sv": "(7)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/ce00db89-4465-4a03-ac60-529f063a7b64", "video": "https://www.youtube.com/watch?v=6FUM1p6qqhQ" }
@@ -377,13 +327,6 @@
       "belt": { "base": "#E01B24", "stripe": "#111111", "stripes": 2 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/33ef79fc-95ff-4bf4-a3d6-0cd52316d841",
       "inherits": true,
-      "facts": {
-        "poomse": "Taegeuk Pal Jang",
-        "onestep": 20,
-        "sparring": "3x2 min",
-        "pushups": { "adult": 70, "child": 35 },
-        "attendance": 80
-      },
       "content": {
         "poomse": [
           { "ko": "Taegeuk Pal Jang", "sv": "(8)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/57634270-2112-4897-92c8-4fa8e65eea48", "video": "https://www.youtube.com/watch?v=Gr_Je2ZkgkI" }
@@ -418,13 +361,6 @@
       "belt": { "base": "#E01B24", "stripe": "#111111", "stripes": 3 },
       "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/5274dcb5-d8c0-4509-90fb-b0e5022739fb",
       "inherits": true,
-      "facts": {
-        "poomse": "Koryo",
-        "onestep": 25,
-        "sparring": "3x2 min + 3x1 min (2 motståndare)",
-        "pushups": { "adult": 80, "child": 40 },
-        "attendance": 80
-      },
       "content": {
         "poomse": [
           { "ko": "Koryo", "sv": "", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/d83a10b8-c094-4880-9f85-d2b8904b0074", "video": "https://www.youtube.com/watch?v=mGa60JDtWmg" }

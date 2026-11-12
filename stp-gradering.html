@@ -890,24 +890,28 @@
     return out;
   }
 
+  let KICKS = null;   // every kick / mittsteknik name in the curriculum (built once)
+  function allKicks() {
+    return KICKS || (KICKS = DATA.belts.flatMap(x => [...(x.content.sparkar || []), ...(x.content.mittsteknik || [])]).map(k => k.ko));
+  }
+
   function factQuestions(b) {
-    const belts = DATA.belts, g = b.gup, f = b.facts, out = [];
-    const byGup = v => Math.abs(belts.find(x => x.facts.poomse === v)?.gup - g);
-    out.push(mk(g, 'poomse', `Vilken poomse ska du kunna till <em>${g} GUP</em>?`, f.poomse,
-      nearDistractors(f.poomse, belts.map(x => x.facts.poomse), byGup)));
-    out.push(mk(g, 'poomse', `Till vilket bälte hör poomse <em>${esc(f.poomse)}</em>?`, `${g} GUP`,
+    const belts = DATA.belts, g = b.gup, out = [];
+    // Poomse name comes from the same content the Learn view shows (single source).
+    const poomseOf = x => x.content.poomse?.[0]?.ko;
+    const poomse = poomseOf(b);
+    const byGup = v => Math.abs(belts.find(x => poomseOf(x) === v)?.gup - g);
+    out.push(mk(g, 'poomse', `Vilken poomse ska du kunna till <em>${g} GUP</em>?`, poomse,
+      nearDistractors(poomse, belts.map(poomseOf), byGup)));
+    out.push(mk(g, 'poomse', `Till vilket bälte hör poomse <em>${esc(poomse)}</em>?`, `${g} GUP`,
       nearDistractors(`${g} GUP`, belts.map(x => `${x.gup} GUP`), v => Math.abs(parseInt(v) - g))));
-    out.push(mk(g, 'balte', `Vilken färg har bältet för <em>${g} GUP</em>?`, b.color,
-      nearDistractors(b.color, belts.map(x => x.color), v => Math.abs(belts.find(x => x.color === v).gup - g))));
-    const who = Math.random() < 0.5 ? 'adult' : 'child';
-    const pu = f.pushups[who];
-    out.push(mk(g, 'armhavning', `Hur många armhävningar gör ${who === 'adult' ? 'en vuxen' : 'ett barn'} vid gradering till <em>${g} GUP</em>?`,
-      `${pu} st.`, nearDistractors(`${pu} st.`, [...new Set(belts.flatMap(x => [x.facts.pushups.adult, x.facts.pushups.child]))].map(n => `${n} st.`), v => Math.abs(parseInt(v) - pu))));
-    out.push(mk(g, 'enstegskamp', `Hur många enstegskamp ska du kunna till <em>${g} GUP</em>?`, `${f.onestep} st.`,
-      nearDistractors(`${f.onestep} st.`, belts.map(x => `${x.facts.onestep} st.`), v => Math.abs(parseInt(v) - f.onestep))));
-    const sp = [...new Set(belts.map(x => x.facts.sparring))];
-    out.push(mk(g, 'kamp', `Hur mycket kamp ingår i graderingen till <em>${g} GUP</em>?`, f.sparring,
-      nearDistractors(f.sparring, sp, v => Math.abs(sp.indexOf(v) - sp.indexOf(f.sparring)))));
+    // Mittsteknik: ask which technique the grading requires. Wrong answers are kicks from OTHER belts,
+    // never this belt's own kicks or mittsteknik (those are also correct things to know for this grading).
+    const own = new Set(['sparkar', 'mittsteknik'].flatMap(k => (b.content[k] || []).map(it => normTxt(it.ko))));
+    const pool = allKicks().filter(ko => !own.has(normTxt(ko)));
+    for (const it of b.content.mittsteknik || []) {
+      out.push(mk(g, 'mittsteknik', `Vilken mittsteknik ska du kunna till <em>${g} GUP</em>?`, it.ko, hardDistractors(it.ko, pool)));
+    }
     out.push(...countQuestions(b));
     return out;
   }
