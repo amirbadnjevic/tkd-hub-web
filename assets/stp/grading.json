@@ -1,6 +1,8 @@
 {
   "club": "Staffanstorps Taekwondo Förening",
   "source": "https://www.stptkd.se/sida/67035/grader-gradering",
+  "poomseSource": "https://www.stptkd.se/sida/67037/poomse",
+  "poomseVideoSource": "https://www.youtube.com/playlist?list=PLSFr5pEwo7gRNGXHlU-ZVxzha5A0c_M3i",
   "copyright": "Copyright © Staffanstorps Taekwondo Förening 2013",
   "sections": {
     "poomse": "Poomse",
@@ -35,7 +37,9 @@
         "attendance": 75
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Il Jang", "sv": "(1)" }],
+        "poomse": [
+          { "ko": "Taegeuk Il Jang", "sv": "(1)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/926de04c-23d3-4591-a145-b17a0cfc1404", "video": "https://www.youtube.com/watch?v=WhkjRruCBTo" }
+        ],
         "stallningar": [
           { "ko": "Joochum Seogi", "sv": "Ridande ställning" },
           { "ko": "Ap Seogi", "sv": "Kort steg" },
@@ -93,7 +97,9 @@
         "attendance": 75
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Yi Jang", "sv": "(2)" }],
+        "poomse": [
+          { "ko": "Taegeuk Yi Jang", "sv": "(2)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/96a377e5-003e-4303-9849-7c7f40fe6712", "video": "https://www.youtube.com/watch?v=tGlrUplKHh8" }
+        ],
         "stallningar": [{ "ko": "Moa Seogi", "sv": "Givakt ställning" }],
         "slag": [
           { "ko": "Bandae Jireugi", "sv": "Samma (sida hand/ben) slag" },
@@ -136,7 +142,9 @@
         "attendance": 75
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Sam Jang", "sv": "(3)" }],
+        "poomse": [
+          { "ko": "Taegeuk Sam Jang", "sv": "(3)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/745b03fd-ca07-4bc1-ba50-7cbcece7df98", "video": "https://www.youtube.com/watch?v=ksSqKt0UkWo" }
+        ],
         "stallningar": [{ "ko": "Dwitkoobi Seogi", "sv": "Bakåt ställning" }],
         "slag": [
           { "ko": "Momtong Doobeon Jireugi", "sv": "Mitt dubbel slag" },
@@ -186,7 +194,9 @@
         "attendance": 75
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Sah Jang", "sv": "(4)" }],
+        "poomse": [
+          { "ko": "Taegeuk Sah Jang", "sv": "(4)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/e0cceef8-c55b-4ccd-b188-cdec42f0506c", "video": "https://www.youtube.com/watch?v=Lt917gacJho" }
+        ],
         "slag": [
           { "ko": "Deung-Joomeok Eolgul Ape Chigi", "sv": "Uppifrån och ned slag" },
           { "ko": "Jebipum Mokchigi", "sv": "Uppslukande knivhands hals slag" }
@@ -234,7 +244,9 @@
         "attendance": 75
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Oh Jang", "sv": "(5)" }],
+        "poomse": [
+          { "ko": "Taegeuk Oh Jang", "sv": "(5)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/f40552af-9c69-48de-b268-3c44b353e3e9", "video": "https://www.youtube.com/watch?v=VdqNEAHWCBM" }
+        ],
         "stallningar": [{ "ko": "Koa Seogi", "sv": "Korsställning" }],
         "slag": [
           { "ko": "Me Joomeok Naeryo Chigi", "sv": "Hammarslag" },
@@ -277,7 +289,9 @@
         "attendance": 75
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Yook Jang", "sv": "(6)" }],
+        "poomse": [
+          { "ko": "Taegeuk Yook Jang", "sv": "(6)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/f0d723c0-f97c-4491-a2bd-7856d6059f7c", "video": "https://www.youtube.com/watch?v=jcBwWo4wN7c" }
+        ],
         "blockeringar": [
           { "ko": "Eolgul Bakkat Makki", "sv": "Hög mitt block" },
           { "ko": "Arae Hechyo Makki", "sv": "Låg dubbel blockering" },
@@ -317,7 +331,9 @@
         "attendance": 80
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Chil Jang", "sv": "(7)" }],
+        "poomse": [
+          { "ko": "Taegeuk Chil Jang", "sv": "(7)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/ce00db89-4465-4a03-ac60-529f063a7b64", "video": "https://www.youtube.com/watch?v=6FUM1p6qqhQ" }
+        ],
         "stallningar": [{ "ko": "Beom Seogi", "sv": "Tigerställning" }],
         "slag": [
           { "ko": "Doo Joomeok Momtong Jeochyo Jireugi", "sv": "Dubbelt uppåtgående knytnävsslag" },
@@ -369,7 +385,9 @@
         "attendance": 80
       },
       "content": {
-        "poomse": [{ "ko": "Taegeuk Pal Jang", "sv": "(8)" }],
+        "poomse": [
+          { "ko": "Taegeuk Pal Jang", "sv": "(8)", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/57634270-2112-4897-92c8-4fa8e65eea48", "video": "https://www.youtube.com/watch?v=Gr_Je2ZkgkI" }
+        ],
         "slag": [
           { "ko": "Joomeok Dangyo Teok Jireugi", "sv": "Knytnävs uppåt hakan slag" },
           { "ko": "Deung Joomeok Eolgul Dollyo Chigi", "sv": "Högt armbågs rundslag" }
@@ -408,7 +426,9 @@
         "attendance": 80
       },
       "content": {
-        "poomse": [{ "ko": "Koryo", "sv": "" }],
+        "poomse": [
+          { "ko": "Koryo", "sv": "", "pdf": "https://www.stptkd.se/staffanstorps-tkd/dokument/d83a10b8-c094-4880-9f85-d2b8904b0074", "video": "https://www.youtube.com/watch?v=mGa60JDtWmg" }
+        ],
         "slag": [
           { "ko": "Eopeun Sonnal Bakkat Chigi", "sv": "Utgående knivhandsslag" },
           { "ko": "Kaljaebi", "sv": "Tigergaps hand" },

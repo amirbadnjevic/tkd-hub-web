@@ -94,16 +94,22 @@
     .belt-head h2 { font-size: 2.2rem; color: var(--navy); }
     .belt-head .sub { color: var(--muted); font-weight: 500; margin-top: 4px; }
     .belt-head .actions { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+    /* Buttons: solid navy (secondary) / club blue (primary), condensed caps like the tabs */
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      border-radius: 0; padding: 10px 16px; font-weight: 600; font-size: 0.92rem;
-      border: 1.5px solid var(--line); background: var(--surface); color: var(--navy); text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 48px; padding: 0 20px; border: 0; border-radius: 0;
+      background: var(--navy); color: #fff; text-decoration: none;
+      font-family: 'Saira Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 1.08rem;
+      text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1;
+      transition: background .15s, transform .08s;
     }
-    .btn:hover { border-color: #b9c6da; }
-    .btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
-    .btn.primary:hover { background: #2556b8; border-color: #2556b8; }
-    .btn.primary:disabled { opacity: .45; cursor: not-allowed; }
-    .btn svg { width: 16px; height: 16px; }
+    .btn:hover { background: #0b3a66; }
+    .btn:active { transform: translateY(1px); }
+    .btn:focus-visible { outline: 3px solid #9fbaf0; outline-offset: 2px; }
+    .btn.primary { background: var(--blue); }
+    .btn.primary:hover { background: #2556b8; }
+    .btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 
     .toggle { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-bottom: 1px solid var(--line); background: #f7f9fc; font-size: 0.92rem; color: var(--muted); cursor: pointer; user-select: none; }
     .toggle input { width: 18px; height: 18px; accent-color: var(--blue); }
@@ -120,11 +126,57 @@
     .items .sv { color: var(--muted); font-weight: 600; }
     .items .from { display: inline-block; font-size: 0.7rem; font-weight: 600; color: var(--muted); background: #eef2f7; border-radius: 0; padding: 1px 6px; margin-left: 6px; vertical-align: 1px; white-space: nowrap; }
     .items li.inherited .ko, .items li.inherited .sv { font-weight: 500; }
+    .items li.has-media { align-items: center; }
+    .items li.has-media .sv { display: flex; align-items: center; gap: 12px; }
+    .media-row { display: flex; gap: 18px; margin-left: auto; }
+    .media .short { display: none; }
+    .media {
+      display: inline-flex; align-items: center; gap: 6px; min-height: 32px;
+      color: var(--blue); font-weight: 600; font-size: 0.92rem; text-decoration: none;
+    }
+    .media svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .media:hover .lbl { text-decoration: underline; text-underline-offset: 3px; }
     .items li.inherited .ko { color: #33445b; }
     @media (max-width: 560px) {
       .items li { grid-template-columns: 1fr; gap: 0; }
+      .media-row { gap: 14px; }
+      .media .full { display: none; }
+      .media .short { display: inline; }
       .belt-head .actions { margin-left: 0; width: 100%; }
-      .belt-head .actions .btn { flex: 1; }
+      .belt-head .actions { flex-direction: column-reverse; }
+      .belt-head .actions .btn { width: 100%; }
+    }
+
+    /* Search */
+    .search { position: relative; margin-bottom: 14px; }
+    .search input {
+      width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--surface);
+      padding: 13px 46px 13px 46px; border: 2px solid var(--line); border-radius: 0; outline: none;
+      -webkit-appearance: none; appearance: none;
+    }
+    .search input:focus { border-color: var(--blue); }
+    .search input::placeholder { color: #8a97a8; }
+    .search input::-webkit-search-cancel-button { display: none; }
+    .search > svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--muted); pointer-events: none; }
+    .search button { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; background: none; border: 0; color: var(--muted); font-size: 1.05rem; }
+    .search button:hover { color: var(--navy); }
+    .s-count { color: var(--muted); font-size: 0.9rem; margin: 0 0 8px; }
+    .s-results { list-style: none; background: var(--surface); border: 1px solid var(--line); }
+    .s-results li + li { border-top: 1px solid #edf1f6; }
+    .s-hit { width: 100%; text-align: left; background: none; border: 0; display: flex; align-items: center; gap: 14px; padding: 12px 16px; min-height: 60px; }
+    .s-hit:hover { background: var(--blue-soft); }
+    .s-main { flex: 1; min-width: 0; }
+    .s-ko { display: block; font-weight: 600; color: var(--text); }
+    .s-sv { display: block; color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 1px; }
+    .s-belt { display: flex; flex-direction: column; align-items: center; gap: 5px; flex-shrink: 0; width: 56px; font-size: 0.74rem; font-weight: 700; color: var(--muted); }
+    .s-belt svg { width: 40px; height: auto; }
+    .s-empty { padding: 22px 16px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
+    mark { background: #fff0a8; color: inherit; }
+    .items li { scroll-margin-top: 110px; }
+    .items li.flash { animation: flash 2.8s ease-out; }
+    @keyframes flash {
+      0%, 40% { background: #fff0a8; box-shadow: 0 0 0 8px #fff0a8; }
+      100% { background: transparent; box-shadow: 0 0 0 8px transparent; }
     }
 
     /* Landing */
@@ -399,6 +451,7 @@
   const state = {
     tab: 'learn',
     learnGup: null,            // null = landing page
+    search: '',
     learnAll: false,
     practice: { gups: new Set([9]), cumulative: true, count: 10 },
     quiz: null,
@@ -441,7 +494,7 @@
       if (t.dataset.tab === 'learn' && state.tab === 'learn') state.learnGup = null;
       setTab(t.dataset.tab);
     }));
-    window.addEventListener('popstate', () => { readHash(); setTab(state.tab, false); });
+    window.addEventListener('popstate', () => { state.search = history.state?.q || ''; readHash(); setTab(state.tab, false); });
     document.addEventListener('keydown', onKey);
     setTab(state.tab, false);
   }
@@ -470,7 +523,7 @@
   }
 
   function renderLanding() {
-    $view().innerHTML = `
+    $view().innerHTML = learnShell(`
       <section class="card landing">
         <div class="eyebrow">Välkommen</div>
         <h2 class="display">Inför graderingen</h2>
@@ -505,12 +558,140 @@
           <li>Du har en dräkt (dobok)</li>
         </ul>
         <a class="more" href="https://www.stptkd.se/sida/67035/grader-gradering" target="_blank" rel="noopener noreferrer">Läs mer på stptkd.se</a>
-      </section>`;
+      </section>`);
+    wireSearch();
 
     $view().querySelectorAll('.belt-btn').forEach(btn => btn.addEventListener('click', () => selectLearnBelt(+btn.dataset.gup)));
     $view().querySelector('[data-go="learn"]').addEventListener('click', () =>
       document.querySelector('.pick').scrollIntoView({ behavior: 'smooth', block: 'start' }));
     $view().querySelector('[data-go="practice"]').addEventListener('click', () => setTab('practice'));
+  }
+
+  /* ---------- Search (Lär dig) ---------- */
+  const itemKey = (key, it) => key + '|' + normTxt(it.ko || '') + '|' + normTxt(it.sv || it.text || '');
+
+  let INDEX = null;
+  function searchIndex() {
+    if (INDEX) return INDEX;
+    const seen = new Set(); INDEX = [];
+    for (const b of DATA.belts) {
+      for (const key of ORDER) {
+        for (const it of b.content[key] || []) {
+          const k = itemKey(key, it);
+          // Techniques/theory carry over, so list them once under the belt that introduces them (9 GUP first).
+          // Per-grading requirements (kamp, krossteknik, armhävning, tidskrav …) are listed for every belt.
+          const seenKey = CUMULATIVE.includes(key) ? k : b.gup + '#' + k;
+          if (seen.has(seenKey)) continue;
+          seen.add(seenKey);
+          INDEX.push({ gup: b.gup, key, k, it,
+            fields: [it.ko, it.sv, it.text, DATA.sections[key]].filter(Boolean).map(fuzzy) });
+        }
+      }
+    }
+    return INDEX;
+  }
+  /* Case, accents, spaces, hyphens and doubled letters are ignored (dobok = Doobok, ki app = Kii App). */
+  const fuzzy = s => normTxt(s).replace(/(.)\1+/g, '$1');
+  /* Whole phrase first; if that finds nothing, every word must match somewhere. */
+  function runSearch(q) {
+    const phrase = fuzzy(q);
+    if (!phrase) return [];
+    const idx = searchIndex();
+    const has = (e, t) => e.fields.some(f => f.includes(t));
+    const exact = idx.filter(e => has(e, phrase));
+    if (exact.length) return exact;
+    const toks = q.trim().split(/\s+/).map(fuzzy).filter(Boolean);
+    return toks.length > 1 ? idx.filter(e => toks.every(t => has(e, t))) : [];
+  }
+  /* Highlight what the search matched, using the same rules as fuzzy(): map each kept
+     character of the normalised text back to its span in the original string. */
+  function hl(str, q) {
+    const norm = [], end = [];
+    for (let i = 0; i < str.length; i++) {
+      const c = str[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      if (!/^[a-z0-9]$/.test(c)) continue;
+      if (norm.length && norm[norm.length - 1] === c) { end[end.length - 1] = i; continue; }
+      norm.push(c); end.push(i);
+    }
+    const n = norm.join(''), on = new Array(str.length).fill(false);
+    const mark = t => {
+      for (let i = n.indexOf(t); t && i >= 0; i = n.indexOf(t, i + 1))
+        for (let j = end[i]; j <= end[i + t.length - 1]; j++) on[j] = true;   // end[i]: last copy of a doubled first letter
+    };
+    const phrase = fuzzy(q);
+    if (n.includes(phrase)) mark(phrase);
+    else q.trim().split(/\s+/).map(fuzzy).filter(t => t.length > 1).forEach(mark);
+    let out = '', open = false;
+    for (let i = 0; i < str.length; i++) {
+      if (on[i] !== open) { out += on[i] ? '<mark>' : '</mark>'; open = on[i]; }
+      out += esc(str[i]);
+    }
+    return out + (open ? '</mark>' : '');
+  }
+
+  function learnShell(body) {
+    return `
+      <div class="search" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" value="${esc(state.search)}" placeholder="Sök teknik eller term, t.ex. naeryo" aria-label="Sök"
+          autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+        <button id="qClear" type="button" aria-label="Rensa sökning" hidden>✕</button>
+      </div>
+      <div id="learnBody">${body}</div>
+      <div id="searchResults" hidden></div>`;
+  }
+
+  function showResults() {
+    const q = state.search, has = q.trim().length > 0;
+    const body = document.getElementById('learnBody'), box = document.getElementById('searchResults');
+    document.getElementById('qClear').hidden = !has;
+    body.hidden = has; box.hidden = !has;
+    if (!has) { box.innerHTML = ''; return; }
+    const hits = runSearch(q);
+    if (!hits.length) { box.innerHTML = `<div class="s-empty">Inga träffar för ”${esc(q.trim())}”.</div>`; return; }
+    box.innerHTML = `
+      <p class="s-count">${hits.length} ${hits.length === 1 ? 'träff' : 'träffar'}</p>
+      <ul class="s-results">${hits.map(e => {
+        const b = beltBy(e.gup), it = e.it, sec = esc(DATA.sections[e.key]);
+        const main = it.text ? hl(it.text, q) : hl(it.ko, q);
+        const sub = it.text ? sec : `${it.sv ? hl(it.sv, q) + ' · ' : ''}${sec}`;
+        return `<li><button class="s-hit" data-gup="${e.gup}" data-k="${esc(e.k)}">
+          <span class="s-main"><span class="s-ko">${main}</span><span class="s-sv">${sub}</span></span>
+          <span class="s-belt">${beltSvg(b.belt, 40)}<span>${e.gup} GUP</span></span></button></li>`;
+      }).join('')}</ul>`;
+    box.querySelectorAll('.s-hit').forEach(btn => btn.addEventListener('click', () => openHit(+btn.dataset.gup, btn.dataset.k)));
+  }
+
+  function openHit(gup, k) {
+    history.replaceState({ q: state.search }, '', location.hash);   // Back restores these results
+    state.search = '';
+    state.learnGup = gup;
+    pushView();
+    renderLearn();
+    const row = [...document.querySelectorAll('.items li[data-k]')].find(li => li.dataset.k === k);
+    if (!row) return window.scrollTo({ top: 0 });
+    row.scrollIntoView({ block: 'center' });
+    row.classList.add('flash');
+  }
+
+  function wireSearch() {
+    const input = document.getElementById('q');
+    input.addEventListener('input', () => { state.search = input.value; showResults(); });
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') input.blur();                       // closes the phone keyboard
+      if (e.key === 'Escape') { input.value = state.search = ''; showResults(); }
+    });
+    document.getElementById('qClear').addEventListener('click', () => { input.value = state.search = ''; showResults(); input.focus(); });
+    if (state.search) showResults();
+  }
+
+  /* PDF guide + film buttons (used for poomse). */
+  function mediaLinks(it) {
+    if (!it.pdf && !it.video) return '';
+    const a = (cls, href, icon, label) => `<a class="media ${cls}" href="${esc(href)}" target="_blank" rel="noopener noreferrer">${icon}<span class="lbl">${label}</span></a>`;
+    const doc = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>';
+    const play = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>';
+    return `<span class="media-row">${it.pdf ? a('pdf', it.pdf, doc, '<span class="full">Guide (PDF)</span><span class="short">PDF</span>') : ''}${it.video ? a('film', it.video, play, 'Film') : ''}</span>`;
   }
 
   function renderLearn() {
@@ -525,20 +706,22 @@
         const older = prev.flatMap(b => (b.content[key] || []).map(it => ({ ...it, gup: b.gup, inherited: true })));
         const seen = new Set();
         items = [...older, ...items].filter(it => {
-          const k = normTxt(it.ko || '') + '|' + normTxt(it.sv || it.text || '');
+          const k = itemKey(key, it);
           return seen.has(k) ? false : (seen.add(k), true);
         });
       }
       if (!items.length) return '';
       const lis = items.map(it => {
         const from = it.inherited ? `<span class="from">${it.gup} GUP</span>` : '';
-        if (it.text) return `<li class="text ${it.inherited ? 'inherited' : ''}"><span>${esc(it.text)}${from}</span></li>`;
-        return `<li class="${it.inherited ? 'inherited' : ''}"><span class="ko">${esc(it.ko)}${from}</span><span class="sv">${esc(it.sv)}</span></li>`;
+        const dk = esc(itemKey(key, it));
+        if (it.text) return `<li data-k="${dk}" class="text ${it.inherited ? 'inherited' : ''}"><span>${esc(it.text)}${from}</span></li>`;
+        const media = mediaLinks(it);
+        return `<li data-k="${dk}" class="${it.inherited ? 'inherited' : ''}${media ? ' has-media' : ''}"><span class="ko">${esc(it.ko)}${from}</span><span class="sv">${esc(it.sv)}${media}</span></li>`;
       }).join('');
       return `<div class="sec"><h3>${esc(DATA.sections[key])}</h3><ul class="items">${lis}</ul></div>`;
     }).join('');
 
-    $view().innerHTML = `
+    $view().innerHTML = learnShell(`
       <button class="back" id="toLanding">← Översikt</button>
       ${beltPicker(state.learnGup, false)}
       <article class="card">
@@ -559,7 +742,8 @@
         ${belt.inherits ? `<label class="toggle"><input type="checkbox" id="learnAll" ${state.learnAll ? 'checked' : ''}> Visa även tekniker och teori från tidigare bälten</label>` : ''}
         ${belt.inherits && !all ? `<p class="note">Samma som för tidigare bälte, med följande tillägg:</p>` : ''}
         <div class="sections">${secs}</div>
-      </article>`;
+      </article>`);
+    wireSearch();
 
     $view().querySelectorAll('.belt-btn').forEach(btn => btn.addEventListener('click', () => {
       selectLearnBelt(+btn.dataset.gup);
@@ -612,7 +796,7 @@
       for (const [cat, group] of Object.entries(TERM_GROUP)) {
         for (const it of b.content[cat] || []) {
           if (!it.ko || !it.sv || it.count) continue;
-          const k = normTxt(it.ko) + '|' + normTxt(it.sv);
+          const k = itemKey(cat, it);
           if (seen.has(k)) continue;
           seen.add(k);
           TERMS.push({ gup: b.gup, cat, group, ko: it.ko, sv: it.sv });
