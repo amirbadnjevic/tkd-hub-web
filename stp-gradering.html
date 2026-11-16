@@ -48,6 +48,8 @@
     .site-header { background: var(--navy) url('assets/stp/header-bg.png') right center / auto 100% no-repeat; color: #fff; }
     .site-header .wrap { display: flex; align-items: center; gap: 18px; min-height: 124px; padding-top: 16px; padding-bottom: 16px; }
     .club-logo { width: 88px; height: auto; flex-shrink: 0; display: block; }
+    .home-link { display: flex; align-items: center; gap: inherit; color: inherit; text-decoration: none; }
+    .home-link:focus-visible { outline: 3px solid #9fbaf0; outline-offset: 4px; }
     .site-header h1 { font-size: clamp(1.7rem, 7vw, 2.6rem); }
     .site-header h1 small { display: block; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: none; letter-spacing: 0; font-size: clamp(0.75rem, 3.2vw, 0.9rem); color: #a9bad3; margin-top: 6px; line-height: 1.35; }
     @media (max-width: 560px) {
@@ -210,15 +212,9 @@
     .landing h2 { font-size: clamp(2rem, 8vw, 2.6rem); color: var(--navy); margin: 6px 0 10px; }
     .landing .lead { color: var(--muted); font-size: 1.02rem; }
     .quote {
-      position: relative; overflow: hidden; margin-top: 22px; padding: 18px 20px 18px 64px;
-      background: linear-gradient(135deg, var(--blue-soft), #fff7d6);
-      border-left: 4px solid var(--blue);
+      margin-top: 22px; text-align: center;
       font-family: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive; font-weight: 700;
       font-size: clamp(1.6rem, 6.4vw, 2.1rem); line-height: 1.15; color: var(--navy);
-    }
-    .quote::before {
-      content: '\201D'; position: absolute; left: 12px; top: -6px;
-      font-family: Georgia, 'Times New Roman', serif; font-size: 5.5rem; line-height: 1; color: var(--blue); opacity: .35;
     }
     .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
     .mode {
@@ -378,8 +374,10 @@
   <div id="app" class="hidden">
     <header class="site-header">
       <div class="wrap">
-        <img class="club-logo" src="assets/stp/logo.png" alt="Staffanstorps Taekwondo Förening">
-        <h1 class="display">Graderingsguide<small>Staffanstorps Taekwondo Förening</small></h1>
+        <a class="home-link" href="#lar" id="homeLink" aria-label="Graderingsguide, startsida">
+          <img class="club-logo" src="assets/stp/logo.png" alt="Staffanstorps Taekwondo Förening">
+          <h1 class="display">Graderingsguide<small>Staffanstorps Taekwondo Förening</small></h1>
+        </a>
       </div>
     </header>
     <nav class="tabs" aria-label="Sektioner">
@@ -537,6 +535,12 @@
       setTab(t.dataset.tab);
     }));
     window.addEventListener('popstate', () => { state.search = history.state?.q || ''; readHash(); setTab(state.tab, false); });
+    document.getElementById('homeLink').addEventListener('click', e => {
+      e.preventDefault();
+      state.search = '';
+      state.learnGup = null;
+      setTab('learn');
+    });
     document.addEventListener('keydown', onKey);
     setTab(state.tab, false);
   }
@@ -595,7 +599,7 @@
             <span><strong>Öva</strong>Quiz med tre svarsalternativ. Öva på ett bälte eller blanda flera, och repetera de frågor du missar.</span>
           </button>
         </div>
-        ${DATA.quote ? `<blockquote class="quote">${esc(DATA.quote)}</blockquote>` : ''}
+        ${DATA.quote ? `<blockquote class="quote">”${esc(DATA.quote)}”</blockquote>` : ''}
       </section>
 
       <section class="pick">
@@ -605,7 +609,8 @@
 
       ${DATA.beltKnot ? `<section class="card about">
         <h3>Hur knyter man bältet?</h3>
-        <p>${esc(DATA.beltKnot.text)} <a href="${esc(DATA.beltKnot.pdf)}" target="_blank" rel="noopener noreferrer">Klicka här för en instruktion.</a></p>
+        <p>${esc(DATA.beltKnot.text)}</p>
+        <p><a href="${esc(DATA.beltKnot.pdf)}" target="_blank" rel="noopener noreferrer">Klicka här för en instruktion.</a></p>
       </section>` : ''}
 
       <section class="card about">
