@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" href="assets/stp/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -209,6 +209,17 @@
     .landing { padding: 24px 20px; }
     .landing h2 { font-size: clamp(2rem, 8vw, 2.6rem); color: var(--navy); margin: 6px 0 10px; }
     .landing .lead { color: var(--muted); font-size: 1.02rem; }
+    .quote {
+      position: relative; overflow: hidden; margin-top: 22px; padding: 18px 20px 18px 64px;
+      background: linear-gradient(135deg, var(--blue-soft), #fff7d6);
+      border-left: 4px solid var(--blue);
+      font-family: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive; font-weight: 700;
+      font-size: clamp(1.6rem, 6.4vw, 2.1rem); line-height: 1.15; color: var(--navy);
+    }
+    .quote::before {
+      content: '\201D'; position: absolute; left: 12px; top: -6px;
+      font-family: Georgia, 'Times New Roman', serif; font-size: 5.5rem; line-height: 1; color: var(--blue); opacity: .35;
+    }
     .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
     .mode {
       text-align: left; display: flex; gap: 14px; align-items: flex-start; padding: 16px;
@@ -225,6 +236,7 @@
     .about p + p { margin-top: 10px; }
     .about ul { padding-left: 20px; }
     .about li { margin: 3px 0; }
+    .about p a { color: var(--blue); font-weight: 600; }
     .about .more { display: inline-block; margin-top: 14px; color: var(--blue); font-weight: 600; }
     .back { background: none; border: 0; color: var(--blue); font-weight: 600; padding: 0 0 12px; font-size: 0.95rem; }
     @media (max-width: 560px) {
@@ -583,12 +595,18 @@
             <span><strong>Öva</strong>Quiz med tre svarsalternativ. Öva på ett bälte eller blanda flera, och repetera de frågor du missar.</span>
           </button>
         </div>
+        ${DATA.quote ? `<blockquote class="quote">${esc(DATA.quote)}</blockquote>` : ''}
       </section>
 
       <section class="pick">
         <h3 class="pick-title">Vilket bälte ska du gradera till?</h3>
         ${beltPicker(null, false)}
       </section>
+
+      ${DATA.beltKnot ? `<section class="card about">
+        <h3>Hur knyter man bältet?</h3>
+        <p>${esc(DATA.beltKnot.text)} <a href="${esc(DATA.beltKnot.pdf)}" target="_blank" rel="noopener noreferrer">Klicka här för en instruktion.</a></p>
+      </section>` : ''}
 
       <section class="card about">
         <h3>Om gradering</h3>
@@ -895,16 +913,19 @@
     return KICKS || (KICKS = DATA.belts.flatMap(x => [...(x.content.sparkar || []), ...(x.content.mittsteknik || [])]).map(k => k.ko));
   }
 
+  const firstOf = (belt, key) => belt.content[key]?.[0];
+  /* Wrong "N GUP" answers: the grades closest to g. */
+  const gupDistractors = g => nearDistractors(`${g} GUP`, DATA.belts.map(x => `${x.gup} GUP`), v => Math.abs(parseInt(v) - g));
+
   function factQuestions(b) {
     const belts = DATA.belts, g = b.gup, out = [];
     // Poomse name comes from the same content the Learn view shows (single source).
-    const poomseOf = x => x.content.poomse?.[0]?.ko;
+    const poomseOf = x => firstOf(x, 'poomse')?.ko;
     const poomse = poomseOf(b);
     const byGup = v => Math.abs(belts.find(x => poomseOf(x) === v)?.gup - g);
     out.push(mk(g, 'poomse', `Vilken poomse ska du kunna till <em>${g} GUP</em>?`, poomse,
       nearDistractors(poomse, belts.map(poomseOf), byGup)));
-    out.push(mk(g, 'poomse', `Till vilket bälte hör poomse <em>${esc(poomse)}</em>?`, `${g} GUP`,
-      nearDistractors(`${g} GUP`, belts.map(x => `${x.gup} GUP`), v => Math.abs(parseInt(v) - g))));
+    out.push(mk(g, 'poomse', `Till vilket bälte hör poomse <em>${esc(poomse)}</em>?`, `${g} GUP`, gupDistractors(g)));
     // Mittsteknik: ask which technique the grading requires. Wrong answers are kicks from OTHER belts,
     // never this belt's own kicks or mittsteknik (those are also correct things to know for this grading).
     const own = new Set(['sparkar', 'mittsteknik'].flatMap(k => (b.content[k] || []).map(it => normTxt(it.ko))));
@@ -913,6 +934,33 @@
       out.push(mk(g, 'mittsteknik', `Vilken mittsteknik ska du kunna till <em>${g} GUP</em>?`, it.ko, hardDistractors(it.ko, pool)));
     }
     out.push(...countQuestions(b));
+    out.push(...meaningQuestions(b));
+    return out;
+  }
+
+  /* Bältets betydelse: what this belt stands for, what its colour is likened to, and the reverse. */
+  /* Every belt meaning with its rank on the 10 GUP → 1 DAN scale (white = 10, black 1 DAN = 0). */
+  let MEANINGS = null;
+  function allMeanings() {
+    return MEANINGS || (MEANINGS = [
+      ...DATA.belts.map(x => ({ ...firstOf(x, 'betydelse'), rank: x.gup })).filter(m => m.text),
+      ...(DATA.beltMeaningOther || []).map(o => ({ ...o, rank: o.gup ?? 1 - o.dan })),
+    ]);
+  }
+  function meaningQuestions(b) {
+    const g = b.gup, m = firstOf(b, 'betydelse'), out = [];
+    if (!m) return out;
+    const all = allMeanings();
+    if (m.short) {
+      const rankOf = new Map(all.filter(x => x.short).map(x => [x.short, x.rank]));
+      out.push(mk(g, 'betydelse', `Vad betyder bältet för <em>${g} GUP</em>?`, m.short,
+        nearDistractors(m.short, [...rankOf.keys()], v => Math.abs(rankOf.get(v) - g))));
+      out.push(mk(g, 'betydelse', `Vilket bälte står för: <em>${esc(m.short)}</em>?`, `${g} GUP`, gupDistractors(g)));
+    }
+    if (m.symbol && m.colorAdj) {
+      out.push(mk(g, 'betydelse', `Vad kan den <em>${esc(m.colorAdj)}</em> färgen liknas vid?`, m.symbol,
+        hardDistractors(m.symbol, all.map(x => x.symbol).filter(Boolean))));
+    }
     return out;
   }
 

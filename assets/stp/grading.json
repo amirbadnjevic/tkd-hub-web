@@ -4,6 +4,16 @@
   "poomseSource": "https://www.stptkd.se/sida/67037/poomse",
   "poomseVideoSource": "https://www.youtube.com/playlist?list=PLSFr5pEwo7gRNGXHlU-ZVxzha5A0c_M3i",
   "copyright": "Copyright © Staffanstorps Taekwondo Förening 2013",
+  "beltMeaningSource": "https://www.stptkd.se/dokument/223ce5dd-a885-4b72-88d6-39c62956244a/Bc3a4ltets20betydelse.pdf?1",
+  "beltMeaningOther": [
+    { "label": "10 GUP (vitt)", "gup": 10, "text": "Den vita färgen symboliserar oskuld och ovetande. Det vita bältet är som ett tomt papper som måste fyllas i för att bli något mer.", "symbol": "Ett tomt papper som måste fyllas i", "short": "Oskuld och ovetande" },
+    { "label": "1 DAN (svart)", "dan": 1, "text": "Plantan är nu fullvuxen och mogen. Den kan börja släppa egna frön, som i sin tur kan gro till egna plantor. Svart bälte är motsatsen till det vita bältet och visar att personen inte bara har tekniskt kunnande utan också har mognat.", "symbol": "En fullvuxen och mogen planta", "short": "Tekniskt kunnande och mognad" }
+  ],
+  "quote": "En svartbältare är en vitbältare som inte gett upp",
+  "beltKnot": {
+    "pdf": "https://www.stptkd.se/dokument/e4ef0ddc-2449-4f21-95d5-f0a337b629b8/Bc3a4ltes20knut.pdf?1",
+    "text": "Bältet viras två varv där första varvet betyder man, andra varvet kvinna och knuten gemenskap."
+  },
   "sections": {
     "poomse": "Poomse",
     "stallningar": "Ställningar",
@@ -52,7 +62,7 @@
         "enstegskamp": [{ "ko": "1 st.", "sv": "Tekniker från poomse (1)" }],
         "krossteknik": [{ "ko": "Momtong Jireugi", "sv": "1 bräda (från 15 år)" }],
         "armhavning": [{ "text": "Vuxen 20 st. Barn 10 st." }],
-        "betydelse": [{ "text": "Det gula bältets betydelse." }],
+        "betydelse": [{ "text": "Den gula färgen kan också liknas vid ett planterat frö. Fröet har alla förutsättningar för att gro och växa. Det gula bältet antyder att eleven börjar lära sig grunderna.", "symbol": "Ett planterat frö", "colorAdj": "gula", "short": "Eleven börjar lära sig grunderna" }],
         "teori": [
           {
             "ko": "Räkna 1-10",
@@ -100,7 +110,7 @@
         "enstegskamp": [{ "ko": "2 st.", "sv": "Tekniker från poomse (2)" }],
         "krossteknik": [{ "ko": "Momtong Jireugi", "sv": "1 bräda (från 15 år)" }],
         "armhavning": [{ "text": "Vuxen 30 st. Barn 15 st." }],
-        "betydelse": [{ "text": "Det gröna bältets betydelse." }],
+        "betydelse": [{ "text": "Den gröna färgen kan också liknas vid tillväxt, en planta som tränger upp ur jorden. Det gröna bältet visar att eleven börjar utvecklas.", "symbol": "En planta som tränger upp ur jorden", "colorAdj": "gröna", "short": "Eleven börjar utvecklas" }],
         "teori": [
           { "ko": "Dojang", "sv": "Träningslokal" },
           { "ko": "Doobok", "sv": "Träningsdräkt" },
@@ -144,7 +154,7 @@
           { "ko": "Bitchagi", "sv": "1 bräda (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 30 st. Barn 15 st." }],
-        "betydelse": [{ "text": "Det gröna bältets betydelse." }],
+        "betydelse": [{ "text": "Det blå strecket visar att eleven börjar närma sig det som krävs för det blå bältet men är inte där ännu.", "short": "Eleven närmar sig det blå bältet men är inte där ännu" }],
         "teori": [
           { "ko": "GUP", "sv": "Elevgrad" },
           { "ko": "Dan", "sv": "Instruktörsgrad" },
@@ -187,7 +197,7 @@
           { "ko": "1 valfri fotteknik (ej bitchagi)", "sv": "1 bräda (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 40 st. Barn 20 st." }],
-        "betydelse": [{ "text": "Det blå bältets betydelse." }],
+        "betydelse": [{ "text": "Den blå färgen kan liknas vid en planta som växer och sträcker sig mot himlen. Det blå bältet visar att eleven når högre i sina kunskaper.", "symbol": "En planta som sträcker sig mot himlen", "colorAdj": "blå", "short": "Eleven når högre i sina kunskaper" }],
         "teori": [
           { "text": "Kunna förklara skillnaden mellan Jireugi och Chigi." },
           { "text": "Kunna förklara skillnaden mellan Sonnal och Hansonnal." },
@@ -231,7 +241,7 @@
           { "ko": "1 valfri fotteknik (ej bitchagi)", "sv": "1 bräda (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 40 st. Barn 20 st." }],
-        "betydelse": [{ "text": "Det blå bältets betydelse." }],
+        "betydelse": [{ "text": "Det röda strecket betyder att eleven har mer kunskap än till det blå bältet men ännu inte allt som krävs till det röda.", "short": "Mer kunskap än till blått bälte, men inte allt som krävs till rött" }],
         "teori": [
           { "text": "Kunna förklara Koreas flagga." },
           { "text": "Kunna redogöra vad Taegeuk står för." }
@@ -266,7 +276,7 @@
           { "ko": "1 valfri snurrande fotteknik", "sv": "1 bräda (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 50 st. Barn 25 st." }],
-        "betydelse": [{ "text": "Det röda bältets betydelse." }],
+        "betydelse": [{ "text": "Den röda färgen representerar solen, ljuset och energin som plantan tar åt sig. Det röda bältet innebär att eleven nu övergår från nybörjare till avancerad. Det röda bältet är en varning och eleven varnas nu om att alltid ha kontroll över sig själv.", "symbol": "Solen, ljuset och energin som plantan tar åt sig", "colorAdj": "röda", "short": "Eleven går från nybörjare till avancerad" }],
         "teori": [
           { "text": "Kunna sammanfatta vad nödvärnsrätten i Brottsbalkens 24 kap 1 § innebär." },
           { "text": "Kunna planera och hålla en uppvärmning för nybörjare." }
@@ -309,6 +319,7 @@
           { "ko": "Twie Yeopchagi (över 4 personer)", "sv": "1 bräda (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 60 st. Barn 30 st." }],
+        "betydelse": [{ "text": "Det svarta strecket är det första steget mot det svarta bältet.", "short": "Första steget mot svart bälte" }],
         "teori": [
           {
             "ko": "Kunna räkna första–tionde",
@@ -352,6 +363,7 @@
           { "ko": "Yeop Chagi (utan kross) / Twie Dwit Chagi", "sv": "2 brädor (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 70 st. Barn 35 st." }],
+        "betydelse": [{ "text": "Det andra svarta strecket visar att man är på god väg till det svarta bältet.", "short": "På god väg till svart bälte" }],
         "tidskrav": [{ "text": "Minst en termin sedan förra graderingen med 80% närvaro." }]
       }
     },
@@ -396,6 +408,7 @@
           { "ko": "Twie Yeop Chagi över 5 personer", "sv": "1 bräda (från 15 år)" }
         ],
         "armhavning": [{ "text": "Vuxen 80 st. Barn 40 st." }],
+        "betydelse": [{ "text": "Det tredje svarta strecket innebär att man nu bara ska ha finslipning av detaljer kvar till det svarta bältet.", "short": "Bara finslipning av detaljer kvar till svart bälte" }],
         "ovrigt": [
           { "text": "Kunna räkna 1–20." },
           { "text": "Instruerat minst 10 träningar." },
