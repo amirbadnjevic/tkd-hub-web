@@ -85,6 +85,8 @@
       text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.8rem; color: var(--muted);
     }
     .label.accent { color: var(--orange); }
+    .label-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    .label-row .when { color: var(--text); white-space: nowrap; }
     .muted { color: var(--muted); }
     .small { font-size: 0.88rem; }
 
@@ -612,9 +614,9 @@
           <p class="muted small">per athlete + €5 per team transaction fee (international clubs) · <b>600 SEK</b> for Swedish clubs</p>
         </div>
         <div class="card">
-          <div class="label accent">Weigh-in</div>
-          <div class="display" style="font-size:2rem;margin-top:6px">Fri 17–20</div>
-          <p class="muted small">22 January at Kristianstad Arena. Two attempts. Category change before 2nd attempt: 600 SEK / €60.</p>
+          <div class="label accent label-row"><span>Weigh-in</span><span class="when">Fri 22 Jan</span></div>
+          <div class="display" style="font-size:2rem;margin-top:6px">17:00–20:00</div>
+          <p class="muted small">At Kristianstad Arena. Two attempts. Category change before 2nd attempt: 600 SEK / €60.</p>
         </div>
         <div class="card">
           <div class="label accent">Who can enter</div>
@@ -738,9 +740,9 @@
           <p class="muted small">+ €5 transaction fee per individual / pair / team (international clubs) · <b>600 SEK</b> for Swedish athletes</p>
         </div>
         <div class="card">
-          <div class="label" style="color:var(--amber)">Check-in</div>
-          <div class="display" style="font-size:2rem;margin-top:6px">Sat 17–20</div>
-          <p class="muted small">Team registration &amp; check-in on 23 January. Bring proof of payment.</p>
+          <div class="label label-row" style="color:var(--amber)"><span>Check-in</span><span class="when">Sat 23 Jan</span></div>
+          <div class="display" style="font-size:2rem;margin-top:6px">17:00–20:00</div>
+          <p class="muted small">Team registration &amp; check-in at Kristianstad Arena. Bring proof of payment.</p>
         </div>
         <div class="card">
           <div class="label" style="color:var(--amber)">Who can enter</div>
@@ -901,7 +903,14 @@
           </div>
           <p class="muted small">Per room &amp; night incl. breakfast. Book until 15 January 2027 or while rooms last. Free cancellation until 7 days before arrival (under 9 rooms).</p>
           <div style="margin-top:14px"><span class="label">Booking code</span><br><span class="code-big">044TKD <button class="copy" type="button" data-copy="044TKD">Copy</button></span></div>
-          <div class="btn-row" style="margin-top:14px">
+          <div class="btn-row" style="margin-top:16px">
+            <a class="btn primary" href="https://app.mews.com/distributor/0b829118-e3ef-43ea-a896-b35d00d8fa21?mewsAvailabilityBlockId=439045f4-28a1-4483-bd99-b501009bca42&amp;mewsStart=2027-01-22&amp;mewsEnd=2027-01-25" target="_blank" rel="noopener">
+              Book hotel online
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+          <p class="muted small" style="margin-top:8px">Opens the event rate, pre-set to 22–25 January – adjust dates on the booking page. Or contact the hotel:</p>
+          <div class="btn-row" style="margin-top:10px">
             <a class="btn ghost" href="mailto:group.grandkristianstad@profilhotels.se?subject=Booking%20code%20044TKD%20-%20Nordic%20Championship%202027">Email hotel</a>
             <a class="btn ghost" href="tel:+4644284801">+46 44 28 48 01</a>
           </div>
