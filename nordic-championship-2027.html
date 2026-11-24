@@ -97,14 +97,16 @@
 
     .hero { text-align: center; padding: 28px 0 10px; }
     .hero .eyebrow { margin-bottom: 10px; }
-    .hero h1 { line-height: 1.02; }
+    .hero h1 { line-height: 1.02; container-type: inline-size; }
     .hero h1 .script { display: block; font-size: clamp(2.3rem, 9.5vw, 4.8rem); text-shadow: 0 0 30px rgba(239, 84, 20, .45); }
     .hero h1 .year { display: block; font-family: 'Oswald', sans-serif; font-weight: 700; color: var(--orange); font-size: clamp(2.2rem, 9vw, 3.8rem); line-height: 1; margin-top: 8px; text-shadow: 0 6px 30px rgba(239, 84, 20, .35); }
     .hero .where { margin-top: 14px; font: 600 clamp(0.95rem, 3.6vw, 1.2rem) 'Oswald', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; }
     .hero .where span { color: var(--orange); padding: 0 6px; }
     .hero .where span.nw { color: inherit; padding: 0; white-space: nowrap; }
     @media (max-width: 520px) { .hero .where .sep1 { display: block; height: 0; overflow: hidden; } }
-    @media (min-width: 900px) { .hero h1 .script { white-space: nowrap; font-size: clamp(3rem, 5.4vw, 4.4rem); } }
+    /* Desktop: one line, sized to the h1's own width (cqi) so a larger browser default font size
+       (rem) can't push it past the content box; balance-wrap as a safety net instead of nowrap. */
+    @media (min-width: 900px) { .hero h1 .script { font-size: clamp(3rem, 5.4vw, 4.4rem); font-size: min(4.4rem, 7.2cqi); text-wrap: balance; } }
     .hero .sv { margin-top: 8px; color: var(--faint); font-size: 0.85rem; }
 
     /* Discipline cards (also act as the switcher) */
