@@ -194,6 +194,11 @@
     .copy.done { color: #7BE3A0; border-color: #2D7A4A; }
 
     .pay { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-top: 16px; }
+    .refs { display: grid; grid-template-columns: max-content 1fr; gap: 6px 12px; align-items: center; margin-top: 6px; }
+    .refs dt { font: 600 0.7rem 'Oswald', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; text-align: center; }
+    .refs dt.k { background: var(--orange); color: #fff; }
+    .refs dt.p { background: var(--amber); color: #2a1404; }
+    .refs dd { font-weight: 600; font-variant-numeric: tabular-nums; }
     .pay > div { background: rgba(0,0,0,.28); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
     .pay .label { font-size: 0.66rem; }
     .pay .v { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -570,7 +575,12 @@
         <div id="payment" style="margin-top:26px">
           <h3>Payment · Kristianstad Taekwondo</h3>
           <p class="muted small">Organisation no. 802518-2471</p>
-          <p class="muted small" style="margin-top:4px">Use the reference <b>Club name + NM27-K</b> (Kyorugi) or <b>Club name + NM27-P</b> (Poomsae). Bring proof of payment to weigh-in / check-in. Late fee: €25 per athlete after 7 January (Poomsae: no late entries).</p>
+          <p class="muted small" style="margin-top:10px">Use the payment reference:</p>
+          <dl class="refs">
+            <dt class="k">Kyorugi</dt><dd>Club name + NM27-K</dd>
+            <dt class="p">Poomsae</dt><dd>Club name + NM27-P</dd>
+          </dl>
+          <p class="muted small" style="margin-top:10px">Bring proof of payment to weigh-in / check-in. Late fee: €25 per athlete after 7 January (Poomsae: no late entries).</p>
           <div class="pay">
             <div><span class="label">Bankgiro</span><div class="v">5299-9216 <button class="copy" type="button" data-copy="5299-9216">Copy</button></div></div>
             <div class="iban"><span class="label">IBAN</span><div class="v">SE49 8000 0831 3952 4354 8699 <button class="copy" type="button" data-copy="SE4980000831395243548699">Copy</button></div></div>
