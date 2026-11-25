@@ -1,0 +1,17 @@
+{
+  "id": "/se-rankings",
+  "name": "SE Rankings - TKD Hub",
+  "short_name": "SE Rankings",
+  "description": "Svenska Cupen ranking for Swedish Taekwondo: cadets, juniors, seniors and masters.",
+  "start_url": "/se-rankings",
+  "scope": "/se-rankings",
+  "display": "standalone",
+  "background_color": "#FAFAFE",
+  "theme_color": "#776ECA",
+  "icons": [
+    { "src": "/assets/se-rankings/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/se-rankings/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/se-rankings/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/se-rankings/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
