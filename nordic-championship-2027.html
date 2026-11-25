@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <!-- PREVIEW MODE: while the access gate is on, keep the page out of search engines.
-       LAUNCH CHECKLIST: 1) delete this robots meta, 2) delete the gate (markup + script),
-       3) add the URL to sitemap.xml, 4) replace the PDF placeholder links (PDF_KYORUGI / PDF_POOMSAE). -->
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0B0706">
 
-  <title>Nordic Taekwondo Championships 2027 – Kyorugi &amp; Poomsae | Kristianstad, Sweden</title>
-  <meta name="description" content="Nordic Taekwondo Championships 2027 (NM27) in Kristianstad Arena, Sweden. Kyorugi 23 January, Poomsae 24 January 2027. Divisions, weight categories, poomsae lists, entry fees, TPSS registration (deadline 7 January), official hotel and outlines.">
+  <title>Nordic Taekwondo Championships 2027 – Kristianstad, Sweden</title>
+  <meta name="description" content="NM27 in Kristianstad Arena: Kyorugi 23 Jan, Poomsae 24 Jan 2027. Divisions, weight categories, fees, TPSS registration (deadline 7 Jan) and official hotel.">
   <meta name="keywords" content="Nordic Championship 2027, Nordic Taekwondo Championships 2027, NM27, NM 2027 taekwondo, Nordiska mästerskapen taekwondo 2027, Kristianstad Arena, taekwondo Kristianstad, kyorugi, poomsae, freestyle poomsae, TPSS, Swedish Taekwondo Union, Svenska Taekwondounionen, Kristianstad Taekwondo, taekwondo competition Sweden January 2027, Denmark, Norway, Finland, Iceland, Faroe Islands, Estonia, Latvia, Lithuania">
   <link rel="canonical" href="https://tkdhub.app/nordic-championship-2027">
 
@@ -73,9 +70,9 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-    body.locked { overflow: hidden; }
     a { color: inherit; }
     img { max-width: 100%; }
+    [hidden] { display: none !important; }
     .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
     .script { font-family: 'Cinzel', Georgia, serif; font-weight: 700; color: var(--amber); letter-spacing: 0.04em; }
@@ -296,25 +293,6 @@
     .presented img { width: 20px; height: 20px; border-radius: 5px; }
     .presented strong { color: var(--muted); font-weight: 600; }
 
-    /* ---------- Gate ---------- */
-    .gate {
-      position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px;
-      background: radial-gradient(circle at 50% 0%, #3A1609 0%, var(--bg) 62%);
-    }
-    .gate-box { width: 100%; max-width: 400px; text-align: center; }
-    .gate-box .script { font-size: clamp(2.2rem, 10vw, 2.9rem); line-height: 1.05; display: block; text-shadow: 0 0 30px rgba(239, 84, 20, .45); }
-    .gate-box .year { margin-top: 6px; font: 700 2.4rem/1 'Oswald', sans-serif; color: var(--orange); }
-    .gate-box p { color: var(--muted); margin: 18px 0 22px; font-size: 0.95rem; }
-    .gate-box form { display: flex; flex-direction: column; gap: 10px; }
-    .gate-box input {
-      font: inherit; font-size: 1.05rem; text-align: center; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 13px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); color: var(--text); outline: none;
-    }
-    .gate-box input:focus { border-color: var(--orange); }
-    .gate-box input::placeholder { color: var(--faint); letter-spacing: 0.04em; text-transform: none; }
-    .gate-box .err { color: #FF8F8A; font-size: 0.9rem; min-height: 1.3em; }
-    .gate-box.shake { animation: shake .35s; }
-    @keyframes shake { 20%,60% { transform: translateX(-6px); } 40%,80% { transform: translateX(6px); } }
 
     .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); opacity: 0; pointer-events: none; background: var(--surface-2); border: 1px solid var(--line); padding: 10px 16px; border-radius: 999px; font-size: 0.88rem; transition: opacity .2s, transform .2s; z-index: 60; }
     .toast.show { opacity: 1; transform: translate(-50%, 0); }
@@ -428,7 +406,7 @@
         "mainEntity": [
           { "@type": "Question", "name": "When is the Nordic Taekwondo Championships 2027?", "acceptedAnswer": { "@type": "Answer", "text": "Kyorugi is on Saturday 23 January 2027 and Poomsae on Sunday 24 January 2027. Kyorugi weigh-in is Friday 22 January 17:00–20:00, Poomsae check-in Saturday 23 January 17:00–20:00." } },
           { "@type": "Question", "name": "Where is the Nordic Championship 2027 held?", "acceptedAnswer": { "@type": "Answer", "text": "Kristianstad Arena, Västra Storgatan 69, 291 54 Kristianstad, Sweden." } },
-          { "@type": "Question", "name": "How do I register for NM27?", "acceptedAnswer": { "@type": "Answer", "text": "Clubs register their athletes on TPSS (www.tpss.eu). The registration and payment deadline is 7 January 2027." } },
+          { "@type": "Question", "name": "How do I register for NM27?", "acceptedAnswer": { "@type": "Answer", "text": "Clubs register their athletes on TPSS (www.tpss.eu) under “Nordic Championships 2027 Kyorugi” or “Nordic Championships 2027 Poomsae”. The registration and payment deadline is 7 January 2027." } },
           { "@type": "Question", "name": "What is the entry fee?", "acceptedAnswer": { "@type": "Answer", "text": "International clubs: €60 per athlete (Kyorugi) or per individual/pair/team (Poomsae) plus a €5 transaction fee. Swedish clubs: 600 SEK. Late fee €25 per athlete after 7 January." } },
           { "@type": "Question", "name": "Which countries can compete?", "acceptedAnswer": { "@type": "Answer", "text": "Denmark, Estonia, Faroe Islands, Finland, Iceland, Latvia, Lithuania, Norway and Sweden." } },
           { "@type": "Question", "name": "What is the minimum grade?", "acceptedAnswer": { "@type": "Answer", "text": "4th Kup/Gup and higher in both Kyorugi and Poomsae. Poomsae athletes must be at least 12 years old." } }
@@ -445,21 +423,7 @@
   }
   </script>
 </head>
-<body class="locked">
-
-<!-- Access gate (front-end only). Remove this block + the gate script at launch. -->
-<div class="gate" id="gate">
-  <div class="gate-box" id="gateBox">
-    <span class="script">Nordic Championship</span>
-    <div class="year">2027</div>
-    <p>This page is in preview. Enter the access code to continue.</p>
-    <form id="gateForm" autocomplete="off">
-      <input id="gateInput" type="text" inputmode="text" autocapitalize="characters" spellcheck="false" placeholder="Access code" aria-label="Access code" required>
-      <button class="btn primary" type="submit">Open</button>
-      <div class="err" id="gateErr" role="alert"></div>
-    </form>
-  </div>
-</div>
+<body>
 
 <header>
   <div class="container">
@@ -572,7 +536,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
         </div>
-        <p class="muted small" style="margin-top:10px">On TPSS, find <b style="color:var(--text)">Nordic Championship 2027</b> in the competition list.</p>
+        <p class="muted small" style="margin-top:10px">On TPSS, find <b style="color:var(--text)">Nordic Championships 2027</b> (<b style="color:var(--orange)">Kyorugi</b> / <b style="color:var(--amber)">Poomsae</b>) in the competition list – each discipline has its own entry.</p>
 
         <div id="payment" style="margin-top:26px">
           <h3>Payment · Kristianstad Taekwondo</h3>
@@ -613,7 +577,7 @@
           <div class="label">NM27 Kyorugi · Saturday 23 January 2027</div>
           <h2 class="display">Kyorugi</h2>
         </div>
-        <a class="btn primary" data-pdf="kyorugi" href="#" target="_blank" rel="noopener">
+        <a class="btn primary" href="https://usercontent.one/wp/www.svenskataekwondounionen.se/wp-content/uploads/2026/11/Nordic-Championships-2027_Kyorugi_Sweden-Kristianstad_23jan.pdf" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15l3 3 3-3"/></svg>
           Full outline (PDF)
         </a>
@@ -739,7 +703,7 @@
           <div class="label">NM27 Poomsae · Sunday 24 January 2027</div>
           <h2 class="display">Poomsae</h2>
         </div>
-        <a class="btn primary" data-pdf="poomsae" href="#" target="_blank" rel="noopener">
+        <a class="btn primary" href="https://usercontent.one/wp/www.svenskataekwondounionen.se/wp-content/uploads/2026/11/Nordic-Championships-2027_Poomsae_Sweden-Kristianstad_24jan.pdf" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15l3 3 3-3"/></svg>
           Full outline (PDF)
         </a>
@@ -985,7 +949,7 @@
       </div>
       <details><summary>When is the Nordic Taekwondo Championships 2027?</summary><p>Kyorugi on Saturday 23 January 2027 and Poomsae on Sunday 24 January 2027. Kyorugi weigh-in is Friday 22 January 17:00–20:00, Poomsae check-in Saturday 23 January 17:00–20:00.</p></details>
       <details><summary>Where is NM27 held?</summary><p>Kristianstad Arena, Västra Storgatan 69, 291 54 Kristianstad, Sweden. The official hotel, ProfilHotels Grand Kristianstad, is on the same street.</p></details>
-      <details><summary>How do I register?</summary><p>Clubs register their athletes on TPSS (tpss.eu) – find “Nordic Championship 2027” in the competition list. Registration and payment deadline: 7 January 2027.</p></details>
+      <details><summary>How do I register?</summary><p>Clubs register their athletes on TPSS (tpss.eu) – find “Nordic Championships 2027 Kyorugi” or “Nordic Championships 2027 Poomsae” in the competition list. Registration and payment deadline: 7 January 2027.</p></details>
       <details><summary>What does it cost?</summary><p>International clubs pay €60 per athlete (Kyorugi) or per individual/pair/team (Poomsae) plus a €5 transaction fee. Swedish clubs pay 600 SEK. Late fee €25 per athlete after 7 January. Spectators 100 SEK / €10 per day.</p></details>
       <details><summary>Which countries can compete?</summary><p>Denmark, Estonia, Faroe Islands, Finland, Iceland, Latvia, Lithuania, Norway and Sweden.</p></details>
       <details><summary>What is the minimum grade and age?</summary><p>4th Kup/Gup and higher in both disciplines. Kyorugi starts at Cadets (12–14); Poomsae athletes must be at least 12. Age is based on birth year.</p></details>
@@ -1015,12 +979,6 @@
 (() => {
   'use strict';
 
-  /* ---------- Links to fill in ---------- */
-  const PDF_KYORUGI = 'https://tkdhub.app/assets/nm27/NM27-Kyorugi-Outline.pdf'; // TODO: real link
-  const PDF_POOMSAE = 'https://tkdhub.app/assets/nm27/NM27-Poomsae-Outline.pdf'; // TODO: real link
-  document.querySelectorAll('[data-pdf="kyorugi"]').forEach(a => a.href = PDF_KYORUGI);
-  document.querySelectorAll('[data-pdf="poomsae"]').forEach(a => a.href = PDF_POOMSAE);
-
   /* ---------- Emails ----------
      Addresses are not in the HTML as user@domain / mailto: so simple harvesting bots
      miss them; they are assembled here. Without JS, visitors see "user [at] domain". */
@@ -1029,58 +987,6 @@
     a.href = 'mailto:' + addr;
     a.replaceChildren(a.dataset.u + '@', document.createElement('wbr'), a.dataset.d);
   });
-
-  /* ---------- Access gate (remove at launch) ----------
-     Front-end only: keeps casual visitors out, not a real security boundary.
-     Same approach as stp-gradering. Compared case-insensitively, ignoring spaces/dashes.
-     To change: run  cyrb53(normCode('NEW-CODE'))  in the console and paste into ACCESS_HASH. */
-  const ACCESS_HASH = 'rvdkg6t80r';
-  const STORE_KEY = 'nm27-access';
-  function cyrb53(str, seed = 0) {
-    let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
-    for (let i = 0; i < str.length; i++) {
-      const ch = str.charCodeAt(i);
-      h1 = Math.imul(h1 ^ ch, 2654435761);
-      h2 = Math.imul(h2 ^ ch, 1597334677);
-    }
-    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
-    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
-    return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(36);
-  }
-  const normCode = s => s.toUpperCase().replace(/[^A-Z0-9ÅÄÖ]/g, '');
-  window.cyrb53 = cyrb53; window.normCode = normCode;
-  const store = {
-    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
-    set(k, v) { try { localStorage.setItem(k, v); } catch { /* private mode */ } },
-  };
-  const gate = document.getElementById('gate');
-  if (gate) {
-    const gateForm = document.getElementById('gateForm');
-    const gateInput = document.getElementById('gateInput');
-    const gateErr = document.getElementById('gateErr');
-    const gateBox = document.getElementById('gateBox');
-    const behind = document.querySelectorAll('body > header, body > main, body > footer');
-    behind.forEach(el => el.inert = true);
-    const unlock = () => {
-      gate.remove(); document.body.classList.remove('locked');
-      behind.forEach(el => el.inert = false);
-    };
-    if (store.get(STORE_KEY) === ACCESS_HASH) unlock();
-    else gateInput.focus();
-    gateForm.addEventListener('submit', e => {
-      e.preventDefault();
-      if (cyrb53(normCode(gateInput.value)) === ACCESS_HASH) {
-        store.set(STORE_KEY, ACCESS_HASH);
-        unlock();
-      } else {
-        gateErr.textContent = 'Wrong code, try again.';
-        gateBox.classList.remove('shake'); void gateBox.offsetWidth; gateBox.classList.add('shake');
-        gateInput.select();
-      }
-    });
-  } else {
-    document.body.classList.remove('locked');
-  }
 
   /* ---------- Discipline switcher ---------- */
   const tabs = { kyorugi: document.getElementById('tab-kyorugi'), poomsae: document.getElementById('tab-poomsae') };
